@@ -1,0 +1,13 @@
+nav{
+    background-color: black;
+    opacity: 0.75;
+}
+.navbar-brand img{
+    width: 2rem;
+}
+.col-lg-3 .nav-item{
+    flex-direction: row;
+}
+.col-lg-1 .nav-item{
+    flex-direction: row;
+}

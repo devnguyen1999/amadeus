@@ -1,0 +1,14 @@
+.form-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+  }
+  .background{
+      max-height: 50rem;
+      object-position: center;
+      opacity: 1;
+      overflow-x: hidden;
+      overflow-y: hidden;
+  }
