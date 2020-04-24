@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Header.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 Header.propTypes = {};
@@ -17,7 +16,7 @@ function Header(props) {
                   className="img-fluid mr-3"
                   alt="Logo"
                 />
-                DIC Shop
+                Amadeus
               </Link>
               <button
                 className="navbar-toggler hidden-lg-up ml-auto"
