@@ -23,17 +23,17 @@ function LienHe(props) {
                     <div className="row no-gutters align-items-center p-3 bg-light m-2 box">
         
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/600px-Facebook-icon-1.png" className="img-icon"></img>
-                                <p className="Text-icon col ml-2 Text-fgp">Facebook: <span className="text-info">https://www.facebook.com/</span></p>
+                                <p className="Text-icon col ml-2 Text-fgp">Facebook: <span className="span-text">https://www.facebook.com/</span></p>
                     </div>
                     <div className="row no-gutters align-items-center p-3 bg-light m-2">
         
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/600px-Facebook-icon-1.png" className="img-icon"></img>
-                                <p className="Text-icon col ml-2 Text-fgp">Gmail:  <span className="text-info">Amadeus-Key@gmail.com</span></p>
+                                <img src="https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/gmail.png" className="img-icon"></img>
+                                <p className="Text-icon col ml-2 Text-fgp">Gmail:  <span className="span-text">Amadeus-Key@gmail.com</span></p>
                     </div>
                     <div className="row no-gutters align-items-center p-3 bg-light m-2">
         
-                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/600px-Facebook-icon-1.png" className="img-icon"></img>
-                                   <p className="Text-icon col ml-2 Text-fgp">Hotline:  <span className="text-info">19001001</span></p>
+                                 <img src="https://img.favpng.com/15/7/19/call-icon-phone-icon-telephone-icon-png-favpng-nPU5MiPqKftnfQK92YNYj85uP.jpg" className="img-icon"></img>
+                                   <p className="Text-icon col ml-2 Text-fgp">Hotline:  <span className="span-text">19001001</span></p>
                      </div>
                                           
                 </div>
