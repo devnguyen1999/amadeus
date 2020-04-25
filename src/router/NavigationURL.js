@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "../pages/Home";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
+import LienHe from "../pages/LienHe";
 NavigationURL.propTypes = {};
 
 function NavigationURL(props) {
@@ -12,6 +13,9 @@ function NavigationURL(props) {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/lien-he">
+          <LienHe />
         </Route>
         <Route path="/dang-nhap">
           <LogIn />
