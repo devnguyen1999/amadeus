@@ -2,10 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../../Asset/css/ChiTietSP.css";
 import "../../Asset/css/bootstrap.css";
+import DieuHuong from "./ThongTin.js"
 
-ChiTietSP.propTypes = {};
 
-function ChiTietSP(props) {
+  
+
+export default class ChiTietSP extends React.Component{
+    constructor(props) {
+        super(props);
+       this.state = {HienThi : true}
+        
+    }
+
+render() {
+ 
+
   return (
         <div className="container-fluid p-2" style={{ 
             backgroundColor: "black",
@@ -82,8 +93,8 @@ function ChiTietSP(props) {
                     <p className="text-light text">Giá sản Phẩm: </p>
                     <p className="text-warning gia">1.200.000 VNĐ</p>
                 <div className="column justify-content-center">
-                    <button className="col-12 btn btn-danger text-white">Mua Ngay</button>
-                    <button className="col-12 btn text-white" style={{background: "#00B894",fontSize:"15px"}}>Thêm vào giỏ hàng</button>
+                    <button className="col-12 btn btn-danger text-white">Mua ngay</button>
+                    <button className="col-12 btn text-white" style={{background: "#00B894"}}>Thêm vào giỏ hàng</button>
                 </div>
                 </div>
                 
@@ -93,11 +104,15 @@ function ChiTietSP(props) {
                      {/*Button  */}
              <div className="container mb-3">
                     <div className="jumbotron col-12 row p-4 row" style={{background: "black",}}>
-                    <button className="btn col-3 mr-2 mb-2 btn-danger text-white">Thông tin game</button>
-                    <button className="btn col-3 mb-2  text-white" style={{background: "rgba(255, 255, 255, 0.1)"}}>Cấu hình yêu cầu</button>
+                    <button className="btn col-3 mr-2 mb-2 btn-danger text-white" onClick={() => this.setState({HienThi: true})} >Thông tin game</button>
+                    <button className="btn col-3 mb-2  text-white" onClick={() => this.setState({HienThi: false})}  style={{background: "rgba(255, 255, 255, 0.1)"}}>Cấu hình yêu cầu</button>
                         </div>
-                     
+            </div>
 
+                 {/*Button  */}
+
+            <div className="container">
+            <DieuHuong HT={this.state.HienThi}/>
             </div>
 
 
@@ -105,5 +120,5 @@ function ChiTietSP(props) {
         </div>
   );
 }
+}
 
-export default ChiTietSP;
