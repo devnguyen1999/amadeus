@@ -116,9 +116,11 @@ function Header(props) {
               id="collapsibleNavId"
             >
               <div className="navbar-nav nav-item ml-auto">
+                <Link className="" to="/gio-hang">
                 <a className="nav-link mr-auto" href="#">
                   <i className="far fa-shopping-cart    " />
                 </a>
+                </Link>
                 {/* <a className="nav-link ml-auto" href="#">
                   <i className="far fa-search    " />
                 </a> */}

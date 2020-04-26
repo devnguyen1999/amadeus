@@ -1,0 +1,21 @@
+.img-success{
+    width: 250px;
+    height: 250px;
+}
+.h2-thankfor{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+.row-thankfor{
+    justify-content: center;
+}
+.btn-continue{
+    background-color: #D63031;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    position: relative;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 30px;
+}
