@@ -5,7 +5,10 @@
     -webkit-line-clamp: 5; /* number of lines to show */
     -webkit-box-orient: vertical;
 }
-
+.text-cauhinh {
+    color: rgb(165, 165, 165);
+    font-size: 18px;
+}
 .text {
     margin: 0 !important;
 }
@@ -46,6 +49,6 @@
     overflow:hidden;
     text-overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp:6; /* number of lines to show */
+    -webkit-line-clamp:4; /* number of lines to show */
     -webkit-box-orient: vertical;
 }

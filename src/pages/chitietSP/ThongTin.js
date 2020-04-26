@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "../../Asset/css/ChiTietSP.css";
 import "../../Asset/css/bootstrap.css";
 import ThongTinGame from "./ChiTietGame.js"
+import CauHinh from "./CauHinh.js"
 
 export default class ThongTin extends React.Component{
    
@@ -11,7 +12,7 @@ export default class ThongTin extends React.Component{
         return <ThongTinGame />
     }
     render() {
-        return this.props.HT ? this.renderResult() : <div className="text-light">Cấu Hình</div>
+        return this.props.HT ? this.renderResult() : <CauHinh />
     }
 }
 

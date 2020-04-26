@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import $ from 'jquery';
+
 import "../../Asset/css/ChiTietSP.css";
 import "../../Asset/css/bootstrap.css";
 
@@ -9,6 +10,7 @@ import "../../Asset/css/bootstrap.css";
 export default class ThongTinGame extends React.Component{
    
     componentDidMount = () =>{
+    
         $('#readless').hide();
         $('#readmore').on('click',function () {
             $('#info').css('-webkit-line-clamp','unset');
@@ -16,15 +18,27 @@ export default class ThongTinGame extends React.Component{
             $('#readless').show();
         })
         $('#readless').on('click',function () {
-            $('#info').css('-webkit-line-clamp','6');
+            $('#info').css('-webkit-line-clamp','4');
             $('#readmore').show();
             $('#readless').hide();
         })
     }
 
+
+    onStarRatingPress = async (rating) => {
+        this.setState({
+            starCount: rating,
+
+        })
+      
+    }
+
     render() {
         return (
+        
        <div className="container-fluid">
+            {/*Nội dung game */}
+            <div>
            <p className="text-light" style={{fontSize:"25px"}}>Nội dung game:</p>
            <div className="jumbotron p-5" style={{background: "rgba(60, 60, 60, 0.5)",}}>
                 <p id="info" className="eclipse-info text-light">NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.
@@ -38,8 +52,20 @@ Utilise the Pod Support System to Assist In and Outside of Battle – Pods can a
 
             <p className="text-primary" id="readmore">Read more...</p>
             <p className="text-primary" id="readless">Read less...</p>
-            
            </div>
+           </div>
+            {/*đánh giá */}
+            <div>
+            <p className="text-light" style={{fontSize:"25px"}}>Đánh giá: </p>
+           <div className="jumbotron p-5 column" style={{background: "rgba(60, 60, 60, 0.5)",}}>
+              <div className="container-fluid justify-content-center">
+                  <p className="text-light text-center mb-0">Đánh giá trung bình</p>
+                  <p className="text-light text-center pt-0" style={{fontSize:"40px",fontWeight:100,}}>5/5</p>
+                  
+              </div>
+              <div></div>
+           </div>
+            </div>
 
        </div>
         )

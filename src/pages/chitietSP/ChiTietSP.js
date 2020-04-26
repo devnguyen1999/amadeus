@@ -76,7 +76,7 @@ render() {
               {/*sản phẩm */}
               
             <div className="container mt-3">
-            <div className="jumbotron col-12 row p-4" style={{background: "rgba(60, 60, 60, 0.5)",}}>
+            <div className="jumbotron row p-4" style={{background: "rgba(60, 60, 60, 0.5)",}}>
 
                 <div className="col-xl-3 col-lg-3 col-md-3 align-content-center justify-content-center img-game" >
                
@@ -103,9 +103,9 @@ render() {
 
                      {/*Button  */}
              <div className="container mb-3">
-                    <div className="jumbotron col-12 row p-4 row" style={{background: "black",}}>
-                    <button className="btn col-3 mr-2 mb-2 btn-danger text-white" onClick={() => this.setState({HienThi: true})} >Thông tin game</button>
-                    <button className="btn col-3 mb-2  text-white" onClick={() => this.setState({HienThi: false})}  style={{background: "rgba(255, 255, 255, 0.1)"}}>Cấu hình yêu cầu</button>
+                    <div className="jumbotron row p-4 row" style={{background: "black",}}>
+                    <button className="btn col-xl-3 col-lg-3 col-md-3 col-5 col-sm-5 mr-2 mb-2 btn-danger text-white" onClick={() => this.setState({HienThi: true})} >Thông tin game</button>
+                    <button className="btn col-xl-3 col-lg-3 col-md-3 col-6 col-sm-5 mb-2  text-white" onClick={() => this.setState({HienThi: false})}  style={{background: "rgba(255, 255, 255, 0.1)"}}>Cấu hình yêu cầu</button>
                         </div>
             </div>
 
