@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
 import LienHe from "../pages/LienHe";
+import ChiTietSP from "../pages/chitietSP/ChiTietSP";
 NavigationURL.propTypes = {};
 
 function NavigationURL(props) {
@@ -16,6 +17,9 @@ function NavigationURL(props) {
         </Route>
         <Route exact path="/lien-he">
           <LienHe />
+        </Route>
+        <Route exact path="/chi-tiet">
+          <ChiTietSP />
         </Route>
         <Route path="/dang-nhap">
           <LogIn />
