@@ -52,3 +52,15 @@
     -webkit-line-clamp:4; /* number of lines to show */
     -webkit-box-orient: vertical;
 }
+
+.text-ykien {
+    font-size: 13;
+}
+
+@media (min-width: 412px) {
+    
+    .text-ykien {
+        font-size: 15;
+    }
+
+}
