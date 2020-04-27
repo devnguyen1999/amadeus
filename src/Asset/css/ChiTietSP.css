@@ -1,0 +1,66 @@
+.eclipse-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+.text-cauhinh {
+    color: rgb(165, 165, 165);
+    font-size: 18px;
+}
+.text {
+    margin: 0 !important;
+}
+.gia {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 57px;
+}
+.img-game {
+    padding: 0 !important;
+   margin-bottom: 0 !important;
+}
+
+.img-game-2 {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.hide {
+    visibility: hidden;
+}
+ 
+@media (min-width: 1200px) {
+    .gia {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 57px;
+    }
+    
+
+}
+
+
+.eclipse-info {
+    overflow:hidden;
+    text-overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp:4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.text-ykien {
+    font-size: 13;
+}
+
+@media (min-width: 412px) {
+    
+    .text-ykien {
+        font-size: 15;
+    }
+
+}

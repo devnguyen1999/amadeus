@@ -7,6 +7,8 @@ import SignUp from "../pages/SignUp";
 import Cart from "../pages/Cart";
 import Thankfor from "../pages/Thankfor"
 import Checkout from "../pages/Checkout";
+import LienHe from "../pages/LienHe";
+import ChiTietSP from "../pages/chitietSP/ChiTietSP";
 NavigationURL.propTypes = {};
 
 function NavigationURL(props) {
@@ -15,6 +17,12 @@ function NavigationURL(props) {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/lien-he">
+          <LienHe />
+        </Route>
+        <Route exact path="/chi-tiet">
+          <ChiTietSP />
         </Route>
         <Route path="/dang-nhap">
           <LogIn />

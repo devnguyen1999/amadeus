@@ -1,0 +1,89 @@
+.page-header {
+    background-color: #B2AFAB;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    max-height: 999px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.section-dark {
+     background-color: #0b1011; }
+
+.box-under {
+
+    background: rgba(0, 0, 0, 0.5) !important;
+    opacity: 0.6;
+}
+
+.box {
+   
+    background: rgba(255, 255, 255, 0.5);
+   
+}
+
+.img-icon {
+   
+   width: 0px;
+   height: 0px;
+}
+.Text-icon {
+  padding: 0;
+  margin-bottom: 0 !important;
+}
+.Title {
+    
+    font-family: Righteous;
+font-style: normal;
+font-weight: normal;
+font-size: 64px;
+line-height: 79px;
+}
+
+.ThongTin {
+ 
+    font-family: Risque;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+   
+
+    color: #B2BEC3;
+}
+.span-text {
+    color: #74B9FF;
+}
+
+.Text-fgp {
+   
+    font-family: Risque;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+@media (min-width: 639px) {
+
+    .Text-fgp {
+   
+        font-family: Risque;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .img-icon {
+        
+        width: 50px;
+        height: 50px;
+     }
+
+}
