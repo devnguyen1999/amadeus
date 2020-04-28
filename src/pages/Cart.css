@@ -1,10 +1,10 @@
 
-.page-header-cart {
+.page-header {
     background-color: #B2AFAB;
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
-    max-height: 1300px;
+    max-height: 1500px;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -188,6 +188,9 @@
     .coupon{
         display: contents;
     }
+    .row-cart{
+        margin-top: 75px;
+    }
 }
 @media(min-width:992px){
     .coupon{
@@ -197,6 +200,12 @@
 @media(max-width:1200px){
     .table-bill{
         height: 400px;
+    }
+    .form-control-cart{
+        max-width: 32px;
+    }
+    .btn-quantity{
+        max-width: 32px;
     }
 }
 @media(max-width:768px){

@@ -5,12 +5,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 Cart.propTypes = {};
 function Cart(props){
     return(
-        <div  className="page-header-cart section-dark" style={{ 
+        <div  className="page-header section-dark" style={{ 
           backgroundImage:
             "url(https://wallpapercave.com/wp/OY4AvGh.jpg)"
         }}>
       <div className="container">
-        <div className="row">
+        <div className="row-cart row">
             <div className="col-lg-9">
               <div className="cart-retangle">
                 <form>
@@ -40,9 +40,9 @@ function Cart(props){
                           <td><h5 className="text-black">500.000</h5></td>
                           <td>
                           <div className="input-group input-group-cart mb3">
-                              <a className="btn-cart btn-outline-cart">-</a>
+                              <a className="btn-cart btn-quantity btn-outline-cart">-</a>
                               <div className="form-control form-control-cart text-center">1</div>
-                              <a className="btn-cart btn-outline-cart">+</a>
+                              <a className="btn-cart btn-quantity btn-outline-cart">+</a>
                             </div>
                           </td>
                           <td><h5 className="text-black">500.000</h5></td>
@@ -61,9 +61,9 @@ function Cart(props){
                           <td><h5 className="text-black">500.000</h5></td>
                           <td>
                             <div className="input-group input-group-cart mb3">
-                              <a className="btn-cart btn-outline-cart">-</a>
+                              <a className="btn-cart btn-quantity btn-outline-cart">-</a>
                               <div class="form-control form-control-cart text-center">1</div>
-                              <a class="btn-cart btn-outline-cart">+</a>
+                              <a class="btn-cart btn-quantity btn-outline-cart">+</a>
                             </div>
                           </td>
                           <td><h5 className="text-black">500.000</h5></td>
@@ -82,9 +82,9 @@ function Cart(props){
                           <td><h5 className="text-black">500.000</h5></td>
                           <td>
                             <div className="input-group input-group-cart mb3">
-                                <a className="btn-cart btn-outline-cart">-</a>
+                                <a className="btn-cart btn-quantity btn-outline-cart">-</a>
                                 <div class="form-control form-control-cart text-center">1</div>
-                                <a class="btn-cart btn-outline-cart">+</a>
+                                <a class="btn-cart btn-quantity btn-outline-cart">+</a>
                               </div>
                           </td>
                           <td><h5 className="text-black">500.000</h5></td>
@@ -95,7 +95,7 @@ function Cart(props){
                 </form>
                 </div>
                 <div className="row col-lg-12 coupon">
-                    <input type="text" className="form-control form-control-cart col-lg-6" placeholder="Nhập mã giảm giá"/>
+                    <input type="text" className="form-control col-lg-6" placeholder="Nhập mã giảm giá"/>
                     <button className="btn-cart btn-coupon col-lg-3">Áp dụng</button>
                   </div>
                 <a href="#" className="text-red">Tiếp tục mua hàng</a>
