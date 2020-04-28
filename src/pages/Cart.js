@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 Cart.propTypes = {};
 function Cart(props){
     return(
-        <div  className="page-header section-dark" style={{ 
+        <div  className="page-header-cart section-dark" style={{ 
           backgroundImage:
             "url(https://wallpapercave.com/wp/OY4AvGh.jpg)"
         }}>
@@ -14,7 +14,7 @@ function Cart(props){
             <div className="col-lg-9">
               <div className="cart-retangle">
                 <form>
-                  <div>
+                  <div className="cart-overflow">
                     <table className="table table-cart">
                       <thead>
                         <tr>
@@ -41,8 +41,8 @@ function Cart(props){
                           <td>
                           <div className="input-group input-group-cart mb3">
                               <a className="btn-cart btn-outline-cart">-</a>
-                              <div class="form-control form-control-cart text-center">1</div>
-                              <a class="btn-cart btn-outline-cart">+</a>
+                              <div className="form-control form-control-cart text-center">1</div>
+                              <a className="btn-cart btn-outline-cart">+</a>
                             </div>
                           </td>
                           <td><h5 className="text-black">500.000</h5></td>
