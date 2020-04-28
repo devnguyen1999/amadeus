@@ -23,7 +23,7 @@ render() {
           <div className="jumbotron hinhnen p-0">
                 <div className="container-fluid d-flex align-items-center justify-content-center flex-column" style={{height: '100%',backgroundColor:"rgba(60, 60, 60, 0.5)"}}>
                 
-                <img src="https://static.zerochan.net/Rory.Mercury.full.2834327.jpg" className="img-fluid rounded-circle p-0" width="120" height="100" />
+                <img src="https://static.zerochan.net/Rory.Mercury.full.2834327.jpg" alt="" className="img-fluid rounded-circle p-0" width="120" height="100" />
                 <p className="text-light text-name mt-3">Thanh Linh Nguyễn</p>
                 </div>
           </div>
