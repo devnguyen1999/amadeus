@@ -11,8 +11,8 @@ function LienHe(props) {
         backgroundImage:
           "url(" + require("../Asset/Img/wl.jpg") + ")"
       }}
-    >
-        <div className="filter" />
+    > 
+
         <div className="justify-content-center">
 
         <h2 className="text-center text-white Title">Amadeus</h2>
@@ -20,20 +20,20 @@ function LienHe(props) {
                 <h3 className="text-center ThongTin">Thông Tin Liên Hệ</h3>
                 <div className="card-body">
 
-                    <div className="row no-gutters align-items-center p-3 bg-light m-2 box">
+                    <div className="row no-gutters align-items-center p-3 m-2 box">
         
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/600px-Facebook-icon-1.png" className="img-icon"></img>
-                                <p className="Text-icon col ml-2 Text-fgp">Facebook: <span className="span-text">https://www.facebook.com/</span></p>
+                                <p className="Text-icon col ml-2 Text-fgp text-light">Facebook: <span className="span-text">https://www.facebook.com/</span></p>
                     </div>
-                    <div className="row no-gutters align-items-center p-3 bg-light m-2">
+                    <div className="row no-gutters align-items-center p-3 m-2 box">
         
                                 <img src="https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/gmail.png" className="img-icon"></img>
-                                <p className="Text-icon col ml-2 Text-fgp">Gmail:  <span className="span-text">Amadeus-Key@gmail.com</span></p>
+                                <p className="Text-icon col ml-2 Text-fgp text-light">Gmail:  <span className="span-text">Amadeus-Key@gmail.com</span></p>
                     </div>
-                    <div className="row no-gutters align-items-center p-3 bg-light m-2">
+                    <div className="row no-gutters align-items-center p-3  m-2 box">
         
                                  <img src="https://img.favpng.com/15/7/19/call-icon-phone-icon-telephone-icon-png-favpng-nPU5MiPqKftnfQK92YNYj85uP.jpg" className="img-icon"></img>
-                                   <p className="Text-icon col ml-2 Text-fgp">Hotline:  <span className="span-text">19001001</span></p>
+                                   <p className="Text-icon col ml-2 Text-fgp text-light">Hotline:  <span className="span-text">19001001</span></p>
                      </div>
                                           
                 </div>
@@ -44,7 +44,7 @@ function LienHe(props) {
 
         </div>
      
-
+        
     </div>
   );
 }

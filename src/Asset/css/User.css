@@ -1,0 +1,29 @@
+.hinhnen {
+    height: 400px;
+    background-image: url(../../Asset/Img/wl.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.text-name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+
+@media (min-width: 336px) {
+
+    .text-name {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+}
