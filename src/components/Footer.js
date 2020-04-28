@@ -68,7 +68,7 @@ function Footer(props) {
             </div>
           </div>
         </div>
-
+// thanh ngu qua
         <div className="py-5">
           <p className="m-0 text-center text-white">Refund Shop 2020</p>
         </div>
