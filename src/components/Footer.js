@@ -14,7 +14,7 @@ function Footer(props) {
               <div className="col-lg-4 d-flex flex-column">
                 <a className="footer-logo d-flex flex-row my-2" to="#">
                   <img
-                    src="https://i.ya-webdesign.com/images/avengers-a-logo-png-3.png"
+                    src="https://i7.pngguru.com/preview/17/1024/947/steins-gate-rintarou-okabe-kurisu-makise-chaos-head-others.jpg"
                     className="img-fluid mr-3"
                     alt="Logo"
                   />

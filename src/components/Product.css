@@ -8,6 +8,9 @@
   .card-body .card-text{
     font-size: large;
   }
+  .card-body .btn{
+    font-size: 2em !important;
+  }
   .card-body .btn:hover{
     color: #ffc107;
   }

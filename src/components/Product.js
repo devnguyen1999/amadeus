@@ -61,7 +61,7 @@ function Product(props) {
             </span>
             <i
               type="button"
-              className="btn fas fa-cart-plus fa-2x text-white mr-3 ml-auto my-auto px-0 pt-0"
+              className="btn fas fa-cart-plus text-white mr-3 ml-auto my-auto px-0 pt-0"
             ></i>
           </div>
         </div>

@@ -12,6 +12,7 @@ function App() {
       <Router>
         <Header />
         <NavigationURL />
+        <Footer />
       </Router>
     </div>
   );

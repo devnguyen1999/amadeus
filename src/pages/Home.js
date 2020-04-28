@@ -1,6 +1,5 @@
 import React from "react";
 import Product from "../components/Product";
-import Footer from "../components/Footer";
 import data from "../product-data.json";
 import "./Home.css";
 Home.propTypes = {};
@@ -76,7 +75,6 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

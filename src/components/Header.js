@@ -13,7 +13,7 @@ function Header(props) {
             <div className="col-lg-2 p-0 d-flex">
               <Link className="navbar-brand" to="/">
                 <img
-                  src="https://i.ya-webdesign.com/images/avengers-a-logo-png-3.png"
+                  src="https://i7.pngguru.com/preview/17/1024/947/steins-gate-rintarou-okabe-kurisu-makise-chaos-head-others.jpg"
                   className="img-fluid mr-3"
                   alt="Logo"
                 />
