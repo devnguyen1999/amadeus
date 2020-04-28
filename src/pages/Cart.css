@@ -1,5 +1,5 @@
 
-.page-header {
+.page-header-cart {
     background-color: #B2AFAB;
     background-position: center center;
     background-size: cover;
@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center; }
 
-.section-dark {
+.section-dark-cart {
      background-color: #0b1011; }
 .cart-retangle{
 	left: 249px;
@@ -55,10 +55,11 @@
 
 	color: #FFFFFF;
 }
+
 .table-cart th{
     text-align: center;
     align-items: center;
-    border-top: solid transparent;
+    border-top: solid transparent !important;
 }
 .table-cart td{
     text-align: center;
@@ -144,7 +145,7 @@
     border-color: #000000;
 }
 .btn-checkout{
-    background-color: #D63031;
+    background-color: #D63031 !important;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     position: relative;
@@ -186,7 +187,7 @@
 }
 @media(max-width:992px){
     .coupon{
-        display: contents;
+        display: contents !important;
     }
     .row-cart{
         margin-top: 75px;
@@ -194,7 +195,7 @@
 }
 @media(min-width:992px){
     .coupon{
-        display: flex;
+        display: flex !important;
     }
 }
 @media(max-width:1200px){
@@ -206,10 +207,5 @@
     }
     .btn-quantity{
         max-width: 32px;
-    }
-}
-@media(max-width:768px){
-    .table-cart{
-        max-width: 540px;
     }
 }

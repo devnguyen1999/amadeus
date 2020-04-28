@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 Cart.propTypes = {};
 function Cart(props){
     return(
-        <div  className="page-header section-dark" style={{ 
+        <div  className="page-header-cart section-dark-cart" style={{ 
           backgroundImage:
             "url(https://wallpapercave.com/wp/OY4AvGh.jpg)"
         }}>
