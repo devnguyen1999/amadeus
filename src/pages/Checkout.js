@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Checkout.css";
+import { Link } from "react-router-dom";
 Checkout.propTypes = {};
 function Checkout(props){
     return(
@@ -68,7 +69,9 @@ function Checkout(props){
                   </div>
                 </div>
                 <div>
+                <Link to="cam-on">
                 <button className="btn-checkout btn col-lg-12">Thanh toán</button>
+                </Link>
                 </div>
               </div>
             </div>

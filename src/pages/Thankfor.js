@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Thankfor.css";
+import { Link } from "react-router-dom";
 Thankfor.propTypes = {};
 function Thankfor(props){
     return(
@@ -14,7 +15,9 @@ function Thankfor(props){
                 <h2 className="h2-thankfor">Cảm ơn bạn đã mua hàng</h2>
             </div>
             <div className="row row-thankfor">
+                <Link className="row row-thankfor col-lg-6" to="/">
                 <button className="btn-continue btn col-lg-6">Tiếp tục mua hàng</button>
+                </Link>
             </div>
           </div>
         </div>
