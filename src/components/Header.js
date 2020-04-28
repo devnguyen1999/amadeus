@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import PropTypes from "prop-types";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 Header.propTypes = {};
 
@@ -12,11 +12,11 @@ function Header(props) {
             <div className="col-lg-2 p-0 d-flex">
               <Link className="navbar-brand" to="/">
                 <img
-                  src="https://legion.lenovo.com/assets/images/team/r2F6RMUvaIMLkJHe.png"
+                  src="https://refundtv.com/wp-content/uploads/2019/06/Refund_Gaming.png"
                   className="img-fluid mr-3"
                   alt="Logo"
                 />
-                Amadeus
+                Refund Shop
               </Link>
               <button
                 className="navbar-toggler hidden-lg-up ml-auto"
@@ -112,42 +112,46 @@ function Header(props) {
               </div>
             </div>
             <div
-              className="col-lg-1 p-0 collapse navbar-collapse"
+              className="col-lg-1 collapse navbar-collapse"
               id="collapsibleNavId"
             >
-              <div className="navbar-nav nav-item ml-auto">
-                <Link className="" to="/gio-hang">
-                <a className="nav-link mr-auto" href="#">
-                  <i className="far fa-shopping-cart    " />
-                </a>
-                </Link>
-                {/* <a className="nav-link ml-auto" href="#">
-                  <i className="far fa-search    " />
-                </a> */}
-                <a
-                  className="nav-link ml-auto"
-                  data-toggle="collapse"
-                  href="#collapseExample"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseExample"
-                >
-                  <i className="far fa-search    " />
-                </a>
-              </div>
+              <ul className="navbar-nav mr-auto">
+                <li className="nav-item dropdown">
+                  <Link className="nav-link mr-auto" to="/gio-hang">
+                    <i className="far fa-shopping-cart    " />
+                  </Link>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link"
+                    href="#"
+                    id="dropdownId"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i className="far fa-search    " />
+                  </a>
+                  <div className="dropdown-menu dropdown-menu-right search-box" aria-labelledby="dropdownId">
+                    <form className="input-group form-inline my-2 my-lg-0 w-100">
+                      <input
+                        className="form-control mr-sm-2"
+                        type="text"
+                        placeholder="Nhập tên sản phẩm muốn tìm kiếm..."
+                      />
+                      <button
+                        className="btn btn-outline-success my-2 my-sm-0"
+                        type="submit"
+                      >
+                        Tìm kiếm
+                      </button>
+                    </form>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </nav>
-        <div className="collapse" id="collapseExample">
-          <div className="container">
-            <div className="card card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life
-              accusamus terry richardson ad squid. Nihil anim keffiyeh
-              helvetica, craft beer labore wes anderson cred nesciunt sapiente
-              ea proident.
-            </div>
-          </div>
-        </div>
       </header>
     </div>
   );
