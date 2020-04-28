@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./Header.css";
 Header.propTypes = {};
 
 function Header(props) {
@@ -12,11 +13,11 @@ function Header(props) {
             <div className="col-lg-2 p-0 d-flex">
               <Link className="navbar-brand" to="/">
                 <img
-                  src="https://refundtv.com/wp-content/uploads/2019/06/Refund_Gaming.png"
+                  src="https://i.ya-webdesign.com/images/avengers-a-logo-png-3.png"
                   className="img-fluid mr-3"
                   alt="Logo"
                 />
-                Refund Shop
+                Amadeus
               </Link>
               <button
                 className="navbar-toggler hidden-lg-up ml-auto"

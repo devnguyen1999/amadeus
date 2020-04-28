@@ -1,0 +1,38 @@
+[
+    {
+        "id":"1",
+        "prImg":"https://www.wykop.pl/cdn/c3201142/comment_ad6nE26h717bOaDBZvzNkrNcJp8mGHF8.jpg",
+        "prTitle":"Grand Theft Auto V",
+        "prPrice":"485.000VND"
+    },
+    {
+        "id":"2",
+        "prImg":"https://i2.wp.com/www.thexboxhub.com/wp-content/uploads/2018/04/Sea-of-Thieves-Final-Beta.jpg?fit=1920%2C1080&ssl=1",
+        "prTitle":"Sea of Thieves",
+        "prPrice":"187.000VND"
+    },
+    {
+        "id":"3",
+        "prImg":"https://zuu.vn/wp-content/uploads/2018/03/zuu.vn-pubg-la-gi.jpg",
+        "prTitle":"PlayerUnknown’s Battlegrounds",
+        "prPrice":"169.000VND"
+    },
+    {
+        "id":"4",
+        "prImg":"https://i.pinimg.com/originals/96/44/41/96444117271c9ed7a0ad188aff850963.jpg",
+        "prTitle":"ARK: Survival Evolved",
+        "prPrice":"388.000VND"
+    },
+    {
+        "id":"5",
+        "prImg":"https://www.hiepsibaotap.com/wp-content/uploads/2018/05/batman-arkham-knight.jpg",
+        "prTitle":"Batman™: Arkham Knight",
+        "prPrice":"187.000VND"
+    },
+    {
+        "id":"6",
+        "prImg":"https://cdn-ext.fanatical.com/production/product/original/a7f9be3b-a05e-45f2-8d19-8151cc7d4144.jpeg?w=1200",
+        "prTitle":"Conan Exiles",
+        "prPrice":"318.000VND"
+    }
+]

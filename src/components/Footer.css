@@ -1,0 +1,23 @@
+.footer-content{
+    color: white;
+    display: block;
+    position: relative;
+  }
+  .footer-logo img{
+    width: 3rem;
+  }
+  .footer-space{
+    width: 0;
+    height: 3rem;
+  }
+  .footer-content::after {
+    content: "";
+    background-image: url(https://craigdodson.files.wordpress.com/2015/12/bf4bannder.jpg);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }

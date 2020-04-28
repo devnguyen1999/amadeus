@@ -1,4 +1,5 @@
 import React from "react";
+import "./Product.css";
 
 const toSlug = (str) => {
   // Chuyển hết sang chữ thường
@@ -32,7 +33,7 @@ const toSlug = (str) => {
 function Product(props) {
   return (
     <div className="col-sm-12 col-md-6 col-lg-4 my-2">
-      <div className="card">
+      <div className="card bg-dark text-white">
         <a
           href={
             "/san-pham/" + toSlug(props.prTitle) + "-" + props.prId + ".html"
@@ -60,7 +61,7 @@ function Product(props) {
             </span>
             <i
               type="button"
-              className="btn fas fa-cart-plus fa-2x mr-3 ml-auto my-auto px-0 pt-0"
+              className="btn fas fa-cart-plus fa-2x text-white mr-3 ml-auto my-auto px-0 pt-0"
             ></i>
           </div>
         </div>

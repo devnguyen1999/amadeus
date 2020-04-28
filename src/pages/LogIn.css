@@ -6,7 +6,7 @@
   width: 25rem;
 }
 .background{
-    max-height: 50rem;
+    height: 100vh;
     object-position: center;
     opacity: 1;
     overflow-x: hidden;

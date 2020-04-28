@@ -1,0 +1,13 @@
+.card-title a{
+    height: 4rem;
+    color: white;
+  }
+  .card-title a:hover{
+    text-decoration: none;
+  }
+  .card-body .card-text{
+    font-size: large;
+  }
+  .card-body .btn:hover{
+    color: #ffc107;
+  }

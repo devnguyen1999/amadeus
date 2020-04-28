@@ -1,0 +1,29 @@
+nav{
+    background-color: black;
+    opacity: 0.85;
+  }
+  .navbar-brand img{
+    width: 2rem;
+  }
+  .col-lg-3 .nav-item{
+    flex-direction: row;
+  }
+  .col-lg-1 .nav-item{
+    flex-direction: row;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.8); 
+  }
+  .navbar-dark .navbar-nav .nav-link:active {
+    color: rgba(255,255,255,0.6); 
+  }
+  .search-box{
+    width: 75vw;
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+  }
+  .search-box input{
+  
+  }
+  .search-box button{
+  }
