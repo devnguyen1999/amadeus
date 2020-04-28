@@ -8,7 +8,7 @@ import Cart from "../pages/Cart";
 import Thankfor from "../pages/Thankfor"
 import Checkout from "../pages/Checkout";
 import LienHe from "../pages/LienHe";
-import User from "../pages/User/UserPage.js";
+import NguoiDung from "../pages/User/NguoiDung.js";
 import ChiTietSP from "../pages/chitietSP/ChiTietSP";
 NavigationURL.propTypes = {};
 
@@ -22,8 +22,8 @@ function NavigationURL(props) {
         <Route exact path="/lien-he">
           <LienHe />
         </Route>
-        <Route exact path="/user">
-          <User />
+        <Route exact path="/nguoi-dung">
+          <NguoiDung />
         </Route>
         <Route exact path="/chi-tiet">
           <ChiTietSP />
