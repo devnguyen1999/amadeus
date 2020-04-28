@@ -67,9 +67,9 @@ export default class ThongTin extends React.Component{
             <div className="jumbotron" style={{background: "rgba(60, 60, 60, 0.5)"}} id="Change">
             <p className="text-light" style={{fontSize:"25px"}}>Thay đổi mật khẩu: </p>
                 
-            <input type="password" class="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 " id="PassOld" placeholder="Nhập mật khẩu cũ" style={{background: "rgba(255, 255, 255, 0.1)"}} />
-            <input type="password" class="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew" placeholder="Nhập mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
-            <input type="password" class="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="password" className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 " id="PassOld" placeholder="Nhập mật khẩu cũ" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="password" className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew" placeholder="Nhập mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="password" className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
          
             <button className="btn col-xl-3 col-lg-3 col-md-3 col-5 col-sm-5 mr-2 mb-2 mt-5 btn-danger text-white  hihihi " >Lưu Thay đổi</button>
             <button className="btn col-xl-3 col-lg-3 col-md-3 col-6 col-sm-5 mb-2 mt-5 text-white     hihihi"  style={{background: "rgba(255, 255, 255, 0.1)"}}>Hủy</button>
@@ -83,24 +83,24 @@ export default class ThongTin extends React.Component{
             <p className="text-light" style={{fontSize:"25px"}}>Thay đổi Thông Tin: </p>
 
             <p className="text-cauhinh">+ Họ và Tên:</p>  
-            <input type="text" class="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 " id="PassOld" placeholder="Họ và tên" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="text"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 " id="PassOld" placeholder="Họ và tên" style={{background: "rgba(255, 255, 255, 0.1)"}} />
             
             <p className="text-cauhinh">+ Ngày sinh:  </p>
-            <input type="date" class="form-control  col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="Date" placeholder="DD/MM/YY" style={{background: "rgba(255, 255, 255, 0.1)"}} />    
+            <input type="date"  className="form-control  col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="Date" placeholder="DD/MM/YY" style={{background: "rgba(255, 255, 255, 0.1)"}} />    
 
 
                         
             <p className="text-cauhinh">+ Số CMND:  </p>
-            <input type="text" class="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="text"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
          
             <p className="text-cauhinh">+ Số điện thoại:  </p>
-            <input type="text" class="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="text"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
          
             <p className="text-cauhinh">+ Email đăng kí:  </p>
-            <input type="email" class="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="email"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
 
             <p className="text-cauhinh">+ Địa chỉ: </p>
-            <input type="text" class="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="text"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
 
             <button className="btn col-xl-3 col-lg-3 col-md-3 col-5 col-sm-5 mr-2 mb-2 mt-5 btn-danger text-white  hihihi " >Lưu Thay đổi</button>
             <button className="btn col-xl-3 col-lg-3 col-md-3 col-6 col-sm-5 mb-2 mt-5 text-white     hihihi"  style={{background: "rgba(255, 255, 255, 0.1)"}}>Hủy</button>
