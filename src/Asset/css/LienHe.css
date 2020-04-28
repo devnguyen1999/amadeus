@@ -1,5 +1,5 @@
 .page-header {
-    background-color: #B2AFAB;
+    background-color: rgba(60, 60, 60, 0.2);
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
@@ -13,17 +13,17 @@
     justify-content: center; }
 
 .section-dark {
-     background-color: #0b1011; }
+     background-color: rgba(60, 60, 60, 0.5); }
 
 .box-under {
 
-    background: rgba(0, 0, 0, 0.5) !important;
-    opacity: 0.6;
+    background: rgba(60, 60, 60, 0.5) !important;
+    
 }
 
 .box {
    
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.267) !important;
    
 }
 
@@ -38,9 +38,9 @@
 }
 .Title {
     
-    font-family: Righteous;
+font-family: Righteous;
 font-style: normal;
-font-weight: normal;
+font-weight: bold;
 font-size: 64px;
 line-height: 79px;
 }

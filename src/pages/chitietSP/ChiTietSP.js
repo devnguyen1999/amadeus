@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "../../Asset/css/ChiTietSP.css";
 import "../../Asset/css/bootstrap.css";
 import DieuHuong from "./ThongTin.js"
@@ -80,7 +79,7 @@ render() {
 
                 <div className="col-xl-3 col-lg-3 col-md-3 align-content-center justify-content-center img-game" >
                
-                <img src="https://steamcdn-a.akamaihd.net/steam/apps/524220/header.jpg?t=1582673822" className="img-game-2 p-3"/>
+                <img src="https://steamcdn-a.akamaihd.net/steam/apps/524220/header.jpg?t=1582673822"  alt="" className="img-game-2 p-3"/>
                
                 </div>
 

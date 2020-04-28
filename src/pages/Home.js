@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Product from "../components/Product";
-
+import data from "../product-data.json";
+import "./Home.css";
 Home.propTypes = {};
 
 function Home(props) {
@@ -55,25 +55,22 @@ function Home(props) {
           <span className="sr-only">Next</span>
         </a>
       </div>
-      {/* <div className="container-fluid">
-        <div className="row mx-2">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-        </div>
-      </div> */}
-      <div className="container">
-        <div className="row">
+      <div className="container-fluid">
+        <div className="row mx-5">
           <div className="col-lg-3"></div>
           <div className="col-lg-9">
             <div className="row my-3">
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
+              {data.map((value, key) => {
+                return (
+                  <Product
+                    key={key}
+                    prId={value.id}
+                    prImg={value.prImg}
+                    prTitle={value.prTitle}
+                    prPrice={value.prPrice}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>

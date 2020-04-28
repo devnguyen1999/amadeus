@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import $ from 'jquery';
 import Rating from 'material-ui-rating'
 import "../../Asset/css/ChiTietSP.css";
@@ -96,7 +96,7 @@ Utilise the Pod Support System to Assist In and Outside of Battle – Pods can a
                 {/*Người bình luan 1 */}
                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 row">
                     <div className="col-xl-2 col-lg-2 col-md-2  justify-content-center">
-                       <img src="https://static.zerochan.net/Rory.Mercury.full.2834327.jpg" className="img-fluid" width="90" height="90"></img>
+                       <img src="https://static.zerochan.net/Rory.Mercury.full.2834327.jpg" alt="" className="img-fluid" width="90" height="90"></img>
                     </div>
                     <div className="col-xl-10 col-lg-10 col-md-10  column">
                         <p className="text-warning mb-0" style={{fontWeight:"bold"}}>Thanh Linh Nguyễn</p>
@@ -109,7 +109,7 @@ Utilise the Pod Support System to Assist In and Outside of Battle – Pods can a
                   {/*Người bình luan 2 */}
                   <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 row">
                     <div className="col-xl-2 col-lg-2 col-md-2  justify-content-center">
-                       <img src="https://cdn.myanimelist.net/s/common/uploaded_files/1460982628-1bff3e4baca0b051fdb9eb6a2c664c5d.jpeg" className="img-fluid" width="90" height="90"></img>
+                       <img src="https://cdn.myanimelist.net/s/common/uploaded_files/1460982628-1bff3e4baca0b051fdb9eb6a2c664c5d.jpeg" alt="" className="img-fluid" width="90" height="90"></img>
                     </div>
                     <div className="col-xl-10 col-lg-10 col-md-10 column">
                         <p className="text-warning mb-0" style={{fontWeight:"bold"}}>Lelouch</p>
