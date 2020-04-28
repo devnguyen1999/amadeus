@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Cart.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 Cart.propTypes = {};
 function Cart(props){
     return(
@@ -126,7 +127,9 @@ function Cart(props){
                   </div>
               </div>
               <div>
+              <Link className="" to="/thanh-toan">
                 <button className="btn-checkout btn-cart col-lg-12">Tiến hành thanh toán</button>
+              </Link>
               </div>
             </div>
           </div>
