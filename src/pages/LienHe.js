@@ -1,7 +1,7 @@
 import React from "react";
 import "../Asset/css/LienHe.css";
 import "../Asset/css/bootstrap.css";
-
+import logo from '../Asset/Img/Amadeus.png';
 LienHe.propTypes = {};
 
 function LienHe(props) {
@@ -13,8 +13,13 @@ function LienHe(props) {
     > 
 
         <div className="justify-content-center">
-
-        <h2 className="text-center text-white Title">Amadeus</h2>
+          <div className="justify-content-center d-flex" style={{width:'100%'}}>
+            <img
+                  src={logo}
+                  className="img-fluid col-xd-10" width={200} height={150}
+                  alt="Logo"
+                />
+              </div>
         <div className="col-xd-10 pl-5 pr-5 p-4 box-under">
                 <h3 className="text-center ThongTin">Thông Tin Liên Hệ</h3>
                 <div className="card-body">

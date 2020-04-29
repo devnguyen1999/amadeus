@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Footer.css";
+import logo from '../Asset/Img/Amadeus.png';
 
 Footer.propTypes = {};
 
@@ -14,7 +15,7 @@ function Footer(props) {
               <div className="col-lg-4 d-flex flex-column">
                 <a className="footer-logo d-flex flex-row my-2" to="#">
                   <img
-                    src="https://i7.pngguru.com/preview/17/1024/947/steins-gate-rintarou-okabe-kurisu-makise-chaos-head-others.jpg"
+                     src={logo}
                     className="img-fluid mr-3"
                     alt="Logo"
                   />
