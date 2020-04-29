@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
 import Cart from "../pages/Cart";
-import Thankfor from "../pages/Thankfor"
+import Thankfor from "../pages/Thankfor";
 import Checkout from "../pages/Checkout";
 import LienHe from "../pages/LienHe";
 import NguoiDung from "../pages/User/NguoiDung.js";
@@ -47,5 +47,4 @@ function NavigationURL(props) {
     </div>
   );
 }
-
 export default NavigationURL;

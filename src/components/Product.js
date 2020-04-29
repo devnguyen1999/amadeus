@@ -1,7 +1,7 @@
 import React from "react";
 import "./Product.css";
 
-const toSlug = (str) => {
+const toSlug = str => {
   // Chuyển hết sang chữ thường
   str = str.toLowerCase();
 
@@ -45,11 +45,13 @@ function Product(props) {
           <div className="card-title m-0 p-0 d-flex flex-column">
             <a
               href={
-                "/san-pham/" +
-                toSlug(props.prTitle) +
-                "-" +
-                props.prId +
-                ".html"
+                //Phap-Tam thời bỏ khúc này chuyển qua khúc dưới
+                // "/san-pham/" +
+                // toSlug(props.prTitle) +
+                // "-" +
+                // props.prId +
+                // ".html"
+                "chi-tiet"
               }
             >
               <h5 className="m-0 my-auto text-center">{props.prTitle}</h5>

@@ -45,7 +45,7 @@ function Header(props) {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Dropdown 1
+                    Thể loại
                   </a>
                   <div className="dropdown-menu" aria-labelledby="dropdownId">
                     <a className="dropdown-item" href="#">
@@ -65,7 +65,7 @@ function Header(props) {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Dropdown 2
+                    Danh mục
                   </a>
                   <div className="dropdown-menu" aria-labelledby="dropdownId">
                     <a className="dropdown-item" href="#">
@@ -85,7 +85,7 @@ function Header(props) {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Dropdown 3
+                    Thông tin
                   </a>
                   <div className="dropdown-menu" aria-labelledby="dropdownId">
                     <a className="dropdown-item" href="#">
@@ -133,7 +133,10 @@ function Header(props) {
                   >
                     <i className="far fa-search    " />
                   </a>
-                  <div className="dropdown-menu dropdown-menu-right search-box" aria-labelledby="dropdownId">
+                  <div
+                    className="dropdown-menu dropdown-menu-right search-box"
+                    aria-labelledby="dropdownId"
+                  >
                     <form className="input-group form-inline my-2 my-lg-0 w-100">
                       <input
                         className="form-control mr-sm-2"

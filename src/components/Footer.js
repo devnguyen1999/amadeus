@@ -71,7 +71,7 @@ function Footer(props) {
         </div>
 
         <div className="py-5">
-          <p className="m-0 text-center text-white">Refund Shop 2020</p>
+          <p className="m-0 text-center text-white">Amadeus Shop 2020</p>
         </div>
       </footer>
     </div>
