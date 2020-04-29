@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./Header.css";
+import logo from '../Asset/Img/Amadeus.png';
+
 Header.propTypes = {};
 
 function Header(props) {
@@ -13,7 +15,7 @@ function Header(props) {
             <div className="col-lg-2 p-0 d-flex">
               <Link className="navbar-brand" to="/">
                 <img
-                  src="https://i7.pngguru.com/preview/17/1024/947/steins-gate-rintarou-okabe-kurisu-makise-chaos-head-others.jpg"
+                  src={logo}
                   className="img-fluid mr-3"
                   alt="Logo"
                 />
