@@ -1,10 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import "./Header.css";
-import logo from '../Asset/Img/Amadeus.png';
-
-Header.propTypes = {};
 
 function Header(props) {
   return (
@@ -15,7 +11,7 @@ function Header(props) {
             <div className="col-lg-2 p-0 d-flex">
               <Link className="navbar-brand" to="/">
                 <img
-                  src={logo}
+                  src="../amadeus.png"
                   className="img-fluid mr-3"
                   alt="Logo"
                 />
@@ -38,7 +34,7 @@ function Header(props) {
               id="collapsibleNavId"
             >
               <ul className="navbar-nav mr-auto">
-                <li className="nav-item dropdown">
+                <li className="nav-item dropdown mr-3">
                   <a
                     className="nav-link dropdown-toggle"
                     href="#"
@@ -51,14 +47,26 @@ function Header(props) {
                   </a>
                   <div className="dropdown-menu" aria-labelledby="dropdownId">
                     <a className="dropdown-item" href="#">
-                      Action 1.1
+                      Chiến thuật
                     </a>
                     <a className="dropdown-item" href="#">
-                      Action 1.2
+                      Đua xe
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Hành động
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Kinh dị
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Phiêu lưu
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Thể thao
                     </a>
                   </div>
                 </li>
-                <li className="nav-item dropdown">
+                <li className="nav-item dropdown mr-3">
                   <a
                     className="nav-link dropdown-toggle"
                     href="#"
@@ -71,14 +79,29 @@ function Header(props) {
                   </a>
                   <div className="dropdown-menu" aria-labelledby="dropdownId">
                     <a className="dropdown-item" href="#">
-                      Action 2.1
+                      CD game PS4
                     </a>
                     <a className="dropdown-item" href="#">
-                      Action 2.2
+                      CD game PS5
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Game trên Battle.net
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Game trên Origin
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Game trên Steam
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Máy chơi game
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Phụ kiện chơi game
                     </a>
                   </div>
                 </li>
-                <li className="nav-item dropdown">
+                <li className="nav-item dropdown mr-3">
                   <a
                     className="nav-link dropdown-toggle"
                     href="#"
@@ -91,12 +114,17 @@ function Header(props) {
                   </a>
                   <div className="dropdown-menu" aria-labelledby="dropdownId">
                     <a className="dropdown-item" href="#">
-                      Action 3.1
+                      Hướng dẫn
                     </a>
                     <a className="dropdown-item" href="#">
-                      Action 3.2
+                      Tin tức
                     </a>
                   </div>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/lien-he">
+                    Liên hệ
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -146,7 +174,7 @@ function Header(props) {
                         placeholder="Nhập tên sản phẩm muốn tìm kiếm..."
                       />
                       <button
-                        className="btn btn-outline-success my-2 my-sm-0"
+                        className="btn btn-outline-success m-0"
                         type="submit"
                       >
                         Tìm kiếm

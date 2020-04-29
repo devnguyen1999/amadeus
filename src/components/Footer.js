@@ -1,9 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Footer.css";
-import logo from '../Asset/Img/Amadeus.png';
-
-Footer.propTypes = {};
 
 function Footer(props) {
   return (
@@ -15,7 +11,7 @@ function Footer(props) {
               <div className="col-lg-4 d-flex flex-column">
                 <a className="footer-logo d-flex flex-row my-2" to="#">
                   <img
-                     src={logo}
+                    src="../amadeus.png"
                     className="img-fluid mr-3"
                     alt="Logo"
                   />
@@ -27,9 +23,8 @@ function Footer(props) {
                 </span>
                 <span className="my-2">Trường Đại học Công nghệ Thông tin</span>
               </div>
-              <div class="col-lg-4 d-flex flex-column">
+              <div className="col-lg-4 d-flex flex-column">
                 <div className="footer-logo d-flex flex-row my-2">
-                  <div className></div>
                   <div className="footer-space"></div>
                   <h5 className="my-auto">Địa chỉ</h5>
                 </div>
@@ -37,7 +32,7 @@ function Footer(props) {
                 <span className="my-2">Khoa Mạng máy tính và Truyền thông</span>
                 <span className="my-2">MMTT2017</span>
               </div>
-              <div class="col-lg-4 d-flex flex-column">
+              <div className="col-lg-4 d-flex flex-column">
                 <div className="footer-logo d-flex flex-row my-2">
                   <div className="footer-space"></div>
                   <h5 className="my-auto">Liên hệ với chúng tôi</h5>
@@ -72,7 +67,7 @@ function Footer(props) {
         </div>
 
         <div className="py-5">
-          <p className="m-0 text-center text-white">Amadeus Shop 2020</p>
+          <p className="m-0 text-center text-white">Amadeus 2020</p>
         </div>
       </footer>
     </div>

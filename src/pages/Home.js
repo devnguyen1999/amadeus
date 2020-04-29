@@ -1,8 +1,8 @@
 import React from "react";
 import Product from "../components/Product";
-import data from "../product-data.json";
+import Footer from "../components/Footer";
+import Data from "../product-data.json";
 import "./Home.css";
-Home.propTypes = {};
 
 function Home(props) {
   return (
@@ -56,15 +56,16 @@ function Home(props) {
         </a>
       </div>
       <div className="container-fluid">
-        <div className="row mx-5">
-          <div className="col-lg-3"></div>
-          <div className="col-lg-9">
-            <div className="row my-3">
-              {data.map((value, key) => {
+        <div className="row">
+          <div className="col-12 col-md-3">
+            
+          </div>
+          <div className="col-12 col-md-9">
+            <div className="row">
+              {Data.map((value, key) => {
                 return (
                   <Product
                     key={key}
-                    prId={value.id}
                     prImg={value.prImg}
                     prTitle={value.prTitle}
                     prPrice={value.prPrice}

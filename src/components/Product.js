@@ -1,7 +1,8 @@
 import React from "react";
+import {Link } from "react-router-dom";
 import "./Product.css";
 
-const toSlug = str => {
+const toSlug = (str) => {
   // Chuyển hết sang chữ thường
   str = str.toLowerCase();
 
@@ -32,38 +33,31 @@ const toSlug = str => {
 
 function Product(props) {
   return (
-    <div className="col-sm-12 col-md-6 col-lg-4 my-2">
-      <div className="card bg-dark text-white">
-        <a
-          href={
-            "/san-pham/" + toSlug(props.prTitle) + "-" + props.prId + ".html"
-          }
-        >
-          <img className="card-img-top px-2 pt-2" src={props.prImg} alt />
-        </a>
-        <div className="card-body px-2 py-0 m-0">
-          <div className="card-title m-0 p-0 d-flex flex-column">
-            <a
-              href={
-                //Phap-Tam thời bỏ khúc này chuyển qua khúc dưới
-                // "/san-pham/" +
-                // toSlug(props.prTitle) +
-                // "-" +
-                // props.prId +
-                // ".html"
-                "chi-tiet"
-              }
-            >
-              <h5 className="m-0 my-auto text-center">{props.prTitle}</h5>
-            </a>
+    <div className="col-6 col-md-4 px-2 my-2">
+      <div className="card bg-dark text-white px-2 pt-2 h-100">
+        <Link to={toSlug(props.prTitle)}>
+          <img className="card-img-top" src={props.prImg} alt="Product"/>
+        </Link>
+        <div className="card-body d-flex flex-column px-2 py-0 m-0">
+          <div className="card-title d-inline-flex w-100 h-100 mx-0 my-2">
+            <div className="card-title-link m-auto text-center">
+              <Link
+                className="d-inline"
+                to={toSlug(props.prTitle)}
+              >
+                <h5 className="text-white p-0 m-0 d-inline">
+                  {props.prTitle}
+                </h5>
+              </Link>
+            </div>
           </div>
-          <div className="d-flex">
+          <div className="d-flex mt-auto">
             <span className="card-text ml-3 mr-auto my-auto">
               {props.prPrice}
             </span>
             <i
               type="button"
-              className="btn fas fa-cart-plus text-white mr-3 ml-auto my-auto px-0 pt-0"
+              className="btn fas fa-cart-plus fa-2x text-white mr-3 ml-auto my-auto px-0 pt-0"
             ></i>
           </div>
         </div>
