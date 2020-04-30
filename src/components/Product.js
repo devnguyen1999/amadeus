@@ -1,6 +1,7 @@
 import React from "react";
 import {Link } from "react-router-dom";
 import "./Product.css";
+import ChiTietSP from "../pages/chitietSP/ChiTietSP";
 
 const toSlug = (str) => {
   // Chuyển hết sang chữ thường

@@ -44,7 +44,7 @@ function NavigationURL(props) {
         <Route path="/cam-on">
           <Thankfor />
         </Route>
-        <Route path="/:slug" children={<ChiTietSP />} />
+        <Route path='/:slug' component={ChiTietSP} />
       </Switch>
     </div>
   );
