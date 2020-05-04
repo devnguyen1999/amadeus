@@ -1,9 +1,9 @@
 import React from "react";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Product.css";
 import ChiTietSP from "../pages/chitietSP/ChiTietSP";
 
-const toSlug = (str) => {
+const toSlug = str => {
   // Chuyển hết sang chữ thường
   str = str.toLowerCase();
 
@@ -37,18 +37,13 @@ function Product(props) {
     <div className="col-6 col-md-4 px-2 my-2">
       <div className="card bg-dark text-white px-2 pt-2 h-100">
         <Link to={toSlug(props.prTitle)}>
-          <img className="card-img-top" src={props.prImg} alt="Product"/>
+          <img className="card-img-top" src={props.prImg} alt="Product" />
         </Link>
         <div className="card-body d-flex flex-column px-2 py-0 m-0">
           <div className="card-title d-inline-flex w-100 h-100 mx-0 my-2">
             <div className="card-title-link m-auto text-center">
-              <Link
-                className="d-inline"
-                to={toSlug(props.prTitle)}
-              >
-                <h5 className="text-white p-0 m-0 d-inline">
-                  {props.prTitle}
-                </h5>
+              <Link className="d-inline" to={toSlug(props.prTitle)}>
+                <h5 className="text-white p-0 m-0 d-inline">{props.prTitle}</h5>
               </Link>
             </div>
           </div>
