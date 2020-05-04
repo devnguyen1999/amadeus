@@ -1,16 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./LogIn.css";
-
-LogIn.propTypes = {};
-
 function LogIn(props) {
   return (
     <div>
       <div className="background">
         <img
           src="https://news.gearvn.com/wp-content/uploads/2019/12/Call-of-Duty-Modern-Warfare-Microtransactions.jpg"
-          alt
+          alt="Background"
         />
       </div>
       <div className="form-group">

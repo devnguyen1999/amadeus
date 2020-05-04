@@ -1,74 +1,252 @@
 [
-  {
-    "id": "1",
-    "prImg": "https://www.wykop.pl/cdn/c3201142/comment_ad6nE26h717bOaDBZvzNkrNcJp8mGHF8.jpg",
-    "prTitle": "Grand Theft Auto V",
-    "prPrice": "485.000VND"
-  },
-  {
-    "id": "2",
-    "prImg": "https://i2.wp.com/www.thexboxhub.com/wp-content/uploads/2018/04/Sea-of-Thieves-Final-Beta.jpg?fit=1920%2C1080&ssl=1",
-    "prTitle": "Sea of Thieves",
-    "prPrice": "187.000VND"
-  },
-  {
-    "id": "3",
-    "prImg": "https://zuu.vn/wp-content/uploads/2018/03/zuu.vn-pubg-la-gi.jpg",
-    "prTitle": "PlayerUnknown’s Battlegrounds",
-    "prPrice": "169.000VND"
-  },
-  {
-    "id": "4",
-    "prImg": "https://i.pinimg.com/originals/96/44/41/96444117271c9ed7a0ad188aff850963.jpg",
-    "prTitle": "ARK: Survival Evolved",
-    "prPrice": "388.000VND"
-  },
-  {
-    "id": "5",
-    "prImg": "https://www.hiepsibaotap.com/wp-content/uploads/2018/05/batman-arkham-knight.jpg",
-    "prTitle": "Batman™: Arkham Knight",
-    "prPrice": "187.000VND"
-  },
-  {
-    "id": "6",
-    "prImg": "https://cdn-ext.fanatical.com/production/product/original/a7f9be3b-a05e-45f2-8d19-8151cc7d4144.jpeg?w=1200",
-    "prTitle": "Conan Exiles",
-    "prPrice": "318.000VND"
-  },
-  {
-    "id": "7",
-    "prImg": "https://www.wykop.pl/cdn/c3201142/comment_ad6nE26h717bOaDBZvzNkrNcJp8mGHF8.jpg",
-    "prTitle": "Grand Theft Auto V",
-    "prPrice": "485.000VND"
-  },
-  {
-    "id": "8",
-    "prImg": "https://i2.wp.com/www.thexboxhub.com/wp-content/uploads/2018/04/Sea-of-Thieves-Final-Beta.jpg?fit=1920%2C1080&ssl=1",
-    "prTitle": "Sea of Thieves",
-    "prPrice": "187.000VND"
-  },
-  {
-    "id": "9",
-    "prImg": "https://zuu.vn/wp-content/uploads/2018/03/zuu.vn-pubg-la-gi.jpg",
-    "prTitle": "PlayerUnknown’s Battlegrounds",
-    "prPrice": "169.000VND"
-  },
-  {
-    "id": "10",
-    "prImg": "https://i.pinimg.com/originals/96/44/41/96444117271c9ed7a0ad188aff850963.jpg",
-    "prTitle": "ARK: Survival Evolved",
-    "prPrice": "388.000VND"
-  },
-  {
-    "id": "11",
-    "prImg": "https://www.hiepsibaotap.com/wp-content/uploads/2018/05/batman-arkham-knight.jpg",
-    "prTitle": "Batman™: Arkham Knight",
-    "prPrice": "187.000VND"
-  },
-  {
-    "id": "12",
-    "prImg": "https://cdn-ext.fanatical.com/production/product/original/a7f9be3b-a05e-45f2-8d19-8151cc7d4144.jpeg?w=1200",
-    "prTitle": "Conan Exiles",
-    "prPrice": "318.000VND"
-  }
+    {
+        "prImg":"https://www.vietboot.com/forum/attachments/pxjffcb-jpg.3741/",
+        "prTitle":"Grand Theft Auto V",
+        "prPrice":"485.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/dqIImhJJr7o/maxresdefault.jpg",
+        "prTitle":"Sea of Thieves",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://cdn.unwire.hk/wp-content/uploads/2019/01/dims-2-1280x720.jpeg",
+        "prTitle":"PlayerUnknown’s Battlegrounds",
+        "prPrice":"169.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/x772q74OdBw/maxresdefault.jpg",
+        "prTitle":"ARK: Survival Evolved",
+        "prPrice":"388.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/PvQdaahZL14/maxresdefault.jpg",
+        "prTitle":"Batman™: Arkham Knight",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/zEaPWMQl_hw/maxresdefault.jpg",
+        "prTitle":"Conan Exiles",
+        "prPrice":"318.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/xDdcINaUJ9I/maxresdefault.jpg",
+        "prTitle":"Call of Duty: Modern Warfare",
+        "prPrice":"452.000VND"
+    },
+    {
+        "prImg":"https://www.desktopbackground.org/download/1280x720/2013/09/15/639383_left-4-dead-2-wallpapers_1920x1080_h.png",
+        "prTitle":"Left 4 Dead 2",
+        "prPrice":"119.000VND"
+    },
+    {
+        "prImg":"https://vignette.wikia.nocookie.net/dont-starve/images/f/f0/DST_A_New_Reign_Release_Poster.jpg/revision/latest?cb=20170527141817&path-prefix=vi",
+        "prTitle":"Don't Starve Together",
+        "prPrice":"164.000VND"
+    },
+    {
+        "prImg":"https://1.bp.blogspot.com/-TmMuEhdG3Bo/XYzbIQeWWPI/AAAAAAAAFow/XDoe7x4BqGYrAIf2CnMAUZTWoeeWov7gACNcBGAsYHQ/s1600/a6c4fd22-11d5-4037-a029-7183a6aabbc3.jpg",
+        "prTitle":"Rust",
+        "prPrice":"308.000VND"
+    },
+    {
+        "prImg":"https://images.cgmagonline.com/wp-content/uploads/2020/03/horror-multiplayer-classic-dead-by-daylight-announced-for-mobile-devices-4-1280x720.jpg",
+        "prTitle":"Dead by Daylight",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/NGsloCp-hdE/maxresdefault.jpg",
+        "prTitle":"Farm Together",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/-M3t4p4H_fI/maxresdefault.jpg",
+        "prTitle":"The Forest",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://i1.wp.com/gamepcfull.com/wp-content/uploads/2020/01/This-War-of-Mine-Free-Download.jpg?fit=1280%2C720&ssl=1",
+        "prTitle":"This War of Mine",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://cs5.pikabu.ru/post_img/big/2015/08/29/1/1440802188_534069256.jpg",
+        "prTitle":"Borderlands 2",
+        "prPrice":"83.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/AHXaxsQBbPU/maxresdefault.jpg",
+        "prTitle":"Sleeping Dogs: Definitive Edition",
+        "prPrice":"414.000VND"
+    },
+    {
+        "prImg":"https://pic4.zhimg.com/v2-a89a962074cc928f022cc422a3190c43.jpg",
+        "prTitle":"No Man's Sky",
+        "prPrice":"478.000VND"
+    },
+    {
+        "prImg":"https://i1.wp.com/www.nintendo-insider.com/wp-content/uploads/2018/08/prison-architect-nintendo-switch-edition-artwork.jpg?fit=1280%2C720&ssl=1",
+        "prTitle":"Prison Architect",
+        "prPrice":"249.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/9kdZriliwS4/maxresdefault.jpg",
+        "prTitle":"Total War: WARHAMMER",
+        "prPrice":"876.000VND"
+    },
+    {
+        "prImg":"https://cdn.shopify.com/s/files/1/0067/8492/files/Batman_Arkham_City_GOTY.jpg?7528943641974014904",
+        "prTitle":"Batman: Arkham City",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://cdn-ext.fanatical.com/production/product/original/033bb714-9374-4143-b9f8-697336259f76.jpeg?w=1200",
+        "prTitle":"Starbound",
+        "prPrice":"164.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/TwIB-OdXMCY/maxresdefault.jpg",
+        "prTitle":"The Witcher® 3: Wild Hunt",
+        "prPrice":"438.000VND"
+    },
+    {
+        "prImg":"https://i1.wp.com/switchaboo.com/wp-content/uploads/2020/03/Saints-Row-4-Switch-Review.jpg?ssl=1",
+        "prTitle":"Saints Row IV",
+        "prPrice":"164.000VND"
+    },
+    {
+        "prImg":"https://1.bp.blogspot.com/-x66pBsExKP4/XYy66Vu-fXI/AAAAAAAAE5E/Xe6MS5yuif40Lhh_LNi9C2tKBsjAgMVgQCNcBGAsYHQ/s1600/maxresdefault.jpg",
+        "prTitle":"Tomb Raider",
+        "prPrice":"414.000VND"
+    },
+    {
+        "prImg":"https://3rd-strike.com/wp-content/uploads/2019/09/Torchlight-II.jpg",
+        "prTitle":"Torchlight II",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/WXD8L3pRTz0/maxresdefault.jpg",
+        "prTitle":"7 Days to Die",
+        "prPrice":"219.000VND"
+    },
+    {
+        "prImg":"https://i0.wp.com/static1.gamespot.com/uploads/screen_kubrick/1537/15377506/2925116-madmax.jpg",
+        "prTitle":"Mad Max",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://m.media-amazon.com/images/M/MV5BN2ZhMTU2MjUtYzMwNy00MTJlLThiYTQtMGE2ODY3ZDkxNTg2XkEyXkFqcGdeQXVyNzczNzE5MTg@._V1_.jpg",
+        "prTitle":"DARK SOULS™ II: Scholar of the First Sin",
+        "prPrice":"637.000VND"
+    },
+    {
+        "prImg":"https://i2.wp.com/thekoalition.com/images/2011/04/portal22.jpg?fit=1280%2C720&ssl=1",
+        "prTitle":"Portal 2",
+        "prPrice":"119.000VND"
+    },
+    {
+        "prImg":"https://1.bp.blogspot.com/-hGw0dDVIY7w/XY3oa9K7L0I/AAAAAAAAH68/stzU_H8Vzr0pG5kUuGLnXGTgLpOE6lgZwCNcBGAsYHQ/s1600/208a7b10f02316fb8dc0ece670be5d9a01310a43.jpg",
+        "prTitle":"Just Cause™ 3",
+        "prPrice":"414.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/t9H7_OfXamk/maxresdefault.jpg",
+        "prTitle":"ORION: Prelude",
+        "prPrice":"14.000VND"
+    },
+    {
+        "prImg":"https://www.novinspot.com/wp-content/uploads/2018/10/shadowofmordor.jpg",
+        "prTitle":"Middle-earth: Shadow of Mordor",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/KqAtep9ra1M/maxresdefault_live.jpg",
+        "prTitle":"Youtubers Life",
+        "prPrice":"404.000VND"
+    },
+    {
+        "prImg":"https://games.mxdwn.com/wp-content/uploads/2017/09/grimdawn-logo.jpg",
+        "prTitle":"Grim Dawn",
+        "prPrice":"219.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/_7mvITaX8mQ/maxresdefault.jpg",
+        "prTitle":"Tree of Life",
+        "prPrice":"99.000VND"
+    },
+    {
+        "prImg":"https://www.playstationlifestyle.net/assets/uploads/2020/03/modern-warfare-3-remastered-1280x720.jpg",
+        "prTitle":"Call of Duty®: Modern Warfare® 2",
+        "prPrice":"452.000VND"
+    },
+    {
+        "prImg":"https://gamebrott.com/wp-content/uploads/2019/05/The-Witcher-Enhanced-Edition-1280x720.jpg",
+        "prTitle":"The Witcher: Enhanced Edition Director's Cut",
+        "prPrice":"119.000VND"
+    },
+    {
+        "prImg":"https://doupe.zive.cz/getthumbnail.aspx?w=1600&h=1000&q=60&id_file=121968389",
+        "prTitle":"Mafia II",
+        "prPrice":"508.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/wZ75Vcxwm7s/maxresdefault.jpg",
+        "prTitle":"BattleBlock Theater®",
+        "prPrice":"164.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/8-3sf-0u8II/maxresdefault.jpg",
+        "prTitle":"Call of Duty: World at War",
+        "prPrice":"452.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/RRrOvmf5mj8/maxresdefault.jpg",
+        "prTitle":"Mirror's Edge™",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://hollywoodmetal.com/wp-content/uploads/FAR-CRY-PRIMAL.jpg",
+        "prTitle":"Far Cry® Primal",
+        "prPrice":"822.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/y9AHbP8wNuA/maxresdefault.jpg",
+        "prTitle":"Killing Floor",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/bNxjQweN0X4/maxresdefault.jpg",
+        "prTitle":"Don't Starve: Shipwrecked",
+        "prPrice":"69.000VND"
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/yZgMpBqXKDE/maxresdefault.jpg",
+        "prTitle":"Need For Speed: Hot Pursuit",
+        "prPrice":"187.000VND"
+    },
+    {
+        "prImg":"https://news-cdn.softpedia.com/images/news2/Download-Now-New-Max-Payne-3-Patch-on-PS3-and-Xbox-360-Soon-on-PC-2.jpg",
+        "prTitle":"Max Payne 3",
+        "prPrice":"333.000VND"
+    },
+    {
+        "prImg":"https://www.gamespace.com/wp-content/uploads/2018/12/subnautica-1280x720.jpg",
+        "prTitle":"Subnautica",
+        "prPrice":"219.000VND"
+    },
+    {
+        "prImg":"https://1.bp.blogspot.com/-SJMJ3SD5GxM/XlrtzxY-W3I/AAAAAAAAGaw/XCPM0xoB55w0meNQn3SSNZKgrgxzFjUNwCLcBGAsYHQ/s1600/maxresdefault.jpg",
+        "prTitle":"Sniper Elite 3",
+        "prPrice":"249.000VND"
+    },
+    {
+        "prImg":"https://1.bp.blogspot.com/-OAdVdPj9Tv8/XY4camYEJKI/AAAAAAAAIXk/vuXBwM4jTp8RiE7HtRJF-fGRUYrNkNEgACNcBGAsYHQ/s1600/maxresdefault.jpg",
+        "prTitle":"Attack on Titan: Wings of Freedom",
+        "prPrice":".000VND"
+    },
+    {
+        "prImg":"https://i1.wp.com/www.blogdot.tv/wp-content/uploads/2014/01/maxresdefault-1.jpg?fit=1280%2C720&ssl=1",
+        "prTitle":"Injustice: Gods Among Us Ultimate Edition",
+        "prPrice":"187.000VND"
+    }
 ]

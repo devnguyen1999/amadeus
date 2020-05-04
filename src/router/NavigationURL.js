@@ -1,6 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import LogIn from "../pages/LogIn";
 import SignUp from "../pages/SignUp";
@@ -10,7 +9,6 @@ import Checkout from "../pages/Checkout";
 import LienHe from "../pages/LienHe";
 import NguoiDung from "../pages/User/NguoiDung.js";
 import ChiTietSP from "../pages/chitietSP/ChiTietSP";
-NavigationURL.propTypes = {};
 
 function NavigationURL(props) {
   return (
@@ -19,14 +17,17 @@ function NavigationURL(props) {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/lien-he">
+        <Route path="/dang-nhap">
+          <LogIn />
+        </Route>
+        <Route path="/dang-ki">
+          <SignUp />
+        </Route>
+        <Route path="/lien-he">
           <LienHe />
         </Route>
-        <Route exact path="/nguoi-dung">
+        <Route  path="/nguoi-dung">
           <NguoiDung />
-        </Route>
-        <Route exact path="/chi-tiet">
-          <ChiTietSP />
         </Route>
         <Route path="/dang-nhap">
           <LogIn />
@@ -43,8 +44,10 @@ function NavigationURL(props) {
         <Route path="/cam-on">
           <Thankfor />
         </Route>
+        <Route path='/:slug' component={ChiTietSP} />
       </Switch>
     </div>
   );
 }
+
 export default NavigationURL;

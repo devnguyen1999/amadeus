@@ -1,16 +1,7 @@
-.card-title a{
-    height: 4rem;
-    color: white;
-  }
-  .card-title a:hover{
-    text-decoration: none;
-  }
-  .card-body .card-text{
-    font-size: large;
-  }
-  .card-body .btn{
-    font-size: 2em !important;
-  }
-  .card-body .btn:hover{
-    color: #ffc107;
-  }
+.card-title-link a:hover {
+  text-decoration: none;
+}
+.card-text{
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
