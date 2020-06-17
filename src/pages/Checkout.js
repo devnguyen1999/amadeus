@@ -15,13 +15,13 @@ function Checkout(props) {
       <div className="container">
         <div className="row">
           <div className="col-lg-9">
-            <div className="checkout-retangle">
+            <div className="cart-form">
               <div className="payment">
                 <h5>Chọn hình thức thanh toán</h5>
                 <form>
                   <div className="radio">
                     <label>
-                      <input type="radio" checked />
+                      <input type="radio" />
                       Thanh toán bằng tài khoản
                     </label>
                   </div>
@@ -50,13 +50,13 @@ function Checkout(props) {
                 </form>
               </div>
             </div>
-            <div className="checkout-retangle">
+            <div className="cart-form mt-2 mb-2">
               <div className="buyfor">
                 <h5>Bạn mua cho ai?</h5>
                 <form>
                   <div className="radio">
                     <label>
-                      <input type="radio" checked />
+                      <input type="radio" />
                       Mua cho bản thân
                     </label>
                   </div>
@@ -71,46 +71,46 @@ function Checkout(props) {
             </div>
           </div>
           <div className="col-lg-3">
-            <div className="">
-              <div className="bill">
+              <div className="cart-form text-center">
+              <h5 className="text-white p-3">Hoá đơn</h5>
+              <br />
                 <div>
-                  <table className="table table-bill">
+                  <table className="table-bill table text-white text-center">
                     <thead>
-                      <tr className="bill-title">
-                        <h5>Hóa đơn</h5>
-                      </tr>
                     </thead>
-                    <tr>
-                      <th>
-                        <h5>Tổng tiền</h5>
-                      </th>
-                      <td>
-                        <h5>1.500.000</h5>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <h5>Giá giảm</h5>
-                      </th>
-                      <td>
-                        <h5>300.000</h5>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <h5>Thành tiền</h5>
-                      </th>
-                      <td>
-                        <h5>1.200.000</h5>
-                      </td>
-                    </tr>
+                    <tbody>
+                      <tr>
+                        <th>
+                          <h5>Tổng tiền</h5>
+                        </th>
+                        <td>
+                          <h5>1.500.000</h5>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <h5>Giá giảm</h5>
+                        </th>
+                        <td>
+                          <h5>300.000</h5>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          <h5>Thành tiền</h5>
+                        </th>
+                        <td>
+                          <h5>1.200.000</h5>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot></tfoot>
                   </table>
                 </div>
               </div>
-            </div>
-            <div>
+            <div className="mt-4">
               <Link to="cam-on">
-                <button className="btn-checkout btn col-lg-12">
+                <button className="btn-danger btn col-lg-12">
                   Thanh toán
                 </button>
               </Link>

@@ -23,7 +23,7 @@ function Thankfor(props) {
         </div>
         <div className="row row-thankfor">
           <Link className="row row-thankfor col-lg-6" to="/">
-            <button className="btn-checkout btn col-lg-6">
+            <button className="btn-danger btn col-lg-6">
               Tiếp tục mua hàng
             </button>
           </Link>
