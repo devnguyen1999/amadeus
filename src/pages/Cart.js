@@ -4,6 +4,7 @@ import "./Cart.css";
 import ItemCart from "../components/ItemCart"
 import CartData from "../product-cart.json"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Footer from "../components/Footer";
 Cart.propTypes = {};
 function Cart(props) {
   return (
@@ -92,6 +93,7 @@ function Cart(props) {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

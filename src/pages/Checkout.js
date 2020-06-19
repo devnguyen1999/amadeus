@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Checkout.css";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 Checkout.propTypes = {};
 function Checkout(props) {
   return (
@@ -118,6 +119,7 @@ function Checkout(props) {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

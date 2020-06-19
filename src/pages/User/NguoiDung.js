@@ -3,6 +3,7 @@ import "../../Asset/css/bootstrap.css";
 import "../../Asset/css/User.css";
 import $ from 'jquery';
 import DieuHuong from "./DieuHuong.js";
+import Footer from "../../components/Footer";
   
 
 export default class User extends React.Component{
@@ -67,12 +68,7 @@ render() {
                  <div className="container">
                     <DieuHuong HT={this.state.HienThi}/>
                 </div>
-            
-
-
-
-
-
+                <Footer/>
         </div>
   );
 }

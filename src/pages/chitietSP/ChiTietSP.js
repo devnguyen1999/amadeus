@@ -3,6 +3,7 @@ import "../../Asset/css/ChiTietSP.css";
 import "../../Asset/css/bootstrap.css";
 import DieuHuong from "./ThongTin.js";
 import Data from "../../product-data.json";
+import Footer from "../../components/Footer";
 
 export default class ChiTietSP extends React.Component {
   constructor(props) {
@@ -180,6 +181,7 @@ export default class ChiTietSP extends React.Component {
         <div className="container">
           <DieuHuong HT={this.state.HienThi} />
         </div>
+        <Footer/>
       </div>
     );
   }

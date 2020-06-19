@@ -33,7 +33,7 @@ function SignUp(props) {
           id
           placeholder="Nhập lại mật khẩu"
         />
-        <button type="submit" className="btn btn-primary mt-4">
+        <button type="submit" className="btn btn-primary mt-4" >
           Đăng kí
         </button>
       </div>
