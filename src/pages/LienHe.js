@@ -2,6 +2,7 @@ import React from "react";
 import "../Asset/css/LienHe.css";
 import "../Asset/css/bootstrap.css";
 import logo from '../Asset/Img/Amadeus.png';
+import Footer from "../components/Footer";
 LienHe.propTypes = {};
 
 function LienHe(props) {
@@ -47,7 +48,7 @@ function LienHe(props) {
         </div>
 
         </div>
-     
+     <Footer/>
     </div>
   );
 }

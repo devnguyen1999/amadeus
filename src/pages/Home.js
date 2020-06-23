@@ -5,23 +5,40 @@ import Data from "../product-data.json";
 import "./Home.css";
 import axios from 'axios';
 
+<<<<<<< HEAD
 
 
 
 export default class Home extends React.Component{
   state = {
     ListData: []
+=======
+export default class Home extends React.Component{
+
+  state = {
+    listdata: []
+>>>>>>> 302c5fce4d9890609bbba769ab9e637932a4a0e4
   }
 
   componentDidMount() {
     axios.get(`https://amadeuss.herokuapp.com/products`)
       .then(res => {
+<<<<<<< HEAD
         const ListData = res.data;
         this.setState({ ListData });
       })
       .catch(error => console.log(error));
   }
 render(){
+=======
+        const listdata = res.data;
+        this.setState({ listdata });
+      })
+      .catch(error => console.log(error));
+  }
+
+render() {
+>>>>>>> 302c5fce4d9890609bbba769ab9e637932a4a0e4
   return (
     <div>
       <div id="carouselId" className="carousel slide" data-ride="carousel">
@@ -79,11 +96,18 @@ render(){
           </div>
           <div className="col-12 col-md-9">
             <div className="row">
+<<<<<<< HEAD
               {this.state.ListData.map((value, key) => {
                 return (
                   <Product
                     key={key}
                     prID={value.id}
+=======
+              {this.state.listdata.map((value, key) => {
+                return (
+                  <Product
+                    key={key}
+>>>>>>> 302c5fce4d9890609bbba769ab9e637932a4a0e4
                     prImg={value.img}
                     prTitle={value.name}
                     prPrice={value.price}
@@ -94,7 +118,13 @@ render(){
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
+<<<<<<< HEAD
  }
+=======
+
+}
+>>>>>>> 302c5fce4d9890609bbba769ab9e637932a4a0e4

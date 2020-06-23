@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Thankfor.css";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 Thankfor.propTypes = {};
 function Thankfor(props) {
   return (
@@ -23,12 +24,13 @@ function Thankfor(props) {
         </div>
         <div className="row row-thankfor">
           <Link className="row row-thankfor col-lg-6" to="/">
-            <button className="btn-checkout btn col-lg-6">
+            <button className="btn-danger btn col-lg-6">
               Tiếp tục mua hàng
             </button>
           </Link>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
