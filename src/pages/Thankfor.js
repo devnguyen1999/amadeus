@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 Thankfor.propTypes = {};
 function Thankfor(props) {
   return (
+    <div>
     <div
       className="page-header section-dark"
       style={{
@@ -30,7 +31,8 @@ function Thankfor(props) {
           </Link>
         </div>
       </div>
-      <Footer/>
+    </div>
+    <Footer/>
     </div>
   );
 }

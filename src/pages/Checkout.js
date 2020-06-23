@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 Checkout.propTypes = {};
 function Checkout(props) {
   return (
+    <div>
     <div
       className="page-header section-dark"
       style={{
@@ -119,7 +120,8 @@ function Checkout(props) {
           </div>
         </div>
       </div>
-      <Footer/>
+    </div>
+    <Footer />
     </div>
   );
 }

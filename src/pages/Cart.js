@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 Cart.propTypes = {};
 function Cart(props) {
   return (
+    <div>
     <div
       className="page-header-cart section-dark-cart"
       style={{
@@ -93,7 +94,8 @@ function Cart(props) {
           </div>
         </div>
       </div>
-      <Footer/>
+    </div>
+    <Footer />
     </div>
   );
 }
