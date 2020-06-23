@@ -9,10 +9,10 @@ export default class ThongTin extends React.Component{
    
 
     renderResult = () => {
-        return <ThongTinGame />
+        return <ThongTinGame DATA={this.props.DATA} />
     }
     render() {
-        return this.props.HT ? this.renderResult() : <CauHinh />
+        return this.props.HT ? this.renderResult() : <CauHinh DATA={this.props.DATA} />
     }
 }
 

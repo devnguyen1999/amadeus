@@ -2,12 +2,41 @@ import React from "react";
 import "../../Asset/css/ChiTietSP.css";
 import "../../Asset/css/bootstrap.css";
 import DieuHuong from "./ThongTin.js";
-import Data from "../../product-data.json";
+import axios from 'axios';
+
 
 export default class ChiTietSP extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { HienThi: true };
+    this.state = { HienThi: true,
+    ListData:{
+      category:[],
+      _id:"",
+      name:"",
+      nameURL:"",
+      img:"",
+      imgHD:"",
+      decription:"",
+      conf:"",
+      producer:"",
+      price: 0 ,
+      number:0,
+      createAt:"",
+      _v:0,
+      reviews:[],
+      id:""
+    } }; 
+  }
+ 
+
+  componentDidMount() {
+    axios.get(`https://amadeuss.herokuapp.com/products/${this.props.match.params.slug}`)
+      .then(res => {
+        const ListData = res.data;
+        this.setState({ ListData });
+        console.log(res.data);
+      })
+      .catch(error => console.log(error));
   }
 
   render() {
@@ -39,6 +68,13 @@ export default class ChiTietSP extends React.Component {
       // return
       return str;
     }
+
+
+    const formatter = new Intl.NumberFormat('vi-VI', {
+      style: 'currency',
+      currency: 'VND',
+      minimumFractionDigits: 0
+    })
     return (
       <div
         className="container-fluid p-2"
@@ -61,22 +97,23 @@ export default class ChiTietSP extends React.Component {
             <div className="carousel-inner" role="listbox">
               <div className="carousel-item active">
                 <img
-                  src="https://compass-ssl.xbox.com/assets/05/75/0575153b-9efa-4620-8afe-b6980200f60f.jpg?n=215489_Page-Hero-1084_1920x720.jpg"
-                  className="img-fluid"
+                  src={this.state.ListData.imgHD}
+                  className="img-fluid mx-auto d-block"
                   alt="First slide"
+
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src="https://i.imgur.com/6mjaYdD.png"
-                  className="img-fluid"
+                 src={this.state.ListData.imgHD}
+                  className="img-fluid mx-auto d-block"
                   alt="Second slide"
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src="https://i.imgur.com/R095ZFO.jpg"
-                  className="img-fluid"
+                  src={this.state.ListData.imgHD}
+                  className="img-fluid mx-auto d-block"
                   alt="Third slide"
                 />
               </div>
@@ -104,9 +141,8 @@ export default class ChiTietSP extends React.Component {
 
         {/*sản phẩm */}
 
-        {Data.map((value, key) => {
-          if (toSlug(value.prTitle) === this.props.match.params.slug) {
-            return (
+        
+           
               <div className="container mt-3">
                 <div
                   className="jumbotron row p-4"
@@ -114,27 +150,22 @@ export default class ChiTietSP extends React.Component {
                 >
                   <div className="col-xl-3 col-lg-3 col-md-3 align-content-center justify-content-center img-game">
                     <img
-                      src={value.prImg}
+                      src={this.state.ListData.imgHD}
                       alt="Product"
                       className="img-game-2 p-3"
                     />
                   </div>
 
                   <div className="col-xl-6 col-lg-6 col-md-5 column ">
-                    <h2 className="text-light">{value.prTitle}</h2>
+                    <h2 className="text-light">{this.state.ListData.name}</h2>
                     <p className="text-light eclipse-text">
-                      Humanity has been driven from the Earth by mechanical
-                      beings from another world. In a final effort to take back
-                      the planet, the human resistance sends a force of android
-                      soldiers to destroy the invaders. Now, a war between
-                      machines and androids rages on... A war that could soon
-                      unveil a long-forgotten truth of the world.
+                      {this.state.ListData.decription}
                     </p>
                   </div>
 
                   <div className="col-xl-3 col-lg-3 col-md-4 column">
                     <p className="text-light text">Giá sản Phẩm: </p>
-                    <p className="text-warning gia">{value.prPrice}</p>
+                    <p className="text-warning gia"> {formatter.format(this.state.ListData.price)}</p>
                     <div className="column justify-content-center">
                       <button className="col-12 btn btn-danger text-white">
                         Mua ngay
@@ -149,9 +180,7 @@ export default class ChiTietSP extends React.Component {
                   </div>
                 </div>
               </div>
-            );
-          }
-        })}
+         
 
         {/*Button  */}
         <div className="container mb-3">
@@ -178,7 +207,7 @@ export default class ChiTietSP extends React.Component {
         {/*Button  */}
 
         <div className="container">
-          <DieuHuong HT={this.state.HienThi} />
+          <DieuHuong HT={this.state.HienThi} DATA={this.state.ListData} />
         </div>
       </div>
     );

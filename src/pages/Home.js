@@ -3,8 +3,25 @@ import Product from "../components/Product";
 import Footer from "../components/Footer";
 import Data from "../product-data.json";
 import "./Home.css";
+import axios from 'axios';
 
-function Home(props) {
+
+
+
+export default class Home extends React.Component{
+  state = {
+    ListData: []
+  }
+
+  componentDidMount() {
+    axios.get(`https://amadeuss.herokuapp.com/products`)
+      .then(res => {
+        const ListData = res.data;
+        this.setState({ ListData });
+      })
+      .catch(error => console.log(error));
+  }
+render(){
   return (
     <div>
       <div id="carouselId" className="carousel slide" data-ride="carousel">
@@ -62,13 +79,14 @@ function Home(props) {
           </div>
           <div className="col-12 col-md-9">
             <div className="row">
-              {Data.map((value, key) => {
+              {this.state.ListData.map((value, key) => {
                 return (
                   <Product
                     key={key}
-                    prImg={value.prImg}
-                    prTitle={value.prTitle}
-                    prPrice={value.prPrice}
+                    prID={value.id}
+                    prImg={value.img}
+                    prTitle={value.name}
+                    prPrice={value.price}
                   />
                 );
               })}
@@ -79,5 +97,4 @@ function Home(props) {
     </div>
   );
 }
-
-export default Home;
+ }
