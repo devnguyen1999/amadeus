@@ -1,7 +1,7 @@
 import "./LogIn.css";
 import React, { useState } from 'react';
 import axios from 'axios';
-import { setUserSession } from './Utils/Common';
+import { setUserSession } from '../Utils/Common';
 function LogIn(props) {
   const username = useFormInput('');
   const password = useFormInput('');

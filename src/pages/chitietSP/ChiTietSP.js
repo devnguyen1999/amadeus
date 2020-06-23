@@ -2,7 +2,6 @@ import React from "react";
 import "../../Asset/css/ChiTietSP.css";
 import "../../Asset/css/bootstrap.css";
 import DieuHuong from "./ThongTin.js";
-
 import axios from 'axios';
 
 
@@ -210,7 +209,7 @@ export default class ChiTietSP extends React.Component {
         <div className="container">
           <DieuHuong HT={this.state.HienThi} DATA={this.state.ListData} />
         </div>
-        <Footer/>
+      
       </div>
     );
   }
