@@ -43,7 +43,7 @@ export default class ThongTinGame extends React.Component{
         //console.log(typeof(list));
        
     console.log(this.props.DATA.reviews); 
-    var arr = this.props.DATA.category.map(e => <p className="btn btn-danger ml-1">{e}</p>);
+    var arr = this.props.DATA.category.map((e,key) => <p className="btn btn-danger ml-1" key={key}>{e}</p>);
         return (
         
        <div className="container-fluid">
@@ -97,9 +97,9 @@ export default class ThongTinGame extends React.Component{
         <div className="jumbotron p-3"  style={{background: "rgba(60, 60, 60, 0.5)"}}>
 
             {this.props.DATA.reviews.map((value,key) =>{
-                return( <div class="media border p-3" key={key}>
+                return( <div className="media border p-3" key={key}>
                 <img src="https://www.w3schools.com/bootstrap4/img_avatar3.png" alt="John Doe" className="mr-3 mt-3 rounded-circle" style={{width:60}} />
-                <div class="media-body">
+                <div className="media-body">
                   <h4 className="text-warning">{value.userId.username}   <small><i className="text-light" style={{fontSize:12}}>   {value.createAt}</i></small></h4>
                 <p className="text-light">{value.content}</p>      
                 </div>
