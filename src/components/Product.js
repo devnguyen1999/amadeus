@@ -46,7 +46,7 @@ function Product(props) {
   return (
     <div className="col-6 col-md-4 px-2 my-2">
       <div className="card bg-dark text-white px-2 pt-2 h-100">
-        <Link to={toSlug(props.prTitle)}>
+        <Link to={props.prURL}>
           <img className="card-img-top" src={props.prImg} alt="Product"/>
         </Link>
         <div className="card-body d-flex flex-column px-2 py-0 m-0">
@@ -54,10 +54,10 @@ function Product(props) {
             <div className="card-title-link m-auto text-center">
               <Link
                 className="d-inline"
-                to={toSlug(props.prTitle)} 
+                to={props.prURL} 
               >
                 <h5 className="text-white p-0 m-0 d-inline">
-                  {props.prTitle}
+                {props.prTitle}
                 </h5>
               </Link>
             </div>

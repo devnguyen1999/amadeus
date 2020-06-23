@@ -4,6 +4,7 @@ import "../../Asset/css/bootstrap.css";
 import DieuHuong from "./ThongTin.js";
 import axios from 'axios';
 import { getToken } from "../../Utils/Common";
+import Footer from "../../components/Footer";
 
 
 export default class ChiTietSP extends React.Component {
@@ -24,7 +25,20 @@ export default class ChiTietSP extends React.Component {
       number:0,
       createAt:"",
       _v:0,
-      reviews:[],
+      reviews:[
+        {
+          _id:"",
+          title:"",
+          vote:0,
+          content:"",
+          productId:"",
+          userId:{
+            _id:"",
+            username:"",
+          },
+          createAt:"",
+        }
+      ],
       id:""
     } }; 
   }
@@ -84,12 +98,11 @@ export default class ChiTietSP extends React.Component {
 
 ////////////////////////////////
 const handleADD = () =>{
-
-  var token = getToken();
+  console.log(this.state.ListData.id)
   axios
-  .post("https://amadeuss.herokuapp.com/api/auth/login", {
-   token: token,
-   idSP: this.props.DATA.id,
+  .post("https://amadeuss.herokuapp.com/api/cart/items", {
+    productId: this.state.ListData.id,
+    count:1,
   })
   .then((response) => {
     console.log(response);
@@ -155,7 +168,7 @@ const handleADD = () =>{
                       <button
                         className="col-12 btn text-white"
                         style={{ background: "#00B894" }}
-                        onClick={{handleADD}}
+                        onClick={handleADD}
                       >
                         Thêm vào giỏ hàng
                       </button>
@@ -192,7 +205,7 @@ const handleADD = () =>{
         <div className="container">
           <DieuHuong HT={this.state.HienThi} DATA={this.state.ListData} />
         </div>
-      
+        <Footer/>
       </div>
     );
   }

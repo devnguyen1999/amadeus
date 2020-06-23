@@ -11,16 +11,21 @@ import axios from 'axios';
 export default class Home extends React.Component{
   state = {
     ListData: []
+    
   }
-
+  
   componentDidMount() {
     axios.get(`https://amadeuss.herokuapp.com/products`)
       .then(res => {
         const ListData = res.data;
         this.setState({ ListData });
+      
       })
       .catch(error => console.log(error));
   }
+
+
+
 render(){
   return (
     <div>
@@ -88,13 +93,13 @@ render(){
               </a>
               <div className="collapse" id="sortMenu">
                 <div
-                  class="nav flex-column nav-pills"
+                  className="nav flex-column nav-pills"
                   id="v-pills-tab"
                   role="tablist"
                   aria-orientation="vertical"
                 >
                   <a
-                    class="nav-link text-white"
+                    className="nav-link text-white"
                     id="v-pills-ascending-tab"
                     data-toggle="pill"
                     href="#v-pills-ascending"
@@ -105,7 +110,7 @@ render(){
                     Giá tăng dần
                   </a>
                   <a
-                    class="nav-link text-white"
+                    className="nav-link text-white"
                     id="v-pills-decrease-tab"
                     data-toggle="pill"
                     href="#v-pills-decrease"
@@ -116,7 +121,7 @@ render(){
                     Giá giảm dần
                   </a>
                   <a
-                    class="nav-link text-white"
+                    className="nav-link text-white"
                     id="v-pills-latest-tab"
                     data-toggle="pill"
                     href="#v-pills-latest"
@@ -146,15 +151,18 @@ render(){
           <div className="col-12 col-md-9">
             <div className="row">
               {this.state.ListData.map((value, key) => {
+    
                 return (
                   <Product
                     key={key}
                     prID={value.id}
                     prImg={value.img}
+                    prURL={value.nameURL}
                     prTitle={value.name}
-                    prPrice={value.price}
+                    prPrice={value.price} 
                   />
                 );
+              
               })}
             </div>
           </div>
