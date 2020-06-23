@@ -3,6 +3,7 @@ import "../../Asset/css/ChiTietSP.css";
 import "../../Asset/css/bootstrap.css";
 import DieuHuong from "./ThongTin.js";
 import axios from 'axios';
+import { getToken } from "../../Utils/Common";
 
 
 export default class ChiTietSP extends React.Component {
@@ -38,6 +39,10 @@ export default class ChiTietSP extends React.Component {
       })
       .catch(error => console.log(error));
   }
+
+
+
+
 
   render() {
     function toSlug(str) {
@@ -75,6 +80,33 @@ export default class ChiTietSP extends React.Component {
       currency: 'VND',
       minimumFractionDigits: 0
     })
+
+
+////////////////////////////////
+const handleADD = () =>{
+
+  var token = getToken();
+  axios
+  .post("https://amadeuss.herokuapp.com/api/auth/login", {
+   token: token,
+   idSP: this.props.DATA.id,
+  })
+  .then((response) => {
+    console.log(response);
+
+  })
+  .catch((error) => {
+  
+    if (error.response.status === 401) {
+      console.log(error.response.data.message);
+    } 
+  });
+
+};
+//////////////
+
+
+
     return (
       <div
         className="container-fluid p-2"
@@ -82,63 +114,13 @@ export default class ChiTietSP extends React.Component {
           backgroundColor: "black",
         }}
       >
-        {/*carosell */}
-        <div>
-          <div id="carouselId" className="carousel slide" data-ride="carousel">
-            <ol className="carousel-indicators">
-              <li
-                data-target="#carouselId"
-                data-slide-to={0}
-                className="active"
-              />
-              <li data-target="#carouselId" data-slide-to={1} />
-              <li data-target="#carouselId" data-slide-to={2} />
-            </ol>
-            <div className="carousel-inner" role="listbox">
-              <div className="carousel-item active">
-                <img
-                  src={this.state.ListData.imgHD}
-                  className="img-fluid mx-auto d-block"
-                  alt="First slide"
-
+        <div className="jumbotron p-0">
+          <img src={this.state.ListData.imgHD}
+                className="img-fluid mx-auto d-block p-0" 
+                alt="img"
+                style={{maxHeight:560 , width:'100%'}}
                 />
-              </div>
-              <div className="carousel-item">
-                <img
-                 src={this.state.ListData.imgHD}
-                  className="img-fluid mx-auto d-block"
-                  alt="Second slide"
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src={this.state.ListData.imgHD}
-                  className="img-fluid mx-auto d-block"
-                  alt="Third slide"
-                />
-              </div>
-            </div>
-            <a
-              className="carousel-control-prev"
-              href="#carouselId"
-              role="button"
-              data-slide="prev"
-            >
-              <span className="carousel-control-prev-icon" aria-hidden="true" />
-              <span className="sr-only">Previous</span>
-            </a>
-            <a
-              className="carousel-control-next"
-              href="#carouselId"
-              role="button"
-              data-slide="next"
-            >
-              <span className="carousel-control-next-icon" aria-hidden="true" />
-              <span className="sr-only">Next</span>
-            </a>
-          </div>
         </div>
-
         {/*sản phẩm */}
 
         
@@ -173,6 +155,7 @@ export default class ChiTietSP extends React.Component {
                       <button
                         className="col-12 btn text-white"
                         style={{ background: "#00B894" }}
+                        onClick={{handleADD}}
                       >
                         Thêm vào giỏ hàng
                       </button>

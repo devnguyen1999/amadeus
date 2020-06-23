@@ -75,7 +75,73 @@ render(){
       <div className="container-fluid">
         <div className="row">
           <div className="col-12 col-md-3">
-            
+          <a
+                className="btn d-block"
+                data-toggle="collapse"
+                href="#sortMenu"
+                role="button"
+                aria-expanded="false"
+                aria-controls="sortMenu"
+              >
+                <h4 className="text-white m dropdown-toggle">Sắp xếp theo</h4>
+                <hr className="border-white mt-2" />
+              </a>
+              <div className="collapse" id="sortMenu">
+                <div
+                  class="nav flex-column nav-pills"
+                  id="v-pills-tab"
+                  role="tablist"
+                  aria-orientation="vertical"
+                >
+                  <a
+                    class="nav-link text-white"
+                    id="v-pills-ascending-tab"
+                    data-toggle="pill"
+                    href="#v-pills-ascending"
+                    role="tab"
+                    aria-controls="v-pills-ascending"
+                    aria-selected="true"
+                  >
+                    Giá tăng dần
+                  </a>
+                  <a
+                    class="nav-link text-white"
+                    id="v-pills-decrease-tab"
+                    data-toggle="pill"
+                    href="#v-pills-decrease"
+                    role="tab"
+                    aria-controls="v-pills-decrease"
+                    aria-selected="false"
+                  >
+                    Giá giảm dần
+                  </a>
+                  <a
+                    class="nav-link text-white"
+                    id="v-pills-latest-tab"
+                    data-toggle="pill"
+                    href="#v-pills-latest"
+                    role="tab"
+                    aria-controls="v-pills-latest"
+                    aria-selected="false"
+                  >
+                    Mới nhất
+                  </a>
+                </div>
+              </div>
+              <a
+                className="btn d-block"
+                data-toggle="collapse"
+                href="#filterMenu"
+                role="button"
+                aria-expanded="false"
+                aria-controls="filterMenu"
+              >
+                <h4 className="text-white m dropdown-toggle">
+                  Bộ lọc sản phẩm
+                </h4>
+                <hr className="border-white mt-2" />
+              </a>
+              <div className="collapse" id="filterMenu"></div>
           </div>
           <div className="col-12 col-md-9">
             <div className="row">
