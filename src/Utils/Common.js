@@ -7,18 +7,18 @@ export const getUser = () => {
 
 // return the token from the session storage
 export const getToken = () => {
-  return sessionStorage.getItem("token") || null;
+  return sessionStorage.getItem("accessToken") || null;
 };
 
 // remove the token and user from the session storage
 export const removeUserSession = () => {
-  sessionStorage.removeItem("token");
+  sessionStorage.removeItem("accessToken");
   sessionStorage.removeItem("user");
 };
 
 // set the token and user from the session storage
-export const setUserSession = (token, user) => {
-  sessionStorage.setItem("token", token);
+export const setUserSession = (accessToken, user) => {
+  sessionStorage.setItem("accessToken", accessToken);
   sessionStorage.setItem("user", JSON.stringify(user));
 };
 

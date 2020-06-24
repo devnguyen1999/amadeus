@@ -13,6 +13,11 @@
     overflow-y: hidden;
 }
 
+.error{
+  color: white;
+  font-size: 1.1rem;
+}
+
 /* Shared */
 .loginBtn {
   box-sizing: border-box;

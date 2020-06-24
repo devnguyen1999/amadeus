@@ -1,7 +1,32 @@
 import React from "react";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css";
+import { getUser } from "../Utils/Common";
 
+const displayCheck = () => {
+  var user = getUser();
+  if (user != null) {
+    return (
+      <div  className="navbar-nav nav-item ml-auto">
+        <Link className="nav-link px-0 mx-0" to="/nguoi-dung">
+          {user.email}
+        </Link>
+      </div>
+    );
+  } else {
+    return (
+      <div  className="navbar-nav nav-item ml-auto">
+        <Link className="nav-link px-0 mx-0" to="/dang-nhap">
+          Đăng nhập
+        </Link>
+        <span className="text-light my-auto">&#160;/&#160;</span>
+        <Link className="nav-link px-0 mx-0" to="/dang-ki">
+          Đăng ký
+        </Link>
+      </div>
+    );
+  }
+};
 function Header(props) {
   return (
     <div>
@@ -132,15 +157,7 @@ function Header(props) {
               className="col-lg-3 collapse navbar-collapse"
               id="collapsibleNavId"
             >
-              <div className="navbar-nav nav-item ml-auto">
-                <Link className="nav-link px-0 mx-0" to="/dang-nhap">
-                  Đăng nhập
-                </Link>
-                <span className="text-light my-auto">&#160;/&#160;</span>
-                <Link className="nav-link px-0 mx-0" to="/dang-ki">
-                  Đăng ký
-                </Link>
-              </div>
+                {displayCheck()}
             </div>
             <div
               className="col-lg-1 collapse navbar-collapse"

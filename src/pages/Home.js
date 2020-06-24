@@ -1,6 +1,7 @@
 import React from "react";
 import Product from "../components/Product";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 import Data from "../product-data.json";
 import "./Home.css";
 import axios from 'axios';
@@ -81,15 +82,15 @@ render(){
         <div className="row">
           <div className="col-12 col-md-3">
           <a
-                className="btn d-block"
+                className="btn d-block text-white dropdown-toggle"
                 data-toggle="collapse"
                 href="#sortMenu"
                 role="button"
                 aria-expanded="false"
                 aria-controls="sortMenu"
               >
-                <h4 className="text-white m dropdown-toggle">Sắp xếp theo</h4>
-                <hr className="border-white mt-2" />
+                <h4 className="text-white">Sắp xếp theo</h4>
+                <hr className="border-white mt-2 mb-0" />
               </a>
               <div className="collapse" id="sortMenu">
                 <div
@@ -134,17 +135,17 @@ render(){
                 </div>
               </div>
               <a
-                className="btn d-block"
+                className="btn d-block text-white dropdown-toggle"
                 data-toggle="collapse"
                 href="#filterMenu"
                 role="button"
                 aria-expanded="false"
                 aria-controls="filterMenu"
               >
-                <h4 className="text-white m dropdown-toggle">
+                <h4>
                   Bộ lọc sản phẩm
                 </h4>
-                <hr className="border-white mt-2" />
+                <hr className="border-white mt-2 mb-0" />
               </a>
               <div className="collapse" id="filterMenu"></div>
           </div>
@@ -168,6 +169,45 @@ render(){
           </div>
         </div>
       </div>
+      <nav aria-label="Page navigation example">
+        <ul className="pagination justify-content-center py-3">
+          <li className="page-item disabled">
+            <Link className="page-link" to="" tabIndex={-1}>
+              Trang trước
+            </Link>
+          </li>
+          <li className="page-item">
+            <Link className="page-link" to="">
+              1
+            </Link>
+          </li>
+          <li className="page-item">
+            <Link className="page-link" to="">
+              2
+            </Link>
+          </li>
+          <li className="page-item">
+            <Link className="page-link" to="">
+              3
+            </Link>
+          </li>
+          <li className="page-item">
+            <Link className="page-link" to="">
+              4
+            </Link>
+          </li>
+          <li className="page-item">
+            <Link className="page-link" to="">
+              5
+            </Link>
+          </li>
+          <li className="page-item">
+            <Link className="page-link" to="" tabIndex={+1}>
+              Trang sau
+            </Link>
+          </li>
+        </ul>
+      </nav>
       <Footer/>
     </div>
   );

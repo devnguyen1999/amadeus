@@ -145,7 +145,7 @@ const handleADD = () =>{
                 >
                   <div className="col-xl-3 col-lg-3 col-md-3 align-content-center justify-content-center img-game">
                     <img
-                      src={this.state.ListData.imgHD}
+                      src={this.state.ListData.img}
                       alt="Product"
                       className="img-game-2 p-3"
                     />

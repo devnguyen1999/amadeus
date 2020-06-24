@@ -17,7 +17,7 @@ function Footer(props) {
                   />
                   <h5 className="my-auto">Amadeus</h5>
                 </a>
-                <span className="my-2">WINNER DOESN'T TAKE IT ALL</span>
+                <span className="my-2">Thương mại điện tử &#38; Triển khai ứng dụng</span>
                 <span className="my-2">
                   Đại học Quốc gia Thành phố Hồ Chí Minh
                 </span>
