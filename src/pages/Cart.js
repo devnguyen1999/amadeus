@@ -11,26 +11,12 @@ function Cart(props) {
     <div>
     <div
       className="page-header-cart section-dark-cart"
-      style={{
-        backgroundImage: "url(https://wallpapercave.com/wp/OY4AvGh.jpg)",
-      }}
+      style={{backgroundImage: "url(https://wallpapercave.com/wp/OY4AvGh.jpg)",}}
     >
       <div className="container">
-        <div className="row p-4">
+        <div className="row" style={{paddingTop:50, paddingBottom:50}}>
           <div className="col-lg-9">
-            <div className="cart-form">
-                  <table className="table text-white text-center">
-                    <thead>
-                      <tr>
-                        <th className="text-black">Hình ảnh</th>
-                        <th className="text-black">Tên</th>
-                        <th className="text-black">Giá</th>
-                        <th className="text-black">Số lượng</th>
-                        <th className="text-black">Tổng</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
+            <div className="d-flex justify-content-center"><h4 className="text-white">Đơn hàng</h4></div>
                       {CartData.map((value,key) =>{
                         return(
                           <ItemCart
@@ -40,26 +26,21 @@ function Cart(props) {
                             prCartPrice={value.prCartPrice}
                           />
                         );
-                      })}    
-                    </tbody>
-                    <tfoot></tfoot>
-                  </table>
-            </div>
-            <div className="row coupon p-3">
+                      })}
+            <div className="row coupon pt-1">
                         <input type="text"
-                               className="form-control col-lg-6"
+                               className="form-control col-lg-4 col-md-4 col-xs-4"
                                placeholder="Nhập mã giảm giá" />
-                        <button className="btn btn-primary col-lg-3">Áp dụng</button>
+                        <button className="btn btn-primary col-lg-3 col-md-3 col-xs-3">Áp dụng</button>
                     </div>
             <a href="#" className="text-red">
               Tiếp tục mua hàng
             </a>
           </div>
           <div className="col-lg-3">
-            <div className="cart-form text-center">
-              <h5 className="text-white p-3">Hoá đơn</h5>
-              <br />
-              <div className="align-items-center" style={{}}>
+          <div className="d-flex justify-content-center"><h4 className="text-white">Hoá đơn</h4></div>
+            <div className="cart-form text-center mt-1">
+              <div className="align-items-center">
                 <table className="table-bill table text-white text-center">
                   <thead></thead>
                   <tbody>
@@ -86,7 +67,7 @@ function Cart(props) {
             </div>
             <div className="mt-2">
                 <Link className="" to="/thanh-toan">
-                  <button className="btn btn-danger col-lg-12">
+                  <button className="btn btn-danger col-lg-12 col-md-12 col-xs-12">
                     Tiến hành thanh toán
                   </button>
                 </Link>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./ItemCart.css";
 const toSlug = str => {
   // Chuyển hết sang chữ thường
   str = str.toLowerCase();
@@ -30,33 +30,31 @@ const toSlug = str => {
   return str;
 };
 function ItemCart(props){
-  return(
-                      <tr>
-                        <td>
-                          <img
-                            alt=""
-                            className="img-fluid img-fluid-cart"
-                            src={props.prCartImg}
-                          />
-                        </td>
-                          <td className="wordbreak"><p>{props.prCartTitle}</p></td>
-                        <td>{props.prCartPrice}</td>
-                        <td>
-                          <div className="input-group input-group-cart mb3">
-                          <a className="btn btn-outline-primary">
-                              -
-                            </a>
-                            <div className="form-control form-control-cart text-center">
-                              1
-                            </div>
-                            <a className="btn btn-outline-primary">
-                              +
-                            </a>
-                          </div>
-                        </td>
-                        <td>500.000</td>
-                        <td><i className="icon-danger fas fa-trash"></i></td>
-                      </tr>                   
+  return(                     
+                                <div className="cart-form row justify-content-center align-items-center p-2 mt-1 text-white">
+                                  <div className="col-lg-3 col-md-3 col-xs-3 text-center">
+                                    <img className="img-cart" src={props.prCartImg} alt="img-cart" />
+                                  </div>
+                                  <div className="col-lg-2 col-md-2 col-xs-2 text-center">
+                                    <h5 className="pt-2">{props.prCartTitle}</h5>
+                                  </div>
+                                  <div className="col-lg-2 col-md-2 col-xs-2 text-center">
+                                    <h5 className="pt-2">{props.prCartPrice}</h5>
+                                  </div>
+                                  <div className="col-lg-3 col-md-3 col-xs-3">
+                                      <div className="input-group justify-content-center">
+                                          <div className="input-group-prepend">
+                                              <button className="btn btn-outline-primary">&minus;</button>
+                                          </div>
+                                          <input className="text-center form-control input-fix" type="tel" placeholder="1"/>
+                                          <div className="input-group-append">
+                                              <button className="btn btn-outline-primary">&#43;</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="col-lg-1 col-md-1 col-xs-1 text-center"><h5 className="pt-2">Total</h5></div>
+                                  <div className="col-lg-1 col-md-1 col-xs-1 justify-content-center d-flex"><i className="icon-danger fa fa-trash" aria-hidden="true"></i></div> 
+                                </div>                  
   );
 }  
 export default ItemCart;              
