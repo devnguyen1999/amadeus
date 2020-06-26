@@ -9,7 +9,10 @@
       name="description"
       content="shop game bản quyền lớn và uy tín nhất việt nam. bán game bản quyền giá rẻ, uy tín, nhanh chóng. steam wallet, steam code, cd key steam, csgo , game bản quyền giá rẻ , game offline, mua game, tải game gta, playerunknown's battlegrounds, pubg, game free"
     />
-    <meta name="google-site-verification" content="vD9DnzRLtS-A_PloT3_Pfl3EKyiMWZ_Je8m_4sD69IA" />
+    <meta
+      name="google-site-verification"
+      content="vD9DnzRLtS-A_PloT3_Pfl3EKyiMWZ_Je8m_4sD69IA"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/amadeus.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -128,6 +131,35 @@
     <title>Amadeus - Website cung cấp game bản quyền</title>
   </head>
   <body style="background-color: black;">
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v7.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
+    <!-- Your Chat Plugin code -->
+    <div
+      class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="101903708243960"
+      logged_in_greeting="Chào bạn, mình có thể hỗ trợ gì cho bạn =) "
+      logged_out_greeting="Chào bạn, mình có thể hỗ trợ gì cho bạn =) "
+    ></div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
