@@ -3,15 +3,106 @@ import PropTypes from "prop-types";
 import $ from 'jquery';
 import "../../Asset/css/ChiTietSP.css";
 import "../../Asset/css/bootstrap.css";
-
+import { getToken } from "../../Utils/Common";
 
 
 export default class ThongTin extends React.Component{
     constructor(props) {
         super(props);
-       this.state = {thaypass: this.props.HT}
+       this.state = {
+        thaypass: this.props.HT,
+        newpass1:'',
+        newpass2:'',
+
+
+        Newusername:'',
+        Newnickname:'',
+        Newphone:'',
+        Newsex:'',
+        Newbirth:'',
+        Newaddress:'',
+        
+      };
+      this.setpass1 = this.setpass1.bind(this);
+      this.setpass2 = this.setpass2.bind(this);
+
+
+      this.setNewusername = this.setNewusername.bind(this);
+      this.Newnickname = this.Newnickname.bind(this);
+      this.Newphone = this.Newphone.bind(this);
+      this.Newsex = this.Newsex.bind(this);
+      this.Newbirth = this.Newbirth.bind(this);
+      this.Newaddress = this.Newaddress.bind(this);
+       
        
     }
+////set new pass
+    setpass1(e){ 
+      e.preventDefault();
+      console.log(e.target.value);
+      this.setState({
+          newpass1:e.target.value
+      })
+  }
+
+  setpass2(e){ 
+    e.preventDefault();
+    console.log(e.target.value);
+    this.setState({
+        newpass1:e.target.value
+    })
+}
+////
+
+//// set user info
+setNewusername(e){ 
+  e.preventDefault();
+  console.log(e.target.value);
+  this.setState({
+    Newusername:e.target.value
+  })
+}
+
+Newnickname(e){ 
+  e.preventDefault();
+  console.log(e.target.value);
+  this.setState({
+    Newnickname:e.target.value
+  })
+}
+
+Newphone(e){ 
+  e.preventDefault();
+  console.log(e.target.value);
+  this.setState({
+    Newphone:e.target.value
+  })
+}
+
+Newsex(e){ 
+  e.preventDefault();
+  console.log(e.target.value);
+  this.setState({
+    Newsex:e.target.value
+  })
+}
+
+Newbirth(e){ 
+  e.preventDefault();
+  console.log(e.target.value);
+  this.setState({
+    Newbirth:e.target.value
+  })
+}
+
+Newaddress(e){ 
+  e.preventDefault();
+  console.log(e.target.value);
+  this.setState({
+    Newaddress:e.target.value
+  })
+}
+///
 
 
     componentDidMount = () =>{
@@ -21,7 +112,7 @@ export default class ThongTin extends React.Component{
            
 /////////
 
-    
+     
         $('#Change').hide();
          $('#ChangeInfo').hide();
         $('#changepass').on('click',function () {
@@ -41,25 +132,108 @@ export default class ThongTin extends React.Component{
             $('#Change').hide();
             $('#Info').show();
         })
-
+    
 
     }
    
     
    
     render() {
+
+
+//// Thay đổi password
+const Updatepass = () => {
+  
+  const token = getToken();
+  if(this.state.newpass1 == this.state.newpass2 ){
+  if (token) {
+    return fetch("https://amadeuss.herokuapp.com/api/reviews", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body:JSON.stringify({
+        password:this.state.newpass1,
+        
+      })
+    })
+    .then((response) => {
+     
+      console.log(response);
+      alert("Thay đổi mật khẩu thành công!");
+      window.location.reload();
+      
+    })
+    .catch((error) => {
+        console.log(error.response.data.message);
+        alert("lỗi khi thay đổi mật khẩu");
+    })
+  }
+}else{alert("Không trùng mật khẩu mới");}
+}
+///
+
+
+
+
+
+
+///////// Update user profile
+const UpdateInfo = () => {
+  const token = getToken();
+  if (token) {
+    return fetch("https://amadeuss.herokuapp.com/api/user/update", {
+      method: "PUT",
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body:JSON.stringify({
+        username:this.state.Newusername,
+        nickname:this.state.Newnickname,
+        numphone:this.state.Newphone,
+        sex:this.state.Newsex,
+        datebirth:this.state.Newbirth,
+        address:this.state.Newaddress,
+        
+      })
+    })
+    .then((response) => {
+     
+      console.log(response);
+      alert("Thay đổi mật khẩu thành công!");
+      window.location.reload();
+      
+    })
+    .catch((error) => {
+        console.log(error.response.data.message);
+        alert("lỗi khi thay đổi mật khẩu");
+    })
+  }
+}
+///
+
+
+
+
+
+
         return  (
             <div className="container-fluid">
                 {/*Thông tin  */}
             <div className="jumbotron" style={{background: "rgba(60, 60, 60, 0.5)"}} id="Info">
-            <p className="text-cauhinh">+ Họ và Tên:  <span className="span-text text-light">Nguyễn Hoàng Thanh Linh</span></p>
-            <p className="text-cauhinh">+ Ngày Sinh:  <span className="span-text text-light">15/05/1999</span></p>
-            <p className="text-cauhinh">+ Số CMND:  <span className="span-text text-light">12345678910</span></p>
-            <p className="text-cauhinh">+ SỐ điện thoại:  <span className="span-text text-light">19001009</span></p>
-            <p className="text-cauhinh">+ Email đăng kí:  <span className="span-text text-light">Otaku-key@gmail.com</span></p>
-            <p className="text-cauhinh">+ Địa chỉ:  <span className="span-text text-light">Ninh Thuận</span></p>
-            <button className="btn col-xl-3 col-lg-3 col-md-3 col-5 col-sm-5 mr-2 mb-2 btn-danger text-white" id='changeinfo'>Chỉnh sửa</button>
-            <button className="btn col-xl-3 col-lg-3 col-md-3 col-6 col-sm-5 mb-2 btn-danger text-white" id='changepass'>Thay đổi mật khẩu</button>
+            <p className="text-cauhinh">+ Tên người dùng:  <span className="span-text text-light">{this.props.UserData.username}</span></p>
+            <p className="text-cauhinh">+ Ngày sinh:  <span className="span-text text-light">{this.props.UserData.datebirth}</span></p>
+            <p className="text-cauhinh">+ Giới tính:  <span className="span-text text-light">{this.props.UserData.sex}</span></p>
+            <p className="text-cauhinh">+ Địa chỉ:  <span className="span-text text-light">{this.props.UserData.address}</span></p>
+            <p className="text-cauhinh">+ Nick name:  <span className="span-text text-light">{this.props.UserData.nickname}</span></p>
+            <p className="text-cauhinh">+ Số điện thoại:  <span className="span-text text-light">{this.props.UserData.numphone}</span></p>
+            <p className="text-cauhinh">+ Email đăng kí:  <span className="span-text text-light">{this.props.UserData.email}</span></p>
+            <button className="btn col-xl-3 col-lg-3 col-md-6 col-6 col-sm-5 mr-2 mb-2 btn-danger text-white" id='changeinfo'>Chỉnh sửa</button>
+            <button className="btn col-xl-3 col-lg-3 col-md-6 col-6 col-sm-5 mb-2 btn-danger text-white" id='changepass'>Thay đổi mật khẩu</button>
             </div>
 
 
@@ -67,12 +241,12 @@ export default class ThongTin extends React.Component{
             <div className="jumbotron" style={{background: "rgba(60, 60, 60, 0.5)"}} id="Change">
             <p className="text-light" style={{fontSize:"25px"}}>Thay đổi mật khẩu: </p>
                 
-            <input type="password" className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 " id="PassOld" placeholder="Nhập mật khẩu cũ" style={{background: "rgba(255, 255, 255, 0.1)"}} />
-            <input type="password" className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew" placeholder="Nhập mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
-            <input type="password" className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
-         
-            <button className="btn col-xl-3 col-lg-3 col-md-3 col-5 col-sm-5 mr-2 mb-2 mt-5 btn-danger text-white  hihihi " >Lưu Thay đổi</button>
-            <button className="btn col-xl-3 col-lg-3 col-md-3 col-6 col-sm-5 mb-2 mt-5 text-white     hihihi"  style={{background: "rgba(255, 255, 255, 0.1)"}}>Hủy</button>
+            <input type="password"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 " id="PassOld" placeholder="Nhập mật khẩu cũ" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="password" value={this.state.setpass1} onChange = {this.setpass1} className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew" placeholder="Nhập mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="password" value={this.state.setpass2} onChange = {this.setpass2} className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3 mb-5" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+           
+            <button className="btn col-xl-3 col-lg-3 col-md-6 col-6 col-sm-5 mr-2 mb-2 btn-danger text-white  hihihi " onClick={Updatepass} >Lưu Thay đổi</button>
+            <button className="btn col-xl-3 col-lg-3 col-md-6 col-6 col-sm-5 mb-2 text-white     hihihi"  style={{background: "rgba(255, 255, 255, 0.1)"}}>Hủy</button>
             
             </div>
 
@@ -82,27 +256,21 @@ export default class ThongTin extends React.Component{
             <div className="jumbotron" style={{background: "rgba(60, 60, 60, 0.5)"}} id="ChangeInfo">
             <p className="text-light" style={{fontSize:"25px"}}>Thay đổi Thông Tin: </p>
 
-            <p className="text-cauhinh">+ Họ và Tên:</p>  
-            <input type="text"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 "  placeholder="Họ và tên" style={{background: "rgba(255, 255, 255, 0.1)"}} />
-            
-            <p className="text-cauhinh">+ Ngày sinh:  </p>
-            <input type="date"  className="form-control  col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="Date" placeholder="DD/MM/YY" style={{background: "rgba(255, 255, 255, 0.1)"}} />    
-
-
-                        
-            <p className="text-cauhinh">+ Số CMND:  </p>
-            <input type="text"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3"  placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
-         
+            <p className="text-cauhinh">+ Tên người dùng:</p>  
+            <input type="text" value={this.state.Newusername} onChange = {this.setNewusername}  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 "  placeholder="Họ và tên" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <p className="text-cauhinh">+ Ngày sinh:</p>  
+            <input type="date" value={this.state.Newbirth} onChange = {this.Newbirth}  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 "  placeholder="DD/MM/YY" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <p className="text-cauhinh">+ Giới tính:</p>  
+            <input type="sex" value={this.state.Newsex} onChange = {this.Newsex} className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 "  placeholder="Giới tính" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <p className="text-cauhinh">+ Địa chỉ:</p>  
+            <input type="text" value={this.state.Newaddress} onChange = {this.Newaddress}  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 "  placeholder="địa chỉ" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <p className="text-cauhinh">+ Nick name:  </p>
+            <input type="text" value={this.state.Newnickname} onChange = {this.Newnickname}  className="form-control  col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="Date" placeholder="Nick name" style={{background: "rgba(255, 255, 255, 0.1)"}} />    
             <p className="text-cauhinh">+ Số điện thoại:  </p>
-            <input type="text"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3"  placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
-         
-            <p className="text-cauhinh">+ Email đăng kí:  </p>
-            <input type="email"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="phone" value={this.state.Newphone} onChange = {this.Newphone}  className="form-control  col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="Date" placeholder="Số điện thoại" style={{background: "rgba(255, 255, 255, 0.1)"}} />    
 
-            <p className="text-cauhinh">+ Địa chỉ: </p>
-            <input type="text"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3"  placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
 
-            <button className="btn col-xl-3 col-lg-3 col-md-3 col-5 col-sm-5 mr-2 mb-2 mt-5 btn-danger text-white  hihihi " >Lưu Thay đổi</button>
+            <button onClick={UpdateInfo} className="btn col-xl-3 col-lg-3 col-md-3 col-6 col-sm-5 mr-2 mb-2 mt-5 btn-danger text-white  hihihi " >Lưu Thay đổi</button>
             <button className="btn col-xl-3 col-lg-3 col-md-3 col-6 col-sm-5 mb-2 mt-5 text-white     hihihi"  style={{background: "rgba(255, 255, 255, 0.1)"}}>Hủy</button>
             
             </div>

@@ -68,30 +68,9 @@ export default class ChiTietSP extends React.Component {
     })
 
 
-    const handleLogin = () => {
-      var token= getToken();
-      console.log(token);
-
-      if (token) {
-        axios.defaults.headers.common['Bearer-Token'] = token
-      }
-      axios.put("https://amadeuss.herokuapp.com/api/cart/items", {
-        productId: this.state.ListData.id,
-	      count:1,
-      })
-      .then((response) => {
-       
-        console.log(response);
-        
-      })
-      .catch((error) => {
-       
-          console.log(error.response.data.message);
-       
-      })
-    }
+   
 ///////////////////////////
-
+/// Add to cart
 const getProfileFetch = () => {
   
     const token = getToken();
@@ -121,7 +100,17 @@ const getProfileFetch = () => {
     }
   }
 
-
+  ////
+ var fake;
+ if(this.state.ListData.priceFake >0)
+ {
+  fake = <div>
+    <p className="text-warning gia pb-0 mb-0" style={{textDecoration:"line-through"}}> {formatter.format(this.state.ListData.priceFake)}</p>
+                    <p className="text-warning gia pt-0 mt-0"> {formatter.format(this.state.ListData.price)}</p>
+  </div>
+ }else{
+fake = <p className="text-warning gia pt-0 mt-0"> {formatter.format(this.state.ListData.price)}</p>
+ }
 
     return (
       <div
@@ -163,7 +152,9 @@ const getProfileFetch = () => {
 
                   <div className="col-xl-3 col-lg-3 col-md-4 column">
                     <p className="text-light text">Giá sản Phẩm: </p>
-                    <p className="text-warning gia"> {formatter.format(this.state.ListData.price)}</p>
+                   
+                   {fake}
+                 
                     <div className="column justify-content-center">
                       <button className="col-12 btn btn-danger text-white">
                         Mua ngay
