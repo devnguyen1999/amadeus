@@ -12,6 +12,7 @@ export default class ChiTietSP extends React.Component {
     super(props);
     this.state = { HienThi: true,
     ListData:{
+      vote:0,
       category:[],
       _id:"",
       name:"",

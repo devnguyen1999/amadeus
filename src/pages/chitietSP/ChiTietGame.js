@@ -146,7 +146,7 @@ export default class ThongTinGame extends React.Component{
             <div className="jumbotron p-2 column" style={{background: "rgba(60, 60, 60, 0.5)",}}>
               <div className="container-fluid justify-content-center">
                   <p className="text-light text-center mb-0">Đánh giá trung bình</p>
-                  <p className="text-light text-center pt-0" style={{fontSize:"40px",fontWeight:100,}}>5/5</p>
+                  <p className="text-warning text-center pt-0" style={{fontSize:"40px",fontWeight:"bold",}}>{this.props.DATA.vote}/5</p>
                   
            
                     <div className="col-xl-12 col-lg-12 d-flex justify-content-center">
@@ -156,10 +156,10 @@ export default class ThongTinGame extends React.Component{
                     emptySymbol={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/OOjs_UI_icon_star.svg/1200px-OOjs_UI_icon_star.svg.png" with="35" height="35" style={{fontSize:10}} className="icon" />}
                     fullSymbol={<img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-512.png" style={{fontSize:10}} with="35" height="35" className="icon" />}
                     
-                    initialRating={this.state.AverageVote}
+                    initialRating={this.props.DATA.vote}
                     readonly />
                     </div>
-                    <p className="text-warning text-center " style={{fontWeight:"bold",fontSize:25}}>(156)</p>
+                    
                     <p className="text-light text-center ">Chia sẽ ý kiến về sản phẩm:</p>
                     <div className="col-xl-12 col-lg-12 d-flex justify-content-center">
                     {danhgia}
