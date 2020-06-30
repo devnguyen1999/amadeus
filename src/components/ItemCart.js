@@ -128,10 +128,10 @@ function ItemCart(props){
                                       </div>
                                       <div className="col-md-9 col-sm-8 col-6 d-flex align-items-center">
                                         <div className="row">
-                                          <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                          <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center ">
                                             <div className="row">
-                                              <div className="col-lg-6 col-md-6 text-center">
-                                                <h6 className="pt-2 mt-auto">{props.name}</h6>
+                                              <div className="col-lg-6 col-md-6 text-center d-flex align-items-center">
+                                                <h6 className="pt-2">{props.name}</h6>
                                               </div>
                                               <div className="col-lg-6 col-md-6 text-center d-flex align-items-center">
                                                 <h6 className="pt-2 span-price">{formatter.format(props.price)}</h6>

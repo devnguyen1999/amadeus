@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { getToken } from "../Utils/Common";
 import axios from "axios";
+import { getUser } from "../Utils/Common";
 export default class Cart extends React.Component{
   state = {
     ListCart:{
@@ -43,6 +44,9 @@ export default class Cart extends React.Component{
   }
 }
   render() {
+    const sum =() => {
+      
+    }
     const deleteall = () => {
   
       const token = getToken();
@@ -64,14 +68,12 @@ export default class Cart extends React.Component{
         })
       }
     }
-    return (
-      <div>
-      <div
-        className="page-header-cart section-dark-cart"
-        style={{backgroundImage: "url(https://wallpapercave.com/wp/OY4AvGh.jpg)",}}
-      >
-        <div className="container">
-          <div className="row" style={{paddingTop:50, paddingBottom:50}}>
+    const checkCart = () =>{
+      var user = getUser();
+      if(user != null){
+        if(this.state.ListCart.items.length != 0){
+          return(
+            <div className="row" style={{paddingTop:50, paddingBottom:50}}>
             <div className="col-lg-9">
               <div className="d-flex justify-content-center"><h4 className="text-white">Đơn hàng</h4></div>
                         {this.state.ListCart.items.map((value, key) =>{
@@ -107,7 +109,7 @@ export default class Cart extends React.Component{
                     <tbody>
                       <tr>
                         <th>Số lượng</th>
-                        <td>3</td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th>Tổng tiền</th>
@@ -131,6 +133,41 @@ export default class Cart extends React.Component{
                 </div>
             </div>
           </div>
+          );
+        }
+        else{
+          return(
+            <div className="row justify-content-center">
+                <div className="alert alert-danger col-lg-6 text-center">
+                  <h4>Giỏ hàng trống!</h4>
+                  <Link className="nav-link px-0 mx-0" to="/">
+                    <a className="h4">Trở lại cửa hàng</a>
+                  </Link>
+                </div>
+            </div>
+        );
+        }
+      }
+      else{
+        return(
+          <div className="row justify-content-center">
+            <div className="alert alert-danger col-lg-6 text-center">
+              <Link className="nav-link px-0 mx-0" to="/dang-nhap">
+                <a className="h4">Vui lòng đăng nhập để xem giỏ hàng!</a>
+              </Link>
+            </div>
+          </div>
+        );
+      }
+    };
+    return (
+      <div>
+      <div
+        className="page-header-cart section-dark-cart"
+        style={{backgroundImage: "url(https://wallpapercave.com/wp/OY4AvGh.jpg)",}}
+      >
+        <div className="container">
+          {checkCart()}
         </div>
       </div>
       <Footer />
