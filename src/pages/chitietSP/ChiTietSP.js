@@ -98,7 +98,7 @@ const getProfileFetch = () => {
           console.log(error.response.data.message);
        
       })
-    }
+    }else{alert("Xin hãy đăng nhập!!!")}
   }
 
   ////
