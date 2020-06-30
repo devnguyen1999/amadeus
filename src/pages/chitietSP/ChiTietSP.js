@@ -89,12 +89,12 @@ const getProfileFetch = () => {
         })
       })
       .then((response) => {
-       
+       alert("Thêm sản phẩm vào giỏ hàng thành công");
         console.log(response);
         
       })
       .catch((error) => {
-       
+        alert("Thêm sản phẩm vào giỏ hàng thất bại");
           console.log(error.response.data.message);
        
       })

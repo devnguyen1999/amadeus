@@ -204,13 +204,13 @@ const UpdateInfo = () => {
     .then((response) => {
      
       console.log(response);
-      alert("Thay đổi mật khẩu thành công!");
+      alert("Thay đổi thông tin thành công!");
       window.location.reload();
       
     })
     .catch((error) => {
         console.log(error.response.data.message);
-        alert("lỗi khi thay đổi mật khẩu");
+        alert("lỗi khi thay đổi thông tin");
     })
   }
 }
