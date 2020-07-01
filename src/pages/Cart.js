@@ -50,24 +50,20 @@ export default class Cart extends React.Component {
     }
   }
   render() {
-<<<<<<< HEAD
-    const sum = () => {};
-=======
-    const sum =() => {
+    const sum = () => {
       var sum = 0;
       this.state.ListCart.items.forEach((item) => {
         sum += item.productId.price * item.count;
       });
       return sum;
-    }
+    };
     const totalNumber = () => {
-      var total =0;
+      var total = 0;
       this.state.ListCart.items.forEach((item) => {
         total += item.count;
       });
       return total;
-    }
->>>>>>> 95eed8b1587c45019317f654929a3947e0c40258
+    };
     const deleteall = () => {
       const token = getToken();
       if (token) {
@@ -111,15 +107,9 @@ export default class Cart extends React.Component {
                 })}
                 <div className="row p-1">
                   <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-left">
-<<<<<<< HEAD
-                    <button className="text-white btn">
+                    <button onClick={sum} className="text-white btn">
                       Tiếp tục mua hàng
                     </button>
-=======
-                  <button onClick={sum} className="text-white btn">
-                    Tiếp tục mua hàng
-                  </button>
->>>>>>> 95eed8b1587c45019317f654929a3947e0c40258
                   </div>
                   <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-right">
                     <button
@@ -130,66 +120,66 @@ export default class Cart extends React.Component {
                     </button>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-            </div>
-            <div className="col-lg-3">
-            <div className="d-flex justify-content-center"><h4 className="text-white">Tạm tính</h4></div>
-              <div className="cart-form text-center mt-1 p-2">
-                <div className="align-items-center">
-                  <table className="table-bill table text-white text-center">
-                    <thead></thead>
-                    <tbody>
-                      <tr>
-                        <th>Số lượng</th>
-                      <td>{totalNumber()}</td>
-                      </tr>
-                      <tr>
-                        <th>Tạm tính</th>
-                        <td>{sum()}</td>
-                      </tr>
-                      <tr>
-                        <th>Thành tiền</th>
-                        <td>{sum()}</td>
-                      </tr>
-                    </tbody>
-                    <tfoot></tfoot>
-                  </table>
-                </div>             
->>>>>>> 95eed8b1587c45019317f654929a3947e0c40258
               </div>
               <div className="col-lg-3">
                 <div className="d-flex justify-content-center">
-                  <h4 className="text-white">Hoá đơn</h4>
+                  <h4 className="text-white">Tạm tính</h4>
                 </div>
-                <div className="cart-form text-center mt-1">
+                <div className="cart-form text-center mt-1 p-2">
                   <div className="align-items-center">
                     <table className="table-bill table text-white text-center">
                       <thead></thead>
                       <tbody>
                         <tr>
                           <th>Số lượng</th>
-                          <td></td>
+                          <td>{totalNumber()}</td>
                         </tr>
                         <tr>
-                          <th>Tổng tiền</th>
-                          <td>1.500.000</td>
+                          <th>Tạm tính</th>
+                          <td>{sum()}</td>
                         </tr>
                         <tr>
                           <th>Thành tiền</th>
-                          <td>1.200.000</td>
+                          <td>{sum()}</td>
                         </tr>
                       </tbody>
                       <tfoot></tfoot>
                     </table>
                   </div>
                 </div>
-                <div className="mt-2">
-                  <Link className="" to="/thanh-toan">
-                    <button className="btn btn-danger col-lg-12 col-md-12 col-xs-12">
-                      Tiến hành thanh toán
-                    </button>
-                  </Link>
+                <div className="col-lg-3">
+                  <div className="d-flex justify-content-center">
+                    <h4 className="text-white">Hoá đơn</h4>
+                  </div>
+                  <div className="cart-form text-center mt-1">
+                    <div className="align-items-center">
+                      <table className="table-bill table text-white text-center">
+                        <thead></thead>
+                        <tbody>
+                          <tr>
+                            <th>Số lượng</th>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th>Tổng tiền</th>
+                            <td>1.500.000</td>
+                          </tr>
+                          <tr>
+                            <th>Thành tiền</th>
+                            <td>1.200.000</td>
+                          </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                      </table>
+                    </div>
+                  </div>
+                  <div className="mt-2">
+                    <Link className="" to="/thanh-toan">
+                      <button className="btn btn-danger col-lg-12 col-md-12 col-xs-12">
+                        Tiến hành thanh toán
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -220,7 +210,7 @@ export default class Cart extends React.Component {
     };
     return (
       <div>
-        <Header/>
+        <Header />
         <div
           className="page-header-cart section-dark-cart"
           style={{

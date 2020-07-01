@@ -2,7 +2,6 @@ import React from "react";
 import "../Asset/css/LienHe.css";
 import "../Asset/css/bootstrap.css";
 import logo from "../amadeus.svg";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 LienHe.propTypes = {};
 
