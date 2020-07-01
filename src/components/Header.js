@@ -6,9 +6,9 @@ import axios from "axios";
 import Bag from "../pages/User/bag";
 const displayCheck = () => {
   var user = getUser();
-  if (user != null) {
+  if (user) {
     return (
-      <div  className="navbar-nav nav-item ml-auto">
+      <div className="navbar-nav nav-item ml-auto">
         <Link className="nav-link px-0 mx-0" to="/nguoi-dung">
           {user.email}
         </Link>
@@ -16,7 +16,7 @@ const displayCheck = () => {
     );
   } else {
     return (
-      <div  className="navbar-nav nav-item ml-auto">
+      <div className="navbar-nav nav-item ml-auto">
         <Link className="nav-link px-0 mx-0" to="/dang-nhap">
           Đăng nhập
         </Link>
@@ -38,7 +38,7 @@ function Header(props) {
             <div className="col-lg-2 p-0 d-flex">
               <Link className="navbar-brand" to="/">
                 <img
-                  src="../amadeus.png"
+                  src="../amadeus.svg"
                   className="img-fluid mr-3"
                   alt="Logo"
                 />
@@ -159,7 +159,7 @@ function Header(props) {
               className="col-lg-3 collapse navbar-collapse"
               id="collapsibleNavId"
             >
-                {displayCheck()}
+              {displayCheck()}
             </div>
             <div
               className="col-lg-1 collapse navbar-collapse"

@@ -3,16 +3,14 @@
   display: block;
   position: relative;
 }
-
 .footer-logo img {
-  width: 3rem;
+  width: 4.25rem;
+  height: auto;
 }
-
 .footer-space {
   width: 0;
   height: 3rem;
 }
-
 .footer-content::after {
   content: "";
   background-image: url(https://i.redd.it/9q6rk9pfspm41.jpg);
@@ -23,4 +21,8 @@
   right: 0;
   position: absolute;
   z-index: -1;
+}
+.footer-content a{
+  color: white !important;
+  text-decoration: none !important;
 }
