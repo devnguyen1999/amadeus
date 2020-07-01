@@ -45,7 +45,18 @@ export default class Cart extends React.Component{
 }
   render() {
     const sum =() => {
-      
+      var sum = 0;
+      this.state.ListCart.items.forEach((item) => {
+        sum += item.productId.price * item.count;
+      });
+      return sum;
+    }
+    const totalNumber = () => {
+      var total =0;
+      this.state.ListCart.items.forEach((item) => {
+        total += item.count;
+      });
+      return total;
     }
     const deleteall = () => {
   
@@ -91,7 +102,7 @@ export default class Cart extends React.Component{
                         })}
                 <div className="row p-1">
                   <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-left">
-                  <button className="text-white btn">
+                  <button onClick={sum} className="text-white btn">
                     Tiếp tục mua hàng
                   </button>
                   </div>
@@ -101,23 +112,23 @@ export default class Cart extends React.Component{
                 </div>
             </div>
             <div className="col-lg-3">
-            <div className="d-flex justify-content-center"><h4 className="text-white">Hoá đơn</h4></div>
-              <div className="cart-form text-center mt-1">
+            <div className="d-flex justify-content-center"><h4 className="text-white">Tạm tính</h4></div>
+              <div className="cart-form text-center mt-1 p-2">
                 <div className="align-items-center">
                   <table className="table-bill table text-white text-center">
                     <thead></thead>
                     <tbody>
                       <tr>
                         <th>Số lượng</th>
-                        <td></td>
+                      <td>{totalNumber()}</td>
                       </tr>
                       <tr>
-                        <th>Tổng tiền</th>
-                        <td>1.500.000</td>
+                        <th>Tạm tính</th>
+                        <td>{sum()}</td>
                       </tr>
                       <tr>
                         <th>Thành tiền</th>
-                        <td>1.200.000</td>
+                        <td>{sum()}</td>
                       </tr>
                     </tbody>
                     <tfoot></tfoot>

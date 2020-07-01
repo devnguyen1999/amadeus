@@ -1,10 +1,88 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Checkout.css";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-Checkout.propTypes = {};
-function Checkout(props) {
+import { getUser, getToken } from "../Utils/Common";
+import axios from "axios";
+export default class Checkout extends React.Component{
+  state = {
+    ListCart:{
+      items:[{
+      _id: "",
+      userId: "",
+      productId: {
+                _id: "",
+                name: "",
+                nameURL: "",
+                img: "",
+                price: 0,
+                id: ""
+            },
+      count: 0,
+      createdAt: "",
+      updatedAt: "",
+      __v: 0,
+    }]
+    }
+  };
+  componentDidMount() {
+    const token = getToken();
+    if(token){
+      axios.get("https://amadeuss.herokuapp.com/api/cart/itemshowall", {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      }).then(response => {
+        const ListCart = response.data;
+        this.setState({ListCart});
+      }).catch((error) => {
+        console.log("error",error);
+      })
+    }
+  }
+render(){
+  const formatter = new Intl.NumberFormat('vi-VI', {
+    style: 'currency',
+    currency: 'VND',
+    minimumFractionDigits: 0
+  })
+  const sum =() => {
+    var sum = 0;
+    this.state.ListCart.items.forEach((item) => {
+      sum += item.productId.price * item.count;
+    });
+    return sum;
+  }
+  const totalNumber = () => {
+    var total = 0;
+    this.state.ListCart.items.forEach((item) => {
+      total += item.count;
+    });
+    return total;
+  }
+  const  createOrder =() => {
+    const user = getUser();
+    console.log("user", user);
+    const token = getToken();
+    if(token){
+      return fetch("https://amadeuss.herokuapp.com/order/post",{
+        method:"POST",
+        headers:{
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body:JSON.stringify({
+          email: user.email
+        }),
+      }).then((response) => {
+        console.log("response", response);
+        window.location.reload();
+      }).catch((error) => {
+        console.log(error);
+      })
+      }
+  }
   return (
     <div>
     <div
@@ -82,28 +160,12 @@ function Checkout(props) {
                     </thead>
                     <tbody>
                       <tr>
-                        <th>
-                          <h5>Tổng tiền</h5>
-                        </th>
-                        <td>
-                          <h5>1.500.000</h5>
-                        </td>
+                        <th></th>
+                        <td></td>
                       </tr>
                       <tr>
-                        <th>
-                          <h5>Giá giảm</h5>
-                        </th>
-                        <td>
-                          <h5>300.000</h5>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <h5>Thành tiền</h5>
-                        </th>
-                        <td>
-                          <h5>1.200.000</h5>
-                        </td>
+                      <th>Thành tiền</th>
+                      <td>{sum()}</td>
                       </tr>
                     </tbody>
                     <tfoot></tfoot>
@@ -111,11 +173,9 @@ function Checkout(props) {
                 </div>
               </div>
             <div className="mt-4">
-              <Link to="cam-on">
-                <button className="btn-danger btn col-lg-12">
+                <button onClick={createOrder} className="btn-danger btn col-lg-12">
                   Thanh toán
                 </button>
-              </Link>
             </div>
           </div>
         </div>
@@ -125,4 +185,4 @@ function Checkout(props) {
     </div>
   );
 }
-export default Checkout;
+};

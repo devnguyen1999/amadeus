@@ -91,7 +91,7 @@ const getProfileFetch = () => {
       .then((response) => {
        alert("Thêm sản phẩm vào giỏ hàng thành công");
         console.log(response);
-        
+        window.location.reload();
       })
       .catch((error) => {
         alert("Thêm sản phẩm vào giỏ hàng thất bại");
