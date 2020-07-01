@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { getUser, getToken } from "../Utils/Common";
+import axios from "axios";
+import Bag from "../pages/User/bag";
 
 function Header(props) {
   const [loggedIn, setloggedIn] = useState(getToken() ? true : false);
@@ -166,9 +168,7 @@ function Header(props) {
             >
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item dropdown">
-                  <Link className="nav-link mr-auto" to="/gio-hang">
-                    <i className="far fa-shopping-cart    " />
-                  </Link>
+                  <Bag></Bag>
                 </li>
                 <li className="nav-item dropdown">
                   <a
