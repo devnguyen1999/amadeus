@@ -4,7 +4,8 @@
   position: relative;
 }
 .footer-logo img {
-  width: 3rem;
+  width: 4.25rem;
+  height: auto;
 }
 .footer-space {
   width: 0;
