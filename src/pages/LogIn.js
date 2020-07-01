@@ -11,6 +11,13 @@ function LogIn(props) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const { from } = { from: { pathname: "/" } };
+  const [redirectToReferrer, setRedirectToReferrer] = useState(false);
+
+  if (redirectToReferrer) {
+    return <Redirect to={from} />;
+  }
+
   const onSubmit = (values) => {
     setError(null);
     setLoading(true);
@@ -22,13 +29,7 @@ function LogIn(props) {
       .then((response) => {
         setLoading(false);
         setUserSession(response.data.accessToken, response.data.user);
-        return (
-          <Redirect
-            to={{
-              pathname: "/",
-            }}
-          />
-        );
+        setRedirectToReferrer(true);
       })
       .catch((error) => {
         setLoading(false);

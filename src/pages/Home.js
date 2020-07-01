@@ -2,7 +2,7 @@ import React from "react";
 import Product from "../components/Product";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import Data from "../product-data.json";
+import Header from "../components/Header";
 import "./Home.css";
 import axios from "axios";
 
@@ -24,6 +24,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <div id="carouselId" className="carousel slide" data-ride="carousel">
           <ol className="carousel-indicators">
             <li
