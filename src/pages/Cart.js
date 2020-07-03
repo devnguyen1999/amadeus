@@ -1,12 +1,12 @@
 import React from "react";
 import "./Cart.css";
 import ItemCart from "../components/ItemCart";
-import { BrowserRouter as Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { getToken } from "../Utils/Common";
 import axios from "axios";
 import { getUser } from "../Utils/Common";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 export default class Cart extends React.Component {
   state = {
     ListCart: {
