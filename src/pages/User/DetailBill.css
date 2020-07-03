@@ -7,14 +7,11 @@
     display: flex;
 }
 .img-bill{
-    max-height: 60px;
-    max-width: 60px;
+    max-height: 100px;
+    max-width: 100px;
 }
 .text-overflow{
-  white-space: nowrap; 
-  width: 50px; 
-  overflow: hidden;
-  text-overflow: ellipsis; 
+  width: 80px; 
 }
 .margin-top-100{
     margin-top: 100px;

@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import "../../Asset/css/bootstrap.css";
 import "./DetailBill.css"
 import ItemBill from "./itemBill.js";
+import { Link } from "react-router-dom";
 export default class DetailBill extends React.Component{
     constructor(props){
         super(props);
@@ -16,7 +17,14 @@ export default class DetailBill extends React.Component{
             email:"",
             products:[{
             _id:"",
-            productId:"",
+            productId:{
+                _id:"",
+                name:"",
+                nameURL:"",
+                img:"",
+                price:0,
+                id:"",
+            },
             nameURL:"",
             quantity: 0,
             price: 0,
@@ -32,7 +40,14 @@ export default class DetailBill extends React.Component{
                 email:"",
                 products:[{
                   _id:"",
-                  productId:"",
+                  productId:{
+                      _id:"",
+                      name:"",
+                      nameURL:"",
+                      img:"",
+                      price:0,
+                      id:"",
+                  },
                   nameURL:"",
                   quantity: 0,
                   price: 0,
@@ -62,8 +77,6 @@ export default class DetailBill extends React.Component{
                     this.setState(this.state.Order);
                 }
             });
-            console.log('data', ListOrders);
-            console.log('order', this.state.Order);
           }).catch((error) => {
             console.log("error",error);
           })
@@ -123,7 +136,9 @@ export default class DetailBill extends React.Component{
                                 return(
                                     <ItemBill
                                         key={key}
-                                        productId={value.productId}
+                                        name={value.productId.name}
+                                        nameURL={value.productId.nameURL}
+                                        img={value.productId.img}
                                         price ={value.price}
                                         quantity={value.quantity}
                                     />
@@ -138,6 +153,9 @@ export default class DetailBill extends React.Component{
                             </tfoot>
                             </div>
                         </table>
+                        <Link to="/nguoi-dung">
+                            <p>Quay về đơn hàng của tôi</p>
+                        </Link>
                         </div>
                     </div>
                 </div>

@@ -9,22 +9,29 @@ import ItemHistory from "./itemHistory";
 
 export default class LichSu extends React.Component{
    state={
-       ListOrders:[{
-        paid: false,
+    ListOrders:[{
+      paid: false,
+      _id:"",
+      userId: "",
+      email:"",
+      products:[{
         _id:"",
-        userId: "",
-        email:"",
-        products:[{
-          _id:"",
-          productId:"",
-          nameURL:"",
-          quantity: 0,
-          price: 0,
-        }],
-        total: 0,
-        createAt:"",
-        __v: 0
-       }]
+        productId:{
+            _id:"",
+            name:"",
+            nameURL:"",
+            img:"",
+            price:0,
+            id:"",
+        },
+        nameURL:"",
+        quantity: 0,
+        price: 0,
+      }],
+      total: 0,
+      createAt:"",
+      __v: 0
+     }]
    };
    getToken(){
     return sessionStorage.getItem("accessToken") || null;
