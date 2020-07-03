@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Cart.css";
 import ItemCart from "../components/ItemCart";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { getToken } from "../Utils/Common";
 import axios from "axios";
@@ -147,40 +146,13 @@ export default class Cart extends React.Component {
                     </table>
                   </div>
                 </div>
-                <div className="col-lg-3">
-                  <div className="d-flex justify-content-center">
-                    <h4 className="text-white">Hoá đơn</h4>
-                  </div>
-                  <div className="cart-form text-center mt-1">
-                    <div className="align-items-center">
-                      <table className="table-bill table text-white text-center">
-                        <thead></thead>
-                        <tbody>
-                          <tr>
-                            <th>Số lượng</th>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <th>Tổng tiền</th>
-                            <td>1.500.000</td>
-                          </tr>
-                          <tr>
-                            <th>Thành tiền</th>
-                            <td>1.200.000</td>
-                          </tr>
-                        </tbody>
-                        <tfoot></tfoot>
-                      </table>
-                    </div>
-                  </div>
-                  <div className="mt-2">
+                <div className="mt-2">
                     <Link className="" to="/thanh-toan">
                       <button className="btn btn-danger col-lg-12 col-md-12 col-xs-12">
                         Tiến hành thanh toán
                       </button>
                     </Link>
                   </div>
-                </div>
               </div>
             </div>
           );

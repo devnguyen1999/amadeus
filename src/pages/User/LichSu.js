@@ -38,6 +38,7 @@ export default class LichSu extends React.Component{
         }
       }).then(response => {
         const ListOrders = response.data;
+        console.log('data', ListOrders);
         this.setState({ListOrders});
       }).catch((error) => {
         console.log("error",error);
@@ -48,7 +49,7 @@ export default class LichSu extends React.Component{
     render() {
         return (
        <div className="container-fluid" >
-          <table class="table table-striped text-light table-bordered text-tb" style={{background: "rgba(60, 60, 60, 0.6)"}}>
+          <table className="table table-striped text-light table-bordered text-tb" style={{background: "rgba(60, 60, 60, 0.6)"}}>
                 <thead>
                     <tr className="text-warning"  style={{background: "rgba(255, 255, 255, 0.3)"}}>
                     <th scope="col">Đơn hàng</th>

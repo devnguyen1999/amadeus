@@ -46,7 +46,6 @@ export default class Bag extends React.Component{
         this.state.ListCart.items.forEach((item) => {
           total += item.count;
         });
-        console.log(this.state.ListCart);
         return total;
       }
     return(
