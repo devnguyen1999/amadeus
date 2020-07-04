@@ -14,11 +14,11 @@ export default class Home extends React.Component {
   componentDidMount() {
     axios
       .get(`https://amadeuss.herokuapp.com/products`)
-      .then(res => {
+      .then((res) => {
         const ListData = res.data;
         this.setState({ ListData });
       })
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   }
 
   render() {
@@ -38,22 +38,22 @@ export default class Home extends React.Component {
           <div className="carousel-inner" role="listbox">
             <div className="carousel-item active">
               <img
-                src="https://compass-ssl.xbox.com/assets/05/75/0575153b-9efa-4620-8afe-b6980200f60f.jpg?n=215489_Page-Hero-1084_1920x720.jpeg"
-                className="img-fluid"
+                src="https://wongstore.com/uploads/2/2020-04/15615.jpg"
+                className="img-fluid d-block mx-auto"
                 alt="First slide"
               />
             </div>
             <div className="carousel-item">
               <img
-                src="https://i.imgur.com/6mjaYdD.jpeg"
-                className="img-fluid"
+                src="https://wongstore.com/uploads/2/2020-02/new_project.jpg"
+                className="img-fluid d-block mx-auto"
                 alt="Second slide"
               />
             </div>
             <div className="carousel-item">
               <img
-                src="https://i.imgur.com/R095ZFO.jpeg"
-                className="img-fluid"
+                src="https://wongstore.com/uploads/2/2020-02/avenger2222.jpg"
+                className="img-fluid d-block mx-auto"
                 alt="Third slide"
               />
             </div>
@@ -77,132 +77,77 @@ export default class Home extends React.Component {
             <span className="sr-only">Next</span>
           </a>
         </div>
-        <div className="container-fluid">
+        <div className="container my-3">
+          <h4 className="text-white mt-3">Sản phẩm khuyến mãi</h4>
+          <hr className="border-white mt-2" />
           <div className="row">
-            <div className="col-12 col-md-3">
-              <a
-                className="btn d-block text-white dropdown-toggle"
-                data-toggle="collapse"
-                href="#sortMenu"
-                role="button"
-                aria-expanded="false"
-                aria-controls="sortMenu"
-              >
-                <h4 className="text-white">Sắp xếp theo</h4>
-                <hr className="border-white mt-2 mb-0" />
-              </a>
-              <div className="collapse" id="sortMenu">
-                <div
-                  className="nav flex-column nav-pills"
-                  id="v-pills-tab"
-                  role="tablist"
-                  aria-orientation="vertical"
-                >
-                  <a
-                    className="nav-link text-white"
-                    id="v-pills-ascending-tab"
-                    data-toggle="pill"
-                    href="#v-pills-ascending"
-                    role="tab"
-                    aria-controls="v-pills-ascending"
-                    aria-selected="true"
-                  >
-                    Giá tăng dần
-                  </a>
-                  <a
-                    className="nav-link text-white"
-                    id="v-pills-decrease-tab"
-                    data-toggle="pill"
-                    href="#v-pills-decrease"
-                    role="tab"
-                    aria-controls="v-pills-decrease"
-                    aria-selected="false"
-                  >
-                    Giá giảm dần
-                  </a>
-                  <a
-                    className="nav-link text-white"
-                    id="v-pills-latest-tab"
-                    data-toggle="pill"
-                    href="#v-pills-latest"
-                    role="tab"
-                    aria-controls="v-pills-latest"
-                    aria-selected="false"
-                  >
-                    Mới nhất
-                  </a>
-                </div>
-              </div>
-              <a
-                className="btn d-block text-white dropdown-toggle"
-                data-toggle="collapse"
-                href="#filterMenu"
-                role="button"
-                aria-expanded="false"
-                aria-controls="filterMenu"
-              >
-                <h4>Bộ lọc sản phẩm</h4>
-                <hr className="border-white mt-2 mb-0" />
-              </a>
-              <div className="collapse" id="filterMenu"></div>
-            </div>
-            <div className="col-12 col-md-9">
-              <div className="row">
-                {this.state.ListData.map((value, key) => {
-                  return (
-                    <Product
-                      key={key}
-                      prID={value.id}
-                      prImg={value.img}
-                      prURL={value.nameURL}
-                      prTitle={value.name}
-                      prPrice={value.price}
-                    />
-                  );
-                })}
-              </div>
-            </div>
+            {this.state.ListData.map((value, key) => {
+              if (value.priceFake !== 0) {
+                return (
+                  <Product
+                    key={key}
+                    prID={value.id}
+                    prImg={value.img}
+                    prTitle={value.name}
+                    prPrice={value.price}
+                    prFake={value.priceFake}
+                  />
+                );
+              }
+            })}
+          </div>
+          <div className="d-flex justify-content-center mt-2">
+            <Link className="text-white custom-link" to="">
+              Xem thêm sản phẩm
+            </Link>
+          </div>
+          <h4 className="text-white mt-3">Sản phẩm mới nhất</h4>
+          <hr className="border-white mt-2" />
+          <div className="row">
+            {this.state.ListData.map((value, key) => {
+              if (key < 9) {
+                return (
+                  <Product
+                    key={key}
+                    prID={value.id}
+                    prImg={value.img}
+                    prTitle={value.name}
+                    prPrice={value.price}
+                    prFake={value.priceFake}
+                  />
+                );
+              }
+            })}
+          </div>
+          <div className="d-flex justify-content-center mt-2">
+            <Link className="text-white custom-link" to="">
+              Xem thêm sản phẩm
+            </Link>
+          </div>
+          <h4 className="text-white mt-3">Sản phẩm ngẫu nhiên</h4>
+          <hr className="border-white mt-2" />
+          <div className="row">
+            {this.state.ListData.map((value, key) => {
+              if (key < 9) {
+                return (
+                  <Product
+                    key={key}
+                    prID={value.id}
+                    prImg={value.img}
+                    prTitle={value.name}
+                    prPrice={value.price}
+                    prFake={value.priceFake}
+                  />
+                );
+              }
+            })}
+          </div>
+          <div className="d-flex justify-content-center mt-2">
+            <Link className="text-white custom-link" to="">
+              Xem thêm sản phẩm
+            </Link>
           </div>
         </div>
-        <nav aria-label="Page navigation example">
-          <ul className="pagination justify-content-center py-3">
-            <li className="page-item disabled">
-              <Link className="page-link" to="" tabIndex={-1}>
-                Trang trước
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link className="page-link" to="">
-                1
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link className="page-link" to="">
-                2
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link className="page-link" to="">
-                3
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link className="page-link" to="">
-                4
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link className="page-link" to="">
-                5
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link className="page-link" to="" tabIndex={+1}>
-                Trang sau
-              </Link>
-            </li>
-          </ul>
-        </nav>
         <Footer />
       </div>
     );

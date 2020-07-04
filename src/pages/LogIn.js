@@ -26,10 +26,12 @@ function LogIn(props) {
         email: values.email,
         password: values.password,
       })
-      .then((response) => {
+      .then((response) => {console.log(response);
         setLoading(false);
         setUserSession(response.data.accessToken, response.data.user);
         setRedirectToReferrer(true);
+        
+        
       })
       .catch((error) => {
         setLoading(false);

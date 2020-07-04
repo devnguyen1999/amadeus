@@ -1,4 +1,3 @@
-import "./SignUp.css";
 import React, { useState, useRef } from "react";
 import Header from "../components/Header";
 import axios from "axios";
@@ -21,7 +20,9 @@ function SignUp(props) {
       })
       .then((response) => {
         setLoading(false);
-        setError("Đăng kí thành công. Vui lòng kiểm tra email của bạn và xác thực tài khoản.")
+        setError("Đăng kí thành công. Vui lòng kiểm tra email của bạn và xác thực tài khoản.");
+        console.log(response);
+        
       })
       .catch((error) => {
         setLoading(false);

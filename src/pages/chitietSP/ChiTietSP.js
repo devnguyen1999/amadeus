@@ -71,18 +71,19 @@ export default class ChiTietSP extends React.Component {
     const getProfileFetch = () => {
       const token = getToken();
       if (token) {
-        return fetch("https://amadeuss.herokuapp.com/api/cart/items", {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({
-            productId: this.state.ListData.id,
-            count: 1,
-          }),
-        })
+        const config = {
+          headers: { Authorization: `Bearer ${token}` },
+        };
+        const bodyParameters = {
+          productId: this.state.ListData.id,
+          count: 1,
+        };
+        return axios
+          .put(
+            "https://amadeuss.herokuapp.com/api/cart/items",
+            bodyParameters,
+            config
+          )
           .then((response) => {
             alert("Thêm sản phẩm vào giỏ hàng thành công");
             console.log(response);
@@ -125,93 +126,93 @@ export default class ChiTietSP extends React.Component {
 
     return (
       <div>
-        <Header/>
+        <Header />
         <div
-        className="container-fluid p-2"
-        style={{
-          backgroundColor: "black",
-        }}
-      >
-        <div className="jumbotron p-0">
-          <img
-            src={this.state.ListData.imgHD}
-            className="img-fluid mx-auto d-block p-0"
-            alt="img"
-            style={{ maxHeight: 560, width: "100%" }}
-          />
-        </div>
-        {/*sản phẩm */}
+          className="container-fluid p-2"
+          style={{
+            backgroundColor: "black",
+          }}
+        >
+          <div className="jumbotron p-0">
+            <img
+              src={this.state.ListData.imgHD}
+              className="img-fluid mx-auto d-block p-0"
+              alt="img"
+              style={{ maxHeight: 560, width: "100%" }}
+            />
+          </div>
+          {/*sản phẩm */}
 
-        <div className="container mt-3">
-          <div
-            className="jumbotron row p-4"
-            style={{ background: "rgba(60, 60, 60, 0.5)" }}
-          >
-            <div className="col-xl-3 col-lg-3 col-md-3 align-content-center justify-content-center img-game">
-              <img
-                src={this.state.ListData.img}
-                alt="Product"
-                className="img-game-2 p-3"
-              />
-            </div>
+          <div className="container mt-3">
+            <div
+              className="jumbotron row p-4"
+              style={{ background: "rgba(60, 60, 60, 0.5)" }}
+            >
+              <div className="col-xl-3 col-lg-3 col-md-3 align-content-center justify-content-center img-game">
+                <img
+                  src={this.state.ListData.img}
+                  alt="Product"
+                  className="img-game-2 p-3"
+                />
+              </div>
 
-            <div className="col-xl-6 col-lg-6 col-md-5 column ">
-              <h2 className="text-light">{this.state.ListData.name}</h2>
-              <p className="text-light eclipse-text">
-                {this.state.ListData.decription}
-              </p>
-            </div>
+              <div className="col-xl-6 col-lg-6 col-md-5 column ">
+                <h2 className="text-light">{this.state.ListData.name}</h2>
+                <p className="text-light eclipse-text">
+                  {this.state.ListData.decription}
+                </p>
+              </div>
 
-            <div className="col-xl-3 col-lg-3 col-md-4 column">
-              <p className="text-light text">Giá sản Phẩm: </p>
+              <div className="col-xl-3 col-lg-3 col-md-4 column">
+                <p className="text-light text">Giá sản Phẩm: </p>
 
-              {fake}
+                {fake}
 
-              <div className="column justify-content-center">
-                <button className="col-12 btn btn-danger text-white">
-                  Mua ngay
-                </button>
-                <button
-                  className="col-12 btn text-white"
-                  style={{ background: "#00B894" }}
-                  onClick={getProfileFetch}
-                >
-                  Thêm vào giỏ hàng
-                </button>
+                <div className="column justify-content-center">
+                  <button className="col-12 btn btn-danger text-white">
+                    Mua ngay
+                  </button>
+                  <button
+                    className="col-12 btn text-white"
+                    style={{ background: "#00B894" }}
+                    onClick={getProfileFetch}
+                  >
+                    Thêm vào giỏ hàng
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/*Button  */}
-        <div className="container mb-3">
-          <div
-            className="jumbotron row p-4 row"
-            style={{ background: "black" }}
-          >
-            <button
-              className="btn col-xl-3 col-lg-3 col-md-3 col-5 col-sm-5 mr-2 mb-2 btn-danger text-white"
-              onClick={() => this.setState({ HienThi: true })}
+          {/*Button  */}
+          <div className="container mb-3">
+            <div
+              className="jumbotron row p-4 row"
+              style={{ background: "black" }}
             >
-              Thông tin game
-            </button>
-            <button
-              className="btn col-xl-3 col-lg-3 col-md-3 col-6 col-sm-5 mb-2  text-white"
-              onClick={() => this.setState({ HienThi: false })}
-              style={{ background: "rgba(255, 255, 255, 0.1)" }}
-            >
-              Cấu hình yêu cầu
-            </button>
+              <button
+                className="btn col-xl-3 col-lg-3 col-md-3 col-5 col-sm-5 mr-2 mb-2 btn-danger text-white"
+                onClick={() => this.setState({ HienThi: true })}
+              >
+                Thông tin game
+              </button>
+              <button
+                className="btn col-xl-3 col-lg-3 col-md-3 col-6 col-sm-5 mb-2  text-white"
+                onClick={() => this.setState({ HienThi: false })}
+                style={{ background: "rgba(255, 255, 255, 0.1)" }}
+              >
+                Cấu hình yêu cầu
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/*Button  */}
+          {/*Button  */}
 
-        <div className="container">
-          <DieuHuong HT={this.state.HienThi} DATA={this.state.ListData} />
+          <div className="container">
+            <DieuHuong HT={this.state.HienThi} DATA={this.state.ListData} />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
       </div>
     );
   }

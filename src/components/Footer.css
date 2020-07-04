@@ -26,3 +26,7 @@
   color: white !important;
   text-decoration: none !important;
 }
+.footer-icon img {
+  width: 3rem;
+  height: auto;
+}

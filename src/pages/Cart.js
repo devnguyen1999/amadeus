@@ -148,7 +148,7 @@ export default class Cart extends React.Component {
                   </div>
                 </div>
                 <div className="col-lg-3">
-                  <div className="d-flex justify-content-center">
+                  {/* <div className="d-flex justify-content-center">
                     <h4 className="text-white">Hoá đơn</h4>
                   </div>
                   <div className="cart-form text-center mt-1">
@@ -179,7 +179,7 @@ export default class Cart extends React.Component {
                         Tiến hành thanh toán
                       </button>
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

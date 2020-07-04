@@ -18,7 +18,7 @@ function Footer(props) {
                   />
                   <h5 className="my-auto">Amadeus Shop</h5>
                 </Link>
-                <span className="my-2">Thương mại điện tử &#38; Triển khai ứng dụng</span>
+                <span className="my-2">Thương mại điện tử &#38; triển khai ứng dụng</span>
                 <span className="my-2">
                   Đại học Quốc gia Thành phố Hồ Chí Minh
                 </span>
@@ -39,8 +39,8 @@ function Footer(props) {
                   <h5 className="my-auto">Liên hệ với chúng tôi</h5>
                 </div>
                 <a
-                  className="footer-logo d-flex flex-row my-2"
-                  href="https://www.facebook.com/thanhdevil"
+                  className="footer-icon d-flex flex-row my-2"
+                  href="https://www.facebook.com/Amadeushop-101903708243960/"
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
@@ -50,7 +50,7 @@ function Footer(props) {
                   <span className="my-2">Facebook</span>
                 </a>
                 <a
-                  className="footer-logo d-flex flex-row my-2"
+                  className="footer-icon d-flex flex-row my-2"
                   href="https://github.com/thanhdevil9699"
                 >
                   <img
@@ -61,7 +61,7 @@ function Footer(props) {
                   <span className="my-2">Github</span>
                 </a>
                 <a
-                  className="footer-logo d-flex flex-row my-2"
+                  className="footer-icon d-flex flex-row my-2"
                   href="https://discord.gg/xeSFUXk"
                 >
                   <img

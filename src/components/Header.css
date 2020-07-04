@@ -19,8 +19,8 @@ nav {
 }
 .search-box {
   width: 75vw;
-  background-color: rgba(255, 255, 255, 0);
-  border-style: none;
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-style: none !important;
 }
 .bag {
   position: relative;
