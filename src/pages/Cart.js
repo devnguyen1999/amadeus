@@ -1,13 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Cart.css";
 import ItemCart from "../components/ItemCart";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { getToken } from "../Utils/Common";
 import axios from "axios";
 import { getUser } from "../Utils/Common";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 export default class Cart extends React.Component {
   state = {
     ListCart: {
@@ -147,6 +146,7 @@ export default class Cart extends React.Component {
                     </table>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <div className="col-lg-3">
                   {/* <div className="d-flex justify-content-center">
                     <h4 className="text-white">Hoá đơn</h4>
@@ -174,13 +174,20 @@ export default class Cart extends React.Component {
                     </div>
                   </div>
                   <div className="mt-2">
+=======
+                <div className="mt-2">
+>>>>>>> bd81cf736c7b4ba70de1d9675c65ebc318054f6d
                     <Link className="" to="/thanh-toan">
                       <button className="btn btn-danger col-lg-12 col-md-12 col-xs-12">
                         Tiến hành thanh toán
                       </button>
                     </Link>
+<<<<<<< HEAD
                   </div> */}
                 </div>
+=======
+                  </div>
+>>>>>>> bd81cf736c7b4ba70de1d9675c65ebc318054f6d
               </div>
             </div>
           );

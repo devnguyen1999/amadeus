@@ -1,0 +1,18 @@
+.bill-infor{
+    height: 72px;
+    color:black;
+    border-radius: 3px;
+}
+.flex{
+    display: flex;
+}
+.img-bill{
+    max-height: 100px;
+    max-width: 100px;
+}
+.text-overflow{
+  width: 80px; 
+}
+.margin-top-100{
+    margin-top: 100px;
+}

@@ -1,11 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Thankfor.css";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 Thankfor.propTypes = {};
-function Thankfor(props) {
+function Thankfor() {
   return (
     <div>
       <Header />
