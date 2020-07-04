@@ -114,9 +114,6 @@ export default class Checkout extends React.Component {
                       Thanh toán bằng tài khoản
                     </label>
                   </div>
-<<<<<<< HEAD
-                </div>
-=======
                   <div className="radio">
                     <label>
                       <input type="radio" />
@@ -140,7 +137,6 @@ export default class Checkout extends React.Component {
                     />
                   </div>
                 </form>
->>>>>>> bd81cf736c7b4ba70de1d9675c65ebc318054f6d
               </div>
             </div>
             <div className="cart-form mt-2 mb-2">

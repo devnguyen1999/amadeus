@@ -146,48 +146,13 @@ export default class Cart extends React.Component {
                     </table>
                   </div>
                 </div>
-<<<<<<< HEAD
-                <div className="col-lg-3">
-                  {/* <div className="d-flex justify-content-center">
-                    <h4 className="text-white">Hoá đơn</h4>
-                  </div>
-                  <div className="cart-form text-center mt-1">
-                    <div className="align-items-center">
-                      <table className="table-bill table text-white text-center">
-                        <thead></thead>
-                        <tbody>
-                          <tr>
-                            <th>Số lượng</th>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <th>Tổng tiền</th>
-                            <td>1.500.000</td>
-                          </tr>
-                          <tr>
-                            <th>Thành tiền</th>
-                            <td>1.200.000</td>
-                          </tr>
-                        </tbody>
-                        <tfoot></tfoot>
-                      </table>
-                    </div>
-                  </div>
-                  <div className="mt-2">
-=======
                 <div className="mt-2">
->>>>>>> bd81cf736c7b4ba70de1d9675c65ebc318054f6d
-                    <Link className="" to="/thanh-toan">
-                      <button className="btn btn-danger col-lg-12 col-md-12 col-xs-12">
-                        Tiến hành thanh toán
-                      </button>
-                    </Link>
-<<<<<<< HEAD
-                  </div> */}
+                  <Link className="" to="/thanh-toan">
+                    <button className="btn btn-danger col-lg-12 col-md-12 col-xs-12">
+                      Tiến hành thanh toán
+                    </button>
+                  </Link>
                 </div>
-=======
-                  </div>
->>>>>>> bd81cf736c7b4ba70de1d9675c65ebc318054f6d
               </div>
             </div>
           );
