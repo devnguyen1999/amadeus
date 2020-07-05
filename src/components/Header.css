@@ -3,7 +3,7 @@ nav {
   opacity: 0.85;
 }
 .navbar-brand img {
-  width: 2rem;
+  width: 3rem;
 }
 .col-lg-3 .nav-item {
   flex-direction: row;
@@ -19,6 +19,22 @@ nav {
 }
 .search-box {
   width: 75vw;
-  background-color: rgba(255, 255, 255, 0);
-  border-style: none;
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-style: none !important;
 }
+.bag {
+  position: relative;
+}
+
+  .bag .number {
+      position: absolute;
+      top: -5px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      line-height: 20px;
+      color: #000;
+      font-size: 12px;
+      background: #f8f9fade;
+      right: -12px;
+  }

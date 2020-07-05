@@ -1,35 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./ItemCart.css";
 import { getToken } from "../Utils/Common";
-const toSlug = str => {
-  // Chuyển hết sang chữ thường
-  str = str.toLowerCase();
-
-  // xóa dấu
-  str = str.replace(/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/g, "a");
-  str = str.replace(/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/g, "e");
-  str = str.replace(/(ì|í|ị|ỉ|ĩ)/g, "i");
-  str = str.replace(/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/g, "o");
-  str = str.replace(/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/g, "u");
-  str = str.replace(/(ỳ|ý|ỵ|ỷ|ỹ)/g, "y");
-  str = str.replace(/(đ)/g, "d");
-
-  // Xóa ký tự đặc biệt
-  str = str.replace(/([^0-9a-z-\s])/g, "");
-
-  // Xóa khoảng trắng thay bằng ký tự -
-  str = str.replace(/(\s+)/g, "-");
-
-  // xóa phần dự - ở đầu
-  str = str.replace(/^-+/g, "");
-
-  // xóa phần dư - ở cuối
-  str = str.replace(/-+$/g, "");
-
-  // return
-  return str;
-};
 
 function ItemCart(props){
   const plus = () => {
@@ -128,10 +99,10 @@ function ItemCart(props){
                                       </div>
                                       <div className="col-md-9 col-sm-8 col-6 d-flex align-items-center">
                                         <div className="row">
-                                          <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+                                          <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center ">
                                             <div className="row">
-                                              <div className="col-lg-6 col-md-6 text-center">
-                                                <h6 className="pt-2 mt-auto">{props.name}</h6>
+                                              <div className="col-lg-6 col-md-6 text-center d-flex align-items-center">
+                                                <h6 className="pt-2">{props.name}</h6>
                                               </div>
                                               <div className="col-lg-6 col-md-6 text-center d-flex align-items-center">
                                                 <h6 className="pt-2 span-price">{formatter.format(props.price)}</h6>
