@@ -89,6 +89,7 @@ const getProfileFetch = () => {
         })
       })
       .then((response) => {
+        console.log(response);
        alert("Thêm sản phẩm vào giỏ hàng thành công");
         console.log(response);
         

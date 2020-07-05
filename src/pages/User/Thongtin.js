@@ -11,9 +11,9 @@ export default class ThongTin extends React.Component{
         super(props);
        this.state = {
         thaypass: this.props.HT,
-        newpass1:'',
-        newpass2:'',
-
+        setpass1:'',
+        setpass2:'',
+        oldpass:'',
 
         Newusername:'',
         Newnickname:'',
@@ -25,6 +25,7 @@ export default class ThongTin extends React.Component{
       };
       this.setpass1 = this.setpass1.bind(this);
       this.setpass2 = this.setpass2.bind(this);
+      this.oldpass = this.oldpass.bind(this);
 
 
       this.setNewusername = this.setNewusername.bind(this);
@@ -41,7 +42,7 @@ export default class ThongTin extends React.Component{
       e.preventDefault();
       console.log(e.target.value);
       this.setState({
-          newpass1:e.target.value
+          setpass1:e.target.value
       })
   }
 
@@ -49,8 +50,18 @@ export default class ThongTin extends React.Component{
     e.preventDefault();
     console.log(e.target.value);
     this.setState({
-        newpass1:e.target.value
+        setpass2:e.target.value
     })
+}
+
+
+
+oldpass(e){ 
+  e.preventDefault();
+  console.log(e.target.value);
+  this.setState({
+      oldpass:e.target.value
+  })
 }
 ////
 
@@ -145,9 +156,10 @@ Newaddress(e){
 const Updatepass = () => {
   
   const token = getToken();
-  if(this.state.newpass1 == this.state.newpass2 ){
+
+  if(this.state.setpass1 == this.state.setpass2 ){
   if (token) {
-    return fetch("https://amadeuss.herokuapp.com/api/reviews", {
+    return fetch("https://amadeuss.herokuapp.com/api/user/changepassword", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -155,8 +167,8 @@ const Updatepass = () => {
         'Authorization': `Bearer ${token}`
       },
       body:JSON.stringify({
-        password:this.state.newpass1,
-        
+        password:this.state.oldpass,
+        newpassword:this.state.setpass1,
       })
     })
     .then((response) => {
@@ -171,7 +183,7 @@ const Updatepass = () => {
         alert("lỗi khi thay đổi mật khẩu");
     })
   }
-}else{alert("Không trùng mật khẩu mới");}
+}else{alert("Mật khẩu mới không trùng lặp");}
 }
 ///
 
@@ -241,7 +253,7 @@ const UpdateInfo = () => {
             <div className="jumbotron" style={{background: "rgba(60, 60, 60, 0.5)"}} id="Change">
             <p className="text-light" style={{fontSize:"25px"}}>Thay đổi mật khẩu: </p>
                 
-            <input type="password"  className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 " id="PassOld" placeholder="Nhập mật khẩu cũ" style={{background: "rgba(255, 255, 255, 0.1)"}} />
+            <input type="password" value={this.state.oldpass} onChange = {this.oldpass} className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 " id="PassOld" placeholder="Nhập mật khẩu cũ" style={{background: "rgba(255, 255, 255, 0.1)"}} />
             <input type="password" value={this.state.setpass1} onChange = {this.setpass1} className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3" id="PassNew" placeholder="Nhập mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
             <input type="password" value={this.state.setpass2} onChange = {this.setpass2} className="form-control text-light col-xl-4 col-lg-5 col-md-8 col-10 col-sm-8 mt-3 mb-5" id="PassNew2" placeholder="Nhập lại mật khẩu mới" style={{background: "rgba(255, 255, 255, 0.1)"}} />
            
