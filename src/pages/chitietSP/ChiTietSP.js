@@ -98,6 +98,37 @@ export default class ChiTietSP extends React.Component {
       }
     };
 
+    /// Add to cart
+    const getProfileFetch2 = () => {
+      const token = getToken();
+      if (token) {
+        const config = {
+          headers: { Authorization: `Bearer ${token}` },
+        };
+        const bodyParameters = {
+          productId: this.state.ListData.id,
+          count: 1,
+        };
+        return axios
+          .put(
+            "https://amadeuss.herokuapp.com/api/cart/items",
+            bodyParameters,
+            config
+          )
+          .then((response) => {
+            alert("Thêm sản phẩm vào giỏ hàng thành công");
+            console.log(response);
+            window.location.reload();
+          })
+          .catch((error) => {
+            alert("Thêm sản phẩm vào giỏ hàng thất bại");
+            console.log(error.response.data.message);
+          });
+      } else {
+        alert("Xin hãy đăng nhập!!!");
+      }
+    };
+
     ////
     var fake;
     if (this.state.ListData.priceFake > 0) {
@@ -170,7 +201,9 @@ export default class ChiTietSP extends React.Component {
                 {fake}
 
                 <div className="column justify-content-center">
-                  <button className="col-12 btn btn-danger text-white">
+                  <button className="col-12 btn btn-danger text-white mb-1"
+                   onClick={getProfileFetch2}
+                  >
                     Mua ngay
                   </button>
                   <button
