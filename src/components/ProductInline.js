@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Product.css";
+import "./ProductInline.css";
 
 const toSlug = (str) => {
   // Chuyển hết sang chữ thường

@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "../components/Product";
+import ProductInline from "../components/ProductInline";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
@@ -84,7 +84,7 @@ export default class Home extends React.Component {
             {this.state.ListData.map((value, key) => {
               if (value.priceFake !== 0) {
                 return (
-                  <Product
+                  <ProductInline
                     key={key}
                     prID={value.id}
                     prImg={value.img}
@@ -107,7 +107,7 @@ export default class Home extends React.Component {
             {this.state.ListData.map((value, key) => {
               if (key < 9) {
                 return (
-                  <Product
+                  <ProductInline
                     key={key}
                     prID={value.id}
                     prImg={value.img}
@@ -130,7 +130,7 @@ export default class Home extends React.Component {
             {this.state.ListData.map((value, key) => {
               if (key < 9) {
                 return (
-                  <Product
+                  <ProductInline
                     key={key}
                     prID={value.id}
                     prImg={value.img}

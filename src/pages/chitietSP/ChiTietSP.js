@@ -6,12 +6,14 @@ import axios from "axios";
 import { getToken } from "../../Utils/Common";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import { Redirect } from "react-router-dom";
 
 export default class ChiTietSP extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       HienThi: true,
+      ChuyenHuong: false,
       ListData: {
         vote: 0,
         category: [],
@@ -59,13 +61,17 @@ export default class ChiTietSP extends React.Component {
       .catch((error) => console.log(error));
   }
 
+  
+
   render() {
     const formatter = new Intl.NumberFormat("vi-VI", {
       style: "currency",
       currency: "VND",
       minimumFractionDigits: 0,
     });
-
+    if (this.state.ChuyenHuong) {
+      return <Redirect to="/gio-hang" />;
+    }
     ///////////////////////////
     /// Add to cart
     const getProfileFetch = () => {
@@ -118,7 +124,7 @@ export default class ChiTietSP extends React.Component {
           .then((response) => {
             alert("Thêm sản phẩm vào giỏ hàng thành công");
             console.log(response);
-            window.location.reload();
+            this.setState({ ChuyenHuong: true });
           })
           .catch((error) => {
             alert("Thêm sản phẩm vào giỏ hàng thất bại");

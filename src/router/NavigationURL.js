@@ -10,6 +10,7 @@ import LienHe from "../pages/LienHe";
 import NguoiDung from "../pages/User/NguoiDung.js";
 import ChiTietSP from "../pages/chitietSP/ChiTietSP";
 import DetailBill from "../pages/User/DetailBill";
+import ProductList from "../pages/ProductList";
 
 function NavigationURL(props) {
   return (
@@ -40,11 +41,14 @@ function NavigationURL(props) {
         <Route path="/gio-hang">
           <Cart />
         </Route>
-        <Route exact path="/thanh-toan">
+        <Route path="/thanh-toan">
           <Checkout />
         </Route>
         <Route path="/cam-on">
           <Thankfor />
+        </Route>
+        <Route path="/the-loai">
+          <ProductList />
         </Route>
         <Route path='/bill/:_id' component={DetailBill} ></Route>
         <Route path='/:slug' component={ChiTietSP} ></Route>
