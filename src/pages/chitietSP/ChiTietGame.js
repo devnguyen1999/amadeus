@@ -1,6 +1,6 @@
 import React from "react";
 import $ from 'jquery';
-import "../../Asset/css/ChiTietSP.css";
+
 
 import Ratings from 'react-rating';
 import { getToken } from "../../Utils/Common";

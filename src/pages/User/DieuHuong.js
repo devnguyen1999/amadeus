@@ -1,7 +1,5 @@
 import React from "react";
 
-import "../../Asset/css/ChiTietSP.css";
-
 import ThongTin from "./Thongtin.js";
 import LichSu from "./LichSu.js";
 

@@ -1,9 +1,6 @@
 import React from "react";
 
-import $ from 'jquery';
-import "../../Asset/css/ChiTietSP.css";
 
-import "../../Asset/css/User.css";
 import axios from "axios";
 import ItemHistory from "./itemHistory";
 

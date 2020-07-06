@@ -1,6 +1,5 @@
 import React from "react";
 
-import "../../Asset/css/User.css";
 import $ from "jquery";
 import DieuHuong from "./DieuHuong.js";
 import Footer from "../../components/Footer.js";

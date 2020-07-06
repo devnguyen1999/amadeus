@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Asset/css/ChiTietSP.css";
+
 
 import DieuHuong from "./ThongTin.js";
 import axios from "axios";
