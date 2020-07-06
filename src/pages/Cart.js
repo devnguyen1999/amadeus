@@ -7,6 +7,8 @@ import axios from "axios";
 import { getUser } from "../Utils/Common";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
+import  reqlogin  from "../Asset/Img/reques-login.png";
+import bag from "../Asset/Img/empty-cart.png"
 export default class Cart extends React.Component {
   state = {
     ListCart: {
@@ -159,9 +161,10 @@ export default class Cart extends React.Component {
         } else {
           return (
             <div className="row justify-content-center">
-              <div className="alert alert-danger col-lg-6 text-center">
-                <h4>Giỏ hàng trống!</h4>
-                <Link className="nav-link px-0 mx-0" to="/">
+              <div className="empty-form col-lg-6 text-center m-4 p-2">
+                  <h3 className="mt-3">Oop! Giỏ hàng trống</h3>
+                  <img className="ml-4 img-fluid" src={bag} />
+                <Link className="px-0 mx-0 col-lg-12" to="/">
                   <a className="h4">Trở lại cửa hàng</a>
                 </Link>
               </div>
@@ -171,11 +174,13 @@ export default class Cart extends React.Component {
       } else {
         return (
           <div className="row justify-content-center">
-            <div className="alert alert-danger col-lg-6 text-center">
-              <Link className="nav-link px-0 mx-0" to="/dang-nhap">
-                <a className="h4">Vui lòng đăng nhập để xem giỏ hàng!</a>
-              </Link>
-            </div>
+            <div className="empty-form col-lg-6 text-center m-4 p-2">
+                  <h3 className="mt-3">Bạn chưa đăng nhập</h3>
+                  <img className="ml-4 img-fluid" src={reqlogin} />
+                <Link className="px-0 mx-0 col-lg-12" to="/dang-nhap">
+                  <a className="h4">Đăng nhập</a>
+                </Link>
+              </div>
           </div>
         );
       }

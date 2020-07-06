@@ -3,6 +3,10 @@
     color:black;
     border-radius: 3px;
 }
+.bill-item-infor{
+    color:black;
+    border-radius: 3px;
+}
 .flex{
     display: flex;
 }
@@ -15,4 +19,28 @@
 }
 .margin-top-100{
     margin-top: 100px;
+}
+.over-flow-auto{
+    overflow: auto;
+}
+.eclipse-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+@media(min-width:768px){
+    .img-bill{
+        max-height: 190px;
+        max-width: 190px;
+    }
+}
+@media(max-width:359px){
+    .img-bill{
+        display: contents;
+    }
+    .eclipse-text{
+        max-width: 70px;
+    }
 }

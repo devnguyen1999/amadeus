@@ -98,7 +98,7 @@ export default class DetailBill extends React.Component{
                             <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-left">
                             <h6>Chi tiết đơn hàng - {this.state.Order._id}</h6>
                             </div>
-                            <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                            <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
                                 <h6>Ngày đặt hàng: {this.state.Order.createAt}</h6>
                             </div>
                         </div>
@@ -122,14 +122,14 @@ export default class DetailBill extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div className="row p-3">
-                        <table className="table table-hover" style={{backgroundColor: "white"}}>
+                        <div className="row mt-1 ml-0 mb-0 mr-0">
+                        <table className="table table-hover text-tb" style={{backgroundColor: "white"}}>
                             <thead>
                             <tr>
-                                <th>Sản phẩm</th>
-                                <th>Giá</th>
-                                <th>Số lượng</th>
-                                <th>Tạm tính</th>
+                                <th scope="col">Sản phẩm</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col">Tạm tính</th>
                             </tr>
                             </thead>
                             {this.state.Order.products.map((value, key) =>{
@@ -144,14 +144,12 @@ export default class DetailBill extends React.Component{
                                     />
                                 )
                             })}
-                            <div className="flex">
                             <tfoot className="flex">  
                                 <tr className="">
                                     <td className="text-right">Tổng cộng</td>
                                     <td className="text-right">{this.state.Order.total}</td>
                                 </tr>
                             </tfoot>
-                            </div>
                         </table>
                         <Link to="/nguoi-dung">
                             <p>Quay về đơn hàng của tôi</p>

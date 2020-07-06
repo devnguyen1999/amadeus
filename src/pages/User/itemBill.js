@@ -34,21 +34,20 @@ function ItemBill(props){
     return(
         <tbody>
                             <tr>
-                                <td>
-                                    <div className="product-bill flex">
-                                        <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6">
+                                <th scope="">
+                                    <div className="eclipse-text">
+                                        <div>
                                             <img className="img-bill" src={props.img} />
                                         </div>
-                                        <div className="text-overflow col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
-                                            <Link to={url}>
-                                            <p className="">{props.name}</p>
+                                        <div className="text-left">
+                                            <Link to={url}>{props.name}
                                             </Link>
                                         </div>
                                     </div>
-                                </td>
-                                <td>{props.price}</td>
-                                <td>{props.quantity}</td>
-                                <td>{props.price * props.quantity}</td>
+                                </th>
+                                <th >{props.price}</th>
+                                <th >{props.quantity}</th>
+                                <th >{props.price * props.quantity}</th>
                             </tr>
                             </tbody>
     );

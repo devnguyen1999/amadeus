@@ -188,7 +188,6 @@ export default class Checkout extends React.Component {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </div>
     <Footer />
