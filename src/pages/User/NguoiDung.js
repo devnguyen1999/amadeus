@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Asset/css/bootstrap.css";
+
 import "../../Asset/css/User.css";
 import $ from "jquery";
 import DieuHuong from "./DieuHuong.js";

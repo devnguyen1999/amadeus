@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../../Asset/css/ChiTietSP.css";
-import "../../Asset/css/bootstrap.css";
+
 import ThongTinGame from "./ChiTietGame.js"
 import CauHinh from "./CauHinh.js"
 

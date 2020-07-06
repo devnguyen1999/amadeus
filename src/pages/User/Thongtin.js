@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import $ from 'jquery';
 import "../../Asset/css/ChiTietSP.css";
-import "../../Asset/css/bootstrap.css";
+
 import { getToken } from "../../Utils/Common";
 
 

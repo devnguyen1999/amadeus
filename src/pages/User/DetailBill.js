@@ -2,7 +2,7 @@ import React from "react";
 import axios from 'axios';
 import Footer from "../../components/Footer.js";
 import Header from "../../components/Header";
-import "../../Asset/css/bootstrap.css";
+
 import "./DetailBill.css"
 import ItemBill from "./itemBill.js";
 import { Link } from "react-router-dom";

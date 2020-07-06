@@ -1,6 +1,6 @@
 import React from "react";
 import "../../Asset/css/ChiTietSP.css";
-import "../../Asset/css/bootstrap.css";
+
 import DieuHuong from "./ThongTin.js";
 import axios from "axios";
 import { getToken } from "../../Utils/Common";
