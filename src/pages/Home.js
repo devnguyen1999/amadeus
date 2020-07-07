@@ -1,8 +1,8 @@
 import React from "react";
 import ProductInline from "../components/ProductInline";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
 import axios from "axios";
 
 export default class Home extends React.Component {
@@ -17,7 +17,6 @@ export default class Home extends React.Component {
         const ListData = res.data;
         this.setState({ ListData });
         console.log(ListData);
-        
       })
       .catch((error) => console.log(error));
   }

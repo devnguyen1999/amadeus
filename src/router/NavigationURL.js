@@ -47,6 +47,7 @@ function NavigationURL(props) {
           <Thankfor />
         </Route>
         <Route path="/bill/:_id" component={DetailBill}></Route>
+        <Route path="/tim-kiem/:search" component={ProductList}></Route>
         <Route path="/the-loai/:category/:slug" component={ChiTietSP}></Route>
         <Route path="/the-loai/:category" component={ProductList}></Route>
 

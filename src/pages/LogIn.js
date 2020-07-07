@@ -11,9 +11,9 @@ function LogIn(props) {
   const [error, setError] = useState(null);
 
   const { from } = { from: { pathname: "/" } };
-  const [redirectToReferrer, setRedirectToReferrer] = useState(false);
+  const [redirect, setRedirect] = useState(false);
 
-  if (redirectToReferrer) {
+  if (redirect) {
     return <Redirect to={from} />;
   }
 
@@ -29,7 +29,7 @@ function LogIn(props) {
         console.log(response);
         setLoading(false);
         setUserSession(response.data.accessToken, response.data.user);
-        setRedirectToReferrer(true);
+        setRedirect(true);
       })
       .catch((error) => {
         setLoading(false);
