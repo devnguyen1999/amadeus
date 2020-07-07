@@ -10,13 +10,15 @@ function App() {
   setTimeout(() => {
     setCount(1);
   }, 2000);
-  return (
-    <div className="App">
-      <Router>
-        <ScrollToTop />
-        <NavigationURL />
-      </Router>
-    </div>
-  );
+  if (count === 1)
+    return (
+      <div className="App">
+        <Router>
+          <ScrollToTop />
+          <NavigationURL />
+        </Router>
+      </div>
+    );
+  return <div>LOADING....</div>;
 }
 export default App;
