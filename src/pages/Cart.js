@@ -90,7 +90,7 @@ export default class Cart extends React.Component {
             <div className="row" style={{ paddingTop: 50, paddingBottom: 50 }}>
               <div className="col-lg-9">
                 <div className="d-flex justify-content-center">
-                  <h4 className="text-white">Đơn hàng</h4>
+                  <h4 className="text-white">Giỏ hàng</h4>
                 </div>
                 {this.state.ListCart.items.map((value, key) => {
                   return (
@@ -150,7 +150,7 @@ export default class Cart extends React.Component {
                 <div className="mt-2">
                   <Link className="" to="/thanh-toan">
                     <button className="btn btn-danger col-lg-12 col-md-12 col-xs-12">
-                      Tiến hành thanh toán
+                      Tiến hành đặt hàng
                     </button>
                   </Link>
                 </div>

@@ -93,8 +93,8 @@ export default class ChiTietSP extends React.Component {
             config
           )
           .then((response) => {
+            console.log(response.data.message);
             alert("Thêm sản phẩm vào giỏ hàng thành công");
-            console.log(response);
             window.location.reload();
           })
           .catch((error) => {
