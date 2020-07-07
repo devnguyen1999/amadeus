@@ -1,11 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-=======
 import ReactDOM from "react-dom";
 import "./Checkout.css";
 import { Link, Router, Route } from "react-router-dom";
->>>>>>> dccf4f5456068a16ab5895793942a0b4fa426737
 import Footer from "../components/Footer";
 import $ from 'jquery';
 import { getUser, getToken } from "../Utils/Common";
