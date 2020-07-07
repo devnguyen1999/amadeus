@@ -1,5 +1,4 @@
 import React from "react";
-import "./Cart.css";
 import ItemCart from "../components/ItemCart";
 import Footer from "../components/Footer";
 import { getToken } from "../Utils/Common";

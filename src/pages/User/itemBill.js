@@ -1,5 +1,4 @@
 import React from "react";
-import "./DetailBill.css";
 import { Link } from "react-router-dom";
 const toSlug = (str) => {
     // Chuyển hết sang chữ thường

@@ -1,5 +1,4 @@
 import React from "react";
-import "./ItemCart.css";
 import { getToken } from "../Utils/Common";
 
 function ItemCart(props){
