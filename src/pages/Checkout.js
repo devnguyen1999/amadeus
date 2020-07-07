@@ -102,6 +102,7 @@ export default class Checkout extends React.Component {
           const order = response.data;
           console.log('order', order);
           this.setState({order});
+          payment();
         }).catch((error) => {
           console.log('error', error);
         });
@@ -127,24 +128,58 @@ export default class Checkout extends React.Component {
         //   });
       }
     };
-    const payment = async () =>{
-      // const token = getToken();
-      // console.log('orderId', this.state.order.orderId);
-      //   const config = {
-      //     headers: { Authorization: `Bearer ${token}` },
-      //   };
-      //   const data ={
-      //     orderId: this.state.order.orderId,
-      //   }
-        
-        await axios.get("https://amadeuss.herokuapp.com/payment",{ orderId: "5f0422b538843d000455bcfa"})
-        .then((response) => {
-          const link = response.data;
-          console.log('link', link);
-          //this.setState({link});
-        }).catch((error) =>{
-          console.log('error', error);
-        })
+    const payment = () =>{
+      const token = getToken();
+      const id = JSON.stringify(this.state.order.orderId);
+      console.log('orderId', id);
+        const config = {
+          headers: { Authorization: `Bearer ${token}`},
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        };
+        const data = {
+          orderID: id
+        };
+        // axios.post("https://amadeuss.herokuapp.com/payment", JSON.stringify(data), config)
+        // .then((response) => {
+        //   const link = response.data.payUrl;
+        //   console.log('link', link);
+        //   //this.setState({link});
+        // }).catch((error) =>{
+        //   console.log('error', error);
+        // })
+        // fetch("https://amadeuss.herokuapp.com/payment",{
+        //   method:"POST",
+        //   headers:{
+        //     Accept: 'application/json',
+        //     'Content-Type': 'application/json',
+        //     Authorization: `Bearer ${token}`,
+        //   },
+        //   body: JSON.stringify({
+        //     orderId: this.state.order.orderId
+        //   })
+        // }).then((response) => {
+        //   const payUrl = response.json();
+        //   console.log('link', payUrl);
+        //   // this.setState({link});
+        //   // console.log(res);
+        // }).catch((error) => {
+        //   console.log('error', error);
+        // })
+        fetch('https://amadeuss.herokuapp.com/payment', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({orderId: this.state.order.orderId})
+          }).then(function(response) {
+            return response.json();
+          }).then((data) => {
+            const link = data.payUrl;
+            this.setState({link});
+            console.log('link', this.state.link);
+          });
     };
     const sum = () => {
       var sum = 0;
@@ -191,7 +226,7 @@ export default class Checkout extends React.Component {
                 <h5>Bạn mua cho ai?</h5>
                 <form>
                   <div className="radio">
-                      <input type="radio" id="yrself" name="payfor" />
+                      <input type="radio" id="yrself" name="payfor" value={this.state.email} onChange={this.setEmail} />
                       <label for="yrself">Mua cho bản thân</label><br></br>
                       <input type="radio" id="fr" name="payfor" />
                       <label for="fr">Mua cho người khác</label><br></br>
@@ -232,9 +267,6 @@ export default class Checkout extends React.Component {
               </div>
             <div className="mt-4">
                 <button onClick={createOrder} className="btn-danger btn col-lg-12">
-                  Thanh toán
-                </button>
-                <button onClick={payment} className="btn-danger btn col-lg-12">
                   Thanh toán
                 </button>
             </div>
