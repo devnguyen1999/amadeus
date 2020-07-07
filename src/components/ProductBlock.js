@@ -35,19 +35,43 @@ const formatter = new Intl.NumberFormat("vi-VI", {
   minimumFractionDigits: 0,
 });
 function ProductBlock(props) {
+  const displayCheck = () => {
+    if (props.prFake === 0) {
+      return (
+        <div className="price col-12 col-md-2 text-right">
+          <span>{formatter.format(props.prPrice)}</span>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <div className="price-fake col-12 col-md-2 text-right">
+            <span>{formatter.format(props.prFake)}</span>
+          </div>
+          <div className="price col-12 col-md-2 text-right">
+            <span>{formatter.format(props.prPrice)}</span>
+          </div>
+        </div>
+      );
+    }
+  };
   return (
     <div className="product-block row text-white bg-dark p-2 my-2">
-      <Link className="col-12 col-md-4" to={props.prCategory + "/" + toSlug(props.prTitle)}>
+      <Link
+        className="col-12 col-md-4"
+        to={props.prCategory + "/" + toSlug(props.prTitle)}
+      >
         <img className="w-100" src={props.prImg} alt="Product" />
       </Link>
       <div className="col-12 col-md-6">
-        <Link className="text-white p-0 m-0 d-inline" to={props.prCategory + "/" + toSlug(props.prTitle)}>
+        <Link
+          className="text-white p-0 m-0 d-inline"
+          to={props.prCategory + "/" + toSlug(props.prTitle)}
+        >
           <h4>{props.prTitle}</h4>
         </Link>
       </div>
-      <div className="price col-12 col-md-2 text-right">
-        <span>{formatter.format(props.prPrice)}</span>
-      </div>
+      {displayCheck()}
     </div>
   );
 }

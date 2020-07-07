@@ -11,6 +11,7 @@ import NguoiDung from "../pages/User/NguoiDung.js";
 import ChiTietSP from "../pages/chitietSP/ChiTietSP";
 import DetailBill from "../pages/User/DetailBill";
 import ProductList from "../pages/ProductList";
+import Search from "../pages/Search";
 
 function NavigationURL(props) {
   return (
@@ -47,7 +48,7 @@ function NavigationURL(props) {
           <Thankfor />
         </Route>
         <Route path="/bill/:_id" component={DetailBill}></Route>
-        <Route path="/tim-kiem/:search" component={ProductList}></Route>
+        <Route path="/tim-kiem=:search" component={Search}></Route>
         <Route path="/the-loai/:category/:slug" component={ChiTietSP}></Route>
         <Route path="/the-loai/:category" component={ProductList}></Route>
 

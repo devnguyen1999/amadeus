@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ProductBlock from "../components/ProductBlock";
+import axios from "axios";
 
 function Search(props) {
+  console.log(props.location.state);
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    (async () => {
+      const products = await axios.post(
+        `https://amadeuss.herokuapp.com/products/search`,
+        {
+          keySearch: props.location.state.keySearch,
+        }
+      );
+      setProducts(products.data);
+    })();
+  }, []);
   return (
     <div>
       <Header />
@@ -60,7 +75,20 @@ function Search(props) {
             <h4 className="text-white mt-3">Sắp xếp sản phẩm</h4>
             <hr className="border-white mt-2" />
           </div>
-          <div className="col-12 col-md-9 pl-5"></div>
+          <div className="col-12 col-md-9 pl-5">
+            {products.map((value, key) => {
+              return (
+                <ProductBlock
+                  key={key}
+                  prID={value.id}
+                  prImg={value.img}
+                  prTitle={value.name}
+                  prPrice={value.price}
+                  prFake={value.priceFake}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
       <Footer />
