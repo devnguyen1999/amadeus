@@ -4,6 +4,7 @@ import $ from 'jquery';
 import { getUser, getToken } from "../Utils/Common";
 import axios from "axios";
 import Header from "../components/Header";
+import { Redirect } from "react-router-dom";
 export default class Checkout extends React.Component {
   constructor() {
     super();
@@ -103,26 +104,6 @@ export default class Checkout extends React.Component {
         }).catch((error) => {
           console.log('error', error);
         });
-        // return fetch("https://amadeuss.herokuapp.com/order/post", {
-        //   method: "POST",
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //     Accept: "application/json",
-        //     Authorization: `Bearer ${token}`,
-        //   },
-        //   body: JSON.stringify({
-        //     email: email,
-        //   }),
-        // })
-        //   .then((res) => {
-        //     const order = res.data.orderId;
-        //     console.log('orderId', order);
-        //     console.log("response", res);
-        //     this.setState({order});
-        //   })
-        //   .catch((error) => {
-        //     console.log(error);
-        //   });
       }
     };
     const payment = () =>{
@@ -137,32 +118,6 @@ export default class Checkout extends React.Component {
         const data = {
           orderID: id
         };
-        // axios.post("https://amadeuss.herokuapp.com/payment", JSON.stringify(data), config)
-        // .then((response) => {
-        //   const link = response.data.payUrl;
-        //   console.log('link', link);
-        //   //this.setState({link});
-        // }).catch((error) =>{
-        //   console.log('error', error);
-        // })
-        // fetch("https://amadeuss.herokuapp.com/payment",{
-        //   method:"POST",
-        //   headers:{
-        //     Accept: 'application/json',
-        //     'Content-Type': 'application/json',
-        //     Authorization: `Bearer ${token}`,
-        //   },
-        //   body: JSON.stringify({
-        //     orderId: this.state.order.orderId
-        //   })
-        // }).then((response) => {
-        //   const payUrl = response.json();
-        //   console.log('link', payUrl);
-        //   // this.setState({link});
-        //   // console.log(res);
-        // }).catch((error) => {
-        //   console.log('error', error);
-        // })
         fetch('https://amadeuss.herokuapp.com/payment', {
             method: 'POST',
             headers: {
@@ -175,6 +130,7 @@ export default class Checkout extends React.Component {
           }).then((data) => {
             const link = data.payUrl;
             this.setState({link});
+            window.location.href=this.state.link;
             console.log('link', this.state.link);
           });
     };
@@ -195,7 +151,7 @@ export default class Checkout extends React.Component {
           "url(https://cdnb.artstation.com/p/assets/images/images/007/382/309/large/nastya-friday-game-background-1.jpg?1505758821)",
       }}
     >
-      <div className="container">
+      <div className="container mt-4">
         <div className="row">
           <div className="col-lg-9">
             <div className="cart-form">
@@ -203,11 +159,7 @@ export default class Checkout extends React.Component {
                 <h5>Chọn hình thức thanh toán</h5>
                 <form>
                   <div className="radio">
-                  <input type="radio" id="cod" name="pay" />
-                    <label for="cod">Thanh toán C.O.D</label>
-                  </div>
-                  <div className="radio">
-                    <input type="radio" id="momo" name="pay" />
+                    <input type="radio" id="momo" name="pay" checked/>
                     <label for="momo">Thanh toán qua momo</label>
                     <img
                       alt="icon momo"
