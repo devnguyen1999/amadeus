@@ -2,8 +2,6 @@ import React from "react";
 import axios from 'axios';
 import Footer from "../../components/Footer.js";
 import Header from "../../components/Header";
-
-import "./DetailBill.css"
 import ItemBill from "./itemBill.js";
 import { Link } from "react-router-dom";
 export default class DetailBill extends React.Component{

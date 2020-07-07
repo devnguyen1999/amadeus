@@ -1,4 +1,3 @@
-import "./LogIn.css";
 import React, { useState } from "react";
 import Header from "../components/Header";
 import axios from "axios";
@@ -26,12 +25,11 @@ function LogIn(props) {
         email: values.email,
         password: values.password,
       })
-      .then((response) => {console.log(response);
+      .then((response) => {
+        console.log(response);
         setLoading(false);
         setUserSession(response.data.accessToken, response.data.user);
         setRedirectToReferrer(true);
-        
-        
       })
       .catch((error) => {
         setLoading(false);

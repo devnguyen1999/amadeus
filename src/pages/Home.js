@@ -3,7 +3,6 @@ import ProductInline from "../components/ProductInline";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import "./Home.css";
 import axios from "axios";
 
 export default class Home extends React.Component {
@@ -17,6 +16,8 @@ export default class Home extends React.Component {
       .then((res) => {
         const ListData = res.data;
         this.setState({ ListData });
+        console.log(ListData);
+        
       })
       .catch((error) => console.log(error));
   }

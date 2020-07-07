@@ -64,6 +64,8 @@ export default class ChiTietSP extends React.Component {
   
 
   render() {
+    console.log(this.props.match.params);
+    
     const formatter = new Intl.NumberFormat("vi-VI", {
       style: "currency",
       currency: "VND",
@@ -119,7 +121,7 @@ export default class ChiTietSP extends React.Component {
           .put(
             "https://amadeuss.herokuapp.com/api/cart/items",
             bodyParameters,
-            config
+            config,
           )
           .then((response) => {
             alert("Thêm sản phẩm vào giỏ hàng thành công");

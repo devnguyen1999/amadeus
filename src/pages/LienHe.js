@@ -1,6 +1,4 @@
 import React from "react";
-
-
 import logo from "../amadeus.svg";
 import Header from "../components/Header";
 LienHe.propTypes = {};

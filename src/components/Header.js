@@ -1,11 +1,34 @@
-import "./Header.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getToken, getUser, removeUserSession } from "../Utils/Common";
 import Bag from "../pages/User/bag";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function Header(props) {
   const [loggedIn, setloggedIn] = useState(getToken() ? true : false);
+  const { handleSubmit, register, errors, watch } = useForm();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const onSubmit = (values) => {
+    setError(null);
+    setLoading(true);
+    console.log(values);
+    const bodyParameters = {
+      keySearch: values.keySearch,
+    };
+    axios
+      .get("https://amadeuss.herokuapp.com/products/search", bodyParameters)
+      .then((response) => {
+        setLoading(false);
+        console.log(response);
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.log(error);
+      });
+  };
   const logOut = (event) => {
     setloggedIn(false);
     removeUserSession();
@@ -105,24 +128,21 @@ function Header(props) {
                     Thể loại
                   </a>
                   <div className="dropdown-menu" aria-labelledby="dropdownId">
-                    <a className="dropdown-item" href="#!">
+                    <Link className="dropdown-item" to="/the-loai/chien-thuat">
                       Chiến thuật
-                    </a>
-                    <a className="dropdown-item" href="#!">
-                      Đua xe
-                    </a>
-                    <a className="dropdown-item" href="#!">
+                    </Link>
+                    <Link className="dropdown-item" to="/the-loai/hanh-dong">
                       Hành động
-                    </a>
-                    <a className="dropdown-item" href="#!">
+                    </Link>
+                    <Link className="dropdown-item" to="/the-loai/kinh-di">
                       Kinh dị
-                    </a>
-                    <a className="dropdown-item" href="#!">
+                    </Link>
+                    <Link className="dropdown-item" to="/the-loai/nhap-vai">
+                      Nhập vai
+                    </Link>
+                    <Link className="dropdown-item" to="/the-loai/phieu-luu">
                       Phiêu lưu
-                    </a>
-                    <a className="dropdown-item" href="#!">
-                      Thể thao
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="nav-item dropdown mr-3">
@@ -163,10 +183,10 @@ function Header(props) {
               id="collapsibleNavId"
             >
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item mr-1">
+                <li className="nav-item ml-3">
                   <Bag></Bag>
                 </li>
-                <li className="nav-item ml-2 dropdown">
+                <li className="nav-item ml-3 dropdown">
                   <a
                     className="nav-link"
                     href="#!"
@@ -181,18 +201,23 @@ function Header(props) {
                     className="dropdown-menu dropdown-menu-right search-box"
                     aria-labelledby="dropdownId"
                   >
-                    <form className="input-group form-inline my-2 my-lg-0 w-100">
+                    <form
+                      onSubmit={handleSubmit(onSubmit)}
+                      className="input-group form-inline my-2 my-lg-0 w-100"
+                    >
                       <input
+                        name="keySearch"
+                        ref={register}
                         className="form-control mr-sm-2"
-                        type="text"
-                        placeholder="Nhập tên sản phẩm muốn tìm kiếm..."
+                        placeholder="Nhập tên sản phẩm..."
+                        type="search"
                       />
-                      <button
-                        className="btn btn-outline-success m-0"
+                      <input
                         type="submit"
-                      >
-                        Tìm kiếm
-                      </button>
+                        className="btn btn-success my-2 my-sm-0"
+                        value={loading ? "Loading..." : "Tìm kiếm"}
+                        disabled={loading}
+                      />
                     </form>
                   </div>
                 </li>

@@ -16,7 +16,6 @@ function NavigationURL(props) {
   return (
     <div>
       <Switch>
-
         <Route exact path="/">
           <Home />
         </Route>
@@ -29,7 +28,7 @@ function NavigationURL(props) {
         <Route path="/lien-he">
           <LienHe />
         </Route>
-        <Route  path="/nguoi-dung">
+        <Route path="/nguoi-dung">
           <NguoiDung />
         </Route>
         <Route path="/dang-nhap">
@@ -47,11 +46,11 @@ function NavigationURL(props) {
         <Route path="/cam-on">
           <Thankfor />
         </Route>
-        <Route path="/the-loai">
-          <ProductList />
-        </Route>
-        <Route path='/bill/:_id' component={DetailBill} ></Route>
-        <Route path='/:slug' component={ChiTietSP} ></Route>
+        <Route path="/bill/:_id" component={DetailBill}></Route>
+        <Route path="/the-loai/:category/:slug" component={ChiTietSP}></Route>
+        <Route path="/the-loai/:category" component={ProductList}></Route>
+
+        <Route path="/:slug" component={ChiTietSP}></Route>
       </Switch>
     </div>
   );
