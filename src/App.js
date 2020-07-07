@@ -9,7 +9,7 @@ function App() {
   const [count, setCount] = useState(0);
   setTimeout(() => {
     setCount(1);
-  }, 2000);
+  }, 5000);
   if (count === 1) {
     return (
       <div className="App">
