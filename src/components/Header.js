@@ -60,21 +60,6 @@ function Header(props) {
     setLoading(true);
     setKeySearch(values.keySearch);
     setRedirect(true);
-    // const bodyParameters = {
-    //   keySearch: values.keySearch,
-    // };
-    // axios
-    //   .post("https://amadeuss.herokuapp.com/products/search", bodyParameters)
-    //   .then((response) => {
-    //     setLoading(false);
-    //     console.log(response.data);
-    //     setSearch(response.data);
-    //     setRedirect(true);
-    //   })
-    //   .catch((error) => {
-    //     setLoading(false);
-    //     console.log(error);
-    //   });
   };
   const logOut = (event) => {
     setloggedIn(false);

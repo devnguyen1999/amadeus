@@ -12,6 +12,7 @@ import ChiTietSP from "../pages/chitietSP/ChiTietSP";
 import DetailBill from "../pages/User/DetailBill";
 import ProductList from "../pages/ProductList";
 import Search from "../pages/Search";
+import SeeMore from "../pages/SeeMore";
 
 function NavigationURL(props) {
   return (
@@ -47,6 +48,9 @@ function NavigationURL(props) {
         <Route path="/cam-on">
           <Thankfor />
         </Route>
+        <Route path="/promotion" component={SeeMore}></Route>
+        <Route path="/latest" component={SeeMore}></Route>
+        <Route path="/all" component={SeeMore}></Route>
         <Route path="/bill/:_id" component={DetailBill}></Route>
         <Route path="/tim-kiem=:search" component={Search}></Route>
         <Route path="/the-loai/:category/:slug" component={ChiTietSP}></Route>

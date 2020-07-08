@@ -82,7 +82,7 @@ export default class Home extends React.Component {
           <hr className="border-white mt-2" />
           <div className="row">
             {this.state.ListData.map((value, key) => {
-              if (value.priceFake !== 0) {
+              if (value.priceFake !== 0 && key < 6) {
                 return (
                   <ProductInline
                     key={key}
@@ -97,7 +97,7 @@ export default class Home extends React.Component {
             })}
           </div>
           <div className="d-flex justify-content-center mt-2">
-            <Link className="text-white custom-link" to="">
+            <Link className="text-white custom-link" to="/promotion">
               Xem thêm sản phẩm
             </Link>
           </div>
@@ -105,7 +105,7 @@ export default class Home extends React.Component {
           <hr className="border-white mt-2" />
           <div className="row">
             {this.state.ListData.map((value, key) => {
-              if (key < 9) {
+              if (key < 6) {
                 return (
                   <ProductInline
                     key={key}
@@ -120,15 +120,15 @@ export default class Home extends React.Component {
             })}
           </div>
           <div className="d-flex justify-content-center mt-2">
-            <Link className="text-white custom-link" to="">
+            <Link className="text-white custom-link" to="/latest">
               Xem thêm sản phẩm
             </Link>
           </div>
-          <h4 className="text-white mt-3">Sản phẩm ngẫu nhiên</h4>
+          <h4 className="text-white mt-3">Tất cả sản phẩm</h4>
           <hr className="border-white mt-2" />
           <div className="row">
             {this.state.ListData.map((value, key) => {
-              if (key < 9) {
+              if (key < 6) {
                 return (
                   <ProductInline
                     key={key}
@@ -143,7 +143,7 @@ export default class Home extends React.Component {
             })}
           </div>
           <div className="d-flex justify-content-center mt-2">
-            <Link className="text-white custom-link" to="">
+            <Link className="text-white custom-link" to="/all">
               Xem thêm sản phẩm
             </Link>
           </div>

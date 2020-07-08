@@ -1,19 +1,46 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ProductBlock from "../components/ProductBlock";
 import axios from "axios";
+import ProductBlock from "../components/ProductBlock";
+import { useParams } from "react-router-dom";
 
-function Search(props) {
-  console.log(props.location.state);
+const toSlug = (str) => {
+  // Chuyển hết sang chữ thường
+  str = str.toLowerCase();
+
+  // xóa dấu
+  str = str.replace(/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/g, "a");
+  str = str.replace(/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/g, "e");
+  str = str.replace(/(ì|í|ị|ỉ|ĩ)/g, "i");
+  str = str.replace(/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/g, "o");
+  str = str.replace(/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/g, "u");
+  str = str.replace(/(ỳ|ý|ỵ|ỷ|ỹ)/g, "y");
+  str = str.replace(/(đ)/g, "d");
+
+  // Xóa ký tự đặc biệt
+  str = str.replace(/([^0-9a-z-\s])/g, "");
+
+  // Xóa khoảng trắng thay bằng ký tự -
+  str = str.replace(/(\s+)/g, "-");
+
+  // xóa phần dự - ở đầu
+  str = str.replace(/^-+/g, "");
+
+  // xóa phần dư - ở cuối
+  str = str.replace(/-+$/g, "");
+
+  // return
+  return str;
+};
+
+function SeeMore(props) {
+  const [error, setError] = useState(null);
   const [products, setProducts] = useState([]);
   useEffect(() => {
     (async () => {
-      const products = await axios.post(
-        `https://amadeuss.herokuapp.com/products/search`,
-        {
-          keySearch: props.location.state.keySearch,
-        }
+      const products = await axios.get(
+        `https://amadeuss.herokuapp.com/products`
       );
       setProducts(products.data);
     })();
@@ -150,8 +177,7 @@ function Search(props) {
               </a>
             </div>
           </div>
-          <div className="col-12 col-md-9 pl-5 mt-3">
-              <h6 className="text-white">Kết quả tìm kiếm cho từ khoá: {props.location.state.keySearch}</h6>
+          <div className="col-12 col-md-9 px-5">
             {products.map((value, key) => {
               return (
                 <ProductBlock
@@ -172,4 +198,4 @@ function Search(props) {
   );
 }
 
-export default Search;
+export default SeeMore;

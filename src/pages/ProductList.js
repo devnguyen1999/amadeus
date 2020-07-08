@@ -45,8 +45,37 @@ function ProductList(props) {
       setProducts(products.data);
     })();
   }, []);
-
   let { category } = useParams();
+  const ascending = (event) => {
+    let handled = products;
+    for (let i = 1; i < handled.length; i++) {
+      let j = i - 1;
+      let temp = handled[i];
+      while (j >= 0 && handled[j].price > temp.price) {
+        handled[j + 1] = handled[j];
+        j--;
+      }
+      handled[j + 1] = temp;
+    }
+    console.log("Gia tang dan");
+    setProducts(handled);
+    
+  };
+  const decrease = () => {
+    let handled = products;
+    for (let i = 1; i < handled.length; i++) {
+      let j = i - 1;
+      let temp = handled[i];
+      while (j >= 0 && handled[j].price < temp.price) {
+        handled[j + 1] = handled[j];
+        j--;
+      }
+      handled[j + 1] = temp;
+    }
+    console.log("Gia giam dan");
+    setProducts(handled);
+  };
+  const latest = () => {};
   return (
     <div>
       <Header />
@@ -110,52 +139,47 @@ function ProductList(props) {
               aria-orientation="vertical"
             >
               <a
-                className="nav-link active"
-                id="v-pills-home-tab"
+                className="nav-link text-white sort-menu"
+                type="button"
                 data-toggle="pill"
-                href="#v-pills-home"
                 role="tab"
                 aria-controls="v-pills-home"
                 aria-selected="true"
+                onClick={(event) => {
+                  ascending(event);
+                }}
               >
-                Home
+                Giá tăng dần
               </a>
               <a
-                className="nav-link"
-                id="v-pills-profile-tab"
+                className="nav-link text-white sort-menu"
+                type="button"
                 data-toggle="pill"
-                href="#v-pills-profile"
                 role="tab"
-                aria-controls="v-pills-profile"
-                aria-selected="false"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+                onClick={(event) => {
+                  decrease(event);
+                }}
               >
-                Profile
+                Giá giảm dần
               </a>
               <a
-                className="nav-link"
-                id="v-pills-messages-tab"
+                className="nav-link text-white sort-menu"
+                type="button"
                 data-toggle="pill"
-                href="#v-pills-messages"
                 role="tab"
-                aria-controls="v-pills-messages"
-                aria-selected="false"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+                onClick={(event) => {
+                  latest(event);
+                }}
               >
-                Messages
-              </a>
-              <a
-                className="nav-link"
-                id="v-pills-settings-tab"
-                data-toggle="pill"
-                href="#v-pills-settings"
-                role="tab"
-                aria-controls="v-pills-settings"
-                aria-selected="false"
-              >
-                Settings
+                Mới nhất
               </a>
             </div>
           </div>
-          <div className="col-12 col-md-9 pl-5">
+          <div className="col-12 col-md-9 px-5 mt-3">
             {products.map((value, key) => {
               var flag = false;
               value.category.map((value, key) => {
@@ -164,6 +188,8 @@ function ProductList(props) {
                 }
               });
               if (flag === true) {
+                console.log(value.price);
+
                 return (
                   <ProductBlock
                     key={key}

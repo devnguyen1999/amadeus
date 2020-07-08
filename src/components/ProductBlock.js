@@ -44,11 +44,11 @@ function ProductBlock(props) {
       );
     } else {
       return (
-        <div>
-          <div className="price-fake col-12 col-md-2 text-right">
+        <div className="col-12 col-md-2 text-right">
+          <div className="price price-fake">
             <span>{formatter.format(props.prFake)}</span>
           </div>
-          <div className="price col-12 col-md-2 text-right">
+          <div className="price">
             <span>{formatter.format(props.prPrice)}</span>
           </div>
         </div>
@@ -78,12 +78,3 @@ function ProductBlock(props) {
 
 export default ProductBlock;
 
-{
-  /* <div class="card">
-    <img class="card-img-top" src="holder.js/100x180/" alt="">
-    <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p>
-    </div>
-</div> */
-}
