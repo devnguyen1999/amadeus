@@ -10,6 +10,12 @@ body{
   -webkit-line-clamp: 5; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
+.eclipse-text-short {
+  width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .text-cauhinh {
   color: rgb(165, 165, 165);
   font-size: 18px;

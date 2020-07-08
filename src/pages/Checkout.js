@@ -207,7 +207,7 @@ export default class Checkout extends React.Component {
                     })}
                       <tr>
                       <th>Thành tiền</th>
-                      <td>{sum()}</td>
+                      <td>{formatter.format(sum())}</td>
                       </tr>
                     </tbody>
                     <tfoot></tfoot>
