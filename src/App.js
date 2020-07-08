@@ -6,11 +6,11 @@ import ScrollToTop from "./router/ScrollToTop";
 
 function App() {
 
-  // const [count, setCount] = useState(0);
-  // setTimeout(() => {
-  //   setCount(1);
-  // }, 3000);
-  // if (count === 1) {
+  const [count, setCount] = useState(0);
+  setTimeout(() => {
+    setCount(1);
+  }, 2000);
+  if (count === 1) {
   return (
     <div className="App">
       <Router>
@@ -19,7 +19,7 @@ function App() {
       </Router>
     </div>
   );
-  // }
-  // return <div>LOADING....</div>;
+  }
+  return <div>LOADING....</div>;
 }
 export default App;
