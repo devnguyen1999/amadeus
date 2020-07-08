@@ -19,9 +19,9 @@ function Footer(props) {
                 </Link>
                 <span className="my-2">Thương mại điện tử &#38; triển khai ứng dụng</span>
                 <span className="my-2">
-                  Đại học Quốc gia Thành phố Hồ Chí Minh
+                  Trần Tuấn Dũng
                 </span>
-                <span className="my-2">Trường Đại học Công nghệ Thông tin</span>
+                <span className="my-2">http://www.dungtran.top/</span>
               </div>
               <div className="col-lg-4 d-flex flex-column">
                 <div className="footer-logo d-flex flex-row my-2">

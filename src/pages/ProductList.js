@@ -35,7 +35,7 @@ const toSlug = (str) => {
 };
 
 function ProductList(props) {
-  const [error, setError] = useState(null);
+  const [stt, setStt] = useState(0);
   const [products, setProducts] = useState([]);
   useEffect(() => {
     (async () => {
@@ -59,7 +59,9 @@ function ProductList(props) {
     }
     console.log("Gia tang dan");
     setProducts(handled);
-    
+    const arr = handled;
+    setProducts(arr);
+    setStt(1);
   };
   const decrease = () => {
     let handled = products;
@@ -73,7 +75,9 @@ function ProductList(props) {
       handled[j + 1] = temp;
     }
     console.log("Gia giam dan");
-    setProducts(handled);
+    const arr = handled;
+    setProducts(arr);
+    setStt(2);
   };
   const latest = () => {};
   return (
@@ -164,7 +168,7 @@ function ProductList(props) {
               >
                 Giá giảm dần
               </a>
-              <a
+              {/* <a
                 className="nav-link text-white sort-menu"
                 type="button"
                 data-toggle="pill"
@@ -176,7 +180,7 @@ function ProductList(props) {
                 }}
               >
                 Mới nhất
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="col-12 col-md-9 px-5 mt-3">
