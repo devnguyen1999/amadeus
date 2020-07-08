@@ -50,6 +50,11 @@ export default class Cart extends React.Component {
     }
   }
   render() {
+    const formatter = new Intl.NumberFormat("vi-VI", {
+      style: "currency",
+      currency: "VND",
+      minimumFractionDigits: 0,
+    });
     const sum = () => {
       var sum = 0;
       this.state.ListCart.items.forEach((item) => {
@@ -136,11 +141,11 @@ export default class Cart extends React.Component {
                         </tr>
                         <tr>
                           <th>Tạm tính</th>
-                          <td>{sum()}</td>
+                          <td>{formatter.format(sum())}</td>
                         </tr>
                         <tr>
                           <th>Thành tiền</th>
-                          <td>{sum()}</td>
+                          <td>{formatter.format(sum())}</td>
                         </tr>
                       </tbody>
                       <tfoot></tfoot>

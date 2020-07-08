@@ -81,6 +81,11 @@ export default class DetailBill extends React.Component{
         }
     }
     render() {
+        const formatter = new Intl.NumberFormat("vi-VI", {
+            style: "currency",
+            currency: "VND",
+            minimumFractionDigits: 0,
+          });
         return(
             <div>
             <Header/>            
@@ -121,7 +126,7 @@ export default class DetailBill extends React.Component{
                             </div>
                         </div>
                         <div className="row mt-1 ml-0 mb-0 mr-0">
-                        <table className="table table-hover text-tb" style={{backgroundColor: "white"}}>
+                        <table className="table table-hover text-sm" style={{backgroundColor: "white"}}>
                             <thead>
                             <tr>
                                 <th scope="col">Sản phẩm</th>
@@ -145,7 +150,7 @@ export default class DetailBill extends React.Component{
                             <tfoot className="flex">  
                                 <tr className="">
                                     <td className="text-right">Tổng cộng</td>
-                                    <td className="text-right">{this.state.Order.total}</td>
+                                    <td className="text-right">{formatter.format(this.state.Order.total)}</td>
                                 </tr>
                             </tfoot>
                         </table>

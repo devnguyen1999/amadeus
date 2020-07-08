@@ -175,7 +175,7 @@ export default class Checkout extends React.Component {
                 <h5>Bạn mua cho ai?</h5>
                 <form>
                   <div className="radio">
-                      <input type="radio" id="yrself" name="payfor" value={this.state.email} onChange={this.setEmail} />
+                      <input type="radio" id="yrself" name="payfor"/>
                       <label for="yrself">Mua cho bản thân</label><br></br>
                       <input type="radio" id="fr" name="payfor" />
                       <label for="fr">Mua cho người khác</label><br></br>
@@ -207,7 +207,7 @@ export default class Checkout extends React.Component {
                     })}
                       <tr>
                       <th>Thành tiền</th>
-                      <td>{sum()}</td>
+                      <td>{formatter.format(sum())}</td>
                       </tr>
                     </tbody>
                     <tfoot></tfoot>
