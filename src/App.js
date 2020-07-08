@@ -5,23 +5,7 @@ import NavigationURL from "./router/NavigationURL";
 import ScrollToTop from "./router/ScrollToTop";
 
 function App() {
-<<<<<<< HEAD
-  const [count, setCount] = useState(0);
-  setTimeout(() => {
-    setCount(1);
-  }, 2200);
-  if (count === 1) {
-    return (
-      <div className="App">
-        <Router>
-          <ScrollToTop />
-          <NavigationURL />
-        </Router>
-      </div>
-    );
-  }
-  return <div>LOADING....</div>;
-=======
+
   // const [count, setCount] = useState(0);
   // setTimeout(() => {
   //   setCount(1);
@@ -37,6 +21,5 @@ function App() {
   );
   // }
   // return <div>LOADING....</div>;
->>>>>>> 97d9c6df287e606a7a8cbd69ea3aa2e9376bd976
 }
 export default App;
