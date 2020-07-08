@@ -28,6 +28,11 @@ const toSlug = (str) => {
     // return
     return str;
   };
+  const formatter = new Intl.NumberFormat("vi-VI", {
+    style: "currency",
+    currency: "VND",
+    minimumFractionDigits: 0,
+  });
 function ItemBill(props){
     var url="/" + props.nameURL;
     return(
@@ -44,9 +49,9 @@ function ItemBill(props){
                                         </div>
                                     </div>
                                 </th>
-                                <th >{props.price}</th>
+                                <th >{formatter.format(props.price)}</th>
                                 <th >{props.quantity}</th>
-                                <th >{props.price * props.quantity}</th>
+                                <th >{formatter.format(props.price * props.quantity)}</th>
                             </tr>
                             </tbody>
     );

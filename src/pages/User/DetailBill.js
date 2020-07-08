@@ -126,7 +126,7 @@ export default class DetailBill extends React.Component{
                             </div>
                         </div>
                         <div className="row mt-1 ml-0 mb-0 mr-0">
-                        <table className="table table-hover text-tb" style={{backgroundColor: "white"}}>
+                        <table className="table table-hover text-sm" style={{backgroundColor: "white"}}>
                             <thead>
                             <tr>
                                 <th scope="col">Sản phẩm</th>
