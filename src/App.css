@@ -3,6 +3,15 @@ body {
 }
 
 /* App */
+.showbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 55%);
+}
+.showbox h1 {
+  font-weight: lighter;
+}
 .loader {
   position: relative;
   margin: 0 auto;
@@ -111,12 +120,7 @@ body {
     stroke: #ffa700;
   }
 }
-.showbox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 100%);
-}
+
 
 /*Chi tiet SP */
 .eclipse-text {

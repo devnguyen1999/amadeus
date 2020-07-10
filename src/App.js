@@ -34,6 +34,7 @@ function App() {
           />
         </svg>
       </div>
+      <h1 className="text-center text-white mt-3">Amadeus Shop</h1>
     </div>
   );
 }
