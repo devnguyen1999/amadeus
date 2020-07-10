@@ -10,6 +10,15 @@ function App() {
     setCount(1);
   }, 2000);
   if (count === 1) {
+    return (
+      <div className="App">
+        <Router>
+          <ScrollToTop />
+          <NavigationURL />
+        </Router>
+      </div>
+    );
+  }
   return (
     <div class="showbox">
       <div class="loader">
@@ -27,7 +36,5 @@ function App() {
       </div>
     </div>
   );
-  }
-  return <div>LOADING....</div>;
 }
 export default App;
