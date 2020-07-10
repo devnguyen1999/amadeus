@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0);
   setTimeout(() => {
     setCount(1);
-  }, 2000);
+  }, 200000);
   if (count === 1) {
     return (
       <div className="App">
@@ -34,6 +34,7 @@ function App() {
           />
         </svg>
       </div>
+      <h1 className="text-center text-white mt-3">Amadeus Shop</h1>
     </div>
   );
 }
