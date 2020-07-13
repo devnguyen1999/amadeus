@@ -129,7 +129,7 @@ function Header(props) {
                   className="img-fluid mr-3"
                   alt="Logo"
                 />
-                Amadeus Shop
+                Amadeus
               </Link>
               <button
                 className="navbar-toggler hidden-lg-up ml-auto"
@@ -151,28 +151,28 @@ function Header(props) {
                 <li className="nav-item dropdown mr-3">
                   <a
                     className="nav-link dropdown-toggle"
-                    href="#!"
-                    id="dropdownId"
+                    type="button"
+                    id="category"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
                     Thể loại
                   </a>
-                  <div className="dropdown-menu" aria-labelledby="dropdownId">
-                    <Link className="dropdown-item" to="/the-loai/chien-thuat">
+                  <div className="dropdown-menu" aria-labelledby="category">
+                    <Link className="dropdown-item" to="/chien-thuat">
                       Chiến thuật
                     </Link>
-                    <Link className="dropdown-item" to="/the-loai/hanh-dong">
+                    <Link className="dropdown-item" to="/hanh-dong">
                       Hành động
                     </Link>
-                    <Link className="dropdown-item" to="/the-loai/kinh-di">
+                    <Link className="dropdown-item" to="/kinh-di">
                       Kinh dị
                     </Link>
-                    <Link className="dropdown-item" to="/the-loai/nhap-vai">
+                    <Link className="dropdown-item" to="/nhap-vai">
                       Nhập vai
                     </Link>
-                    <Link className="dropdown-item" to="/the-loai/phieu-luu">
+                    <Link className="dropdown-item" to="/phieu-luu">
                       Phiêu lưu
                     </Link>
                   </div>
@@ -180,15 +180,15 @@ function Header(props) {
                 <li className="nav-item dropdown mr-3">
                   <a
                     className="nav-link dropdown-toggle"
-                    href="#!"
-                    id="dropdownId"
+                    type="button"
+                    id="info"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
                     Thông tin
                   </a>
-                  <div className="dropdown-menu" aria-labelledby="dropdownId">
+                  <div className="dropdown-menu" aria-labelledby="info">
                     <a className="dropdown-item" href="#!">
                       Hướng dẫn
                     </a>
@@ -221,8 +221,8 @@ function Header(props) {
                 <li className="nav-item ml-3 dropdown">
                   <a
                     className="nav-link"
-                    href="#!"
-                    id="dropdownId"
+                    type="button"
+                    id="search"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
@@ -231,7 +231,7 @@ function Header(props) {
                   </a>
                   <div
                     className="dropdown-menu dropdown-menu-right search-box"
-                    aria-labelledby="dropdownId"
+                    aria-labelledby="search"
                   >
                     <form
                       onSubmit={handleSubmit(onSubmit)}
@@ -246,7 +246,7 @@ function Header(props) {
                       />
                       <input
                         type="submit"
-                        className="btn btn-success my-2 my-sm-0"
+                        className="btn btn-success"
                         value={loading ? "Loading..." : "Tìm kiếm"}
                         disabled={loading}
                       />

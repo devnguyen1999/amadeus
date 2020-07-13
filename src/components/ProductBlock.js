@@ -59,7 +59,7 @@ function ProductBlock(props) {
     <div className="product-block row text-white bg-dark p-2 my-2">
       <Link
         className="col-12 col-md-4"
-        to={props.prCategory + "/" + toSlug(props.prTitle)}
+        to={props.prCategory + "/"  + toSlug(props.prTitle)}
       >
         <img className="w-100" src={props.prImg} alt="Product" />
       </Link>
@@ -77,4 +77,3 @@ function ProductBlock(props) {
 }
 
 export default ProductBlock;
-
