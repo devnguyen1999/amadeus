@@ -13,7 +13,7 @@ import DetailBill from "../pages/User/DetailBill";
 import ProductList from "../pages/ProductList";
 import Search from "../pages/Search";
 import SeeMore from "../pages/SeeMore";
-
+import Undefine from "../pages/undefine"
 function NavigationURL(props) {
   return (
     <div>
@@ -47,6 +47,9 @@ function NavigationURL(props) {
         </Route>
         <Route path="/cam-on">
           <Thankfor />
+        </Route>
+        <Route path="/undefine">
+          <Undefine />
         </Route>
         <Route path="/promotion" component={SeeMore}></Route>
         <Route path="/latest" component={SeeMore}></Route>
