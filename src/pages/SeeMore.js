@@ -42,10 +42,25 @@ function SeeMore(props) {
       const products = await axios.get(
         `https://amadeuss.herokuapp.com/products`
       );
-      setProducts(products.data);
+      if (props.location.state.type === "promotion") {
+        let arrPr = [];
+        products.data.map((value, key) => {
+          if (value.priceFake !== 0) {
+            arrPr[key] = value;
+          }
+        });
+        setProducts(arrPr);
+      }
+      if (props.location.state.type === "latest") {
+        setProducts(products.data.reverse());
+      }
+      if (props.location.state.type === "all") {
+        setProducts(products.data);
+      }
     })();
   }, []);
-  const ascending = (event) => {
+  console.log(products);
+  const ascending = () => {
     let handled = products;
     for (let i = 1; i < handled.length; i++) {
       let j = i - 1;
@@ -56,7 +71,6 @@ function SeeMore(props) {
       }
       handled[j + 1] = temp;
     }
-    console.log("Gia tang dan");
     setProducts(handled);
     const arr = handled;
     setProducts(arr);
@@ -73,12 +87,11 @@ function SeeMore(props) {
       }
       handled[j + 1] = temp;
     }
-    console.log("Gia giam dan");
     const arr = handled;
     setProducts(arr);
     setStt(2);
   };
-  const latest = () => {};
+
   return (
     <div>
       <Header />
@@ -171,44 +184,16 @@ function SeeMore(props) {
           </div>
           <div className="col-12 col-md-9 px-5">
             {products.map((value, key) => {
-              if (props.location.state.type === "promotion") {
-                if (value.priceFake !== 0) {
-                  return (
-                    <ProductBlock
-                      key={key}
-                      prID={value.id}
-                      prImg={value.img}
-                      prTitle={value.name}
-                      prPrice={value.price}
-                      prFake={value.priceFake}
-                    />
-                  );
-                }
-              }
-              if (props.location.state.type === "latest") {
-                return (
-                  <ProductBlock
-                    key={key}
-                    prID={value.id}
-                    prImg={value.img}
-                    prTitle={value.name}
-                    prPrice={value.price}
-                    prFake={value.priceFake}
-                  />
-                );
-              }
-              if (props.location.state.type === "all") {
-                return (
-                  <ProductBlock
-                    key={key}
-                    prID={value.id}
-                    prImg={value.img}
-                    prTitle={value.name}
-                    prPrice={value.price}
-                    prFake={value.priceFake}
-                  />
-                );
-              }
+              return (
+                <ProductBlock
+                  key={key}
+                  prID={value.id}
+                  prImg={value.img}
+                  prTitle={value.name}
+                  prPrice={value.price}
+                  prFake={value.priceFake}
+                />
+              );
             })}
           </div>
         </div>
