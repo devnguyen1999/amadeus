@@ -104,8 +104,11 @@ export default class ChiTietSP extends React.Component {
             config
           )
           .then((response) => {
+            console.log(response.data);
             console.log(response.data.message);
+           if(response.data.message =="The item has been added to cart")
             alert("Thêm sản phẩm vào giỏ hàng thành công");
+            else   alert("Thêm sản phẩm vào giỏ hàng thất bại");
             window.location.reload();
           })
           .catch((error) => {
@@ -135,8 +138,9 @@ export default class ChiTietSP extends React.Component {
             config,
           )
           .then((response) => {
+            if(response.data.message =="The item has been added to cart")
             alert("Thêm sản phẩm vào giỏ hàng thành công");
-            console.log(response);
+            else   alert("Thêm sản phẩm vào giỏ hàng thất bại");
             this.setState({ ChuyenHuong: true });
           })
           .catch((error) => {
