@@ -1,5 +1,5 @@
 import React from "react";
-
+import $ from "jquery";
 
 import DieuHuong from "./ThongTin.js";
 import axios from "axios";
@@ -59,6 +59,17 @@ export default class ChiTietSP extends React.Component {
         console.log(res.data);
       })
       .catch((error) => console.log(error));
+
+
+      $("#1").on("click", function () {
+        $("#1").css("background", "#D63031");
+        $("#2").css("background", "rgba(255, 255, 255, 0.1)");
+      });
+  
+      $("#2").on("click", function () {
+        $("#2").css("background", "#D63031");
+        $("#1").css("background", "rgba(255, 255, 255, 0.1)");
+      });
   }
 
   
@@ -234,14 +245,14 @@ export default class ChiTietSP extends React.Component {
             >
               <button
                 className="btn col-xl-3 col-lg-3 col-md-3 col-5 col-sm-5 mr-2 mb-2 btn-danger text-white"
-                onClick={() => this.setState({ HienThi: true })}
+                onClick={() => this.setState({ HienThi: true })} id="1"
               >
                 Thông tin game
               </button>
               <button
                 className="btn col-xl-3 col-lg-3 col-md-3 col-6 col-sm-5 mb-2  text-white"
                 onClick={() => this.setState({ HienThi: false })}
-                style={{ background: "rgba(255, 255, 255, 0.1)" }}
+                style={{ background: "rgba(255, 255, 255, 0.1)" }} id="2"
               >
                 Cấu hình yêu cầu
               </button>
