@@ -34,7 +34,7 @@ const formatter = new Intl.NumberFormat("vi-VI", {
   currency: "VND",
   minimumFractionDigits: 0,
 });
-function ProductSearch(props) {
+function ProductBlockCat(props) {
   const displayCheck = () => {
     if (props.prFake === 0) {
       return (
@@ -59,14 +59,14 @@ function ProductSearch(props) {
     <div className="product-block row text-white bg-dark p-2 my-2">
       <Link
         className="col-12 col-md-4"
-        to={toSlug(props.prTitle)}
+        to={props.prCategory + "/"  + toSlug(props.prTitle)}
       >
         <img className="w-100" src={props.prImg} alt="Product" />
       </Link>
       <div className="col-12 col-md-6">
         <Link
           className="text-white p-0 m-0 d-inline"
-          to={toSlug(props.prTitle)}
+          to={props.prCategory + "/" + toSlug(props.prTitle)}
         >
           <h4>{props.prTitle}</h4>
         </Link>
@@ -76,4 +76,4 @@ function ProductSearch(props) {
   );
 }
 
-export default ProductSearch;
+export default ProductBlockCat;

@@ -167,33 +167,48 @@ function SeeMore(props) {
               >
                 Giá giảm dần
               </a>
-              {/* <a
-                className="nav-link text-white sort-menu"
-                type="button"
-                data-toggle="pill"
-                role="tab"
-                aria-controls="v-pills-home"
-                aria-selected="true"
-                onClick={(event) => {
-                  latest(event);
-                }}
-              >
-                Mới nhất
-              </a> */}
             </div>
           </div>
           <div className="col-12 col-md-9 px-5">
             {products.map((value, key) => {
-              return (
-                <ProductBlock
-                  key={key}
-                  prID={value.id}
-                  prImg={value.img}
-                  prTitle={value.name}
-                  prPrice={value.price}
-                  prFake={value.priceFake}
-                />
-              );
+              if (props.location.state.type === "promotion") {
+                if (value.priceFake !== 0) {
+                  return (
+                    <ProductBlock
+                      key={key}
+                      prID={value.id}
+                      prImg={value.img}
+                      prTitle={value.name}
+                      prPrice={value.price}
+                      prFake={value.priceFake}
+                    />
+                  );
+                }
+              }
+              if (props.location.state.type === "latest") {
+                return (
+                  <ProductBlock
+                    key={key}
+                    prID={value.id}
+                    prImg={value.img}
+                    prTitle={value.name}
+                    prPrice={value.price}
+                    prFake={value.priceFake}
+                  />
+                );
+              }
+              if (props.location.state.type === "all") {
+                return (
+                  <ProductBlock
+                    key={key}
+                    prID={value.id}
+                    prImg={value.img}
+                    prTitle={value.name}
+                    prPrice={value.price}
+                    prFake={value.priceFake}
+                  />
+                );
+              }
             })}
           </div>
         </div>
