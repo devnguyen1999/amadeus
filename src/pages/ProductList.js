@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import axios from "axios";
-import ProductBlock from "../components/ProductBlock";
+import ProductBlockCat from "../components/ProductBlockCat";
 import { useParams } from "react-router-dom";
 
 const toSlug = (str) => {
@@ -195,7 +195,7 @@ function ProductList(props) {
                 console.log(value.price);
 
                 return (
-                  <ProductBlock
+                  <ProductBlockCat
                     key={key}
                     prID={value.id}
                     prImg={value.img}

@@ -53,8 +53,8 @@ function NavigationURL(props) {
         <Route path="/all" component={SeeMore}></Route>
         <Route path="/bill/:_id" component={DetailBill}></Route>
         <Route path="/tim-kiem=:search" component={Search}></Route>
-        <Route path="/:category/:slug" component={ChiTietSP}></Route>
-        <Route path="/:category" component={ProductList}></Route>
+        <Route path="/the-loai/:category/:slug" component={ChiTietSP}></Route>
+        <Route path="/the-loai/:category" component={ProductList}></Route>
 
         <Route path="/:slug" component={ChiTietSP}></Route>
       </Switch>

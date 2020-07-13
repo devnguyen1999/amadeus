@@ -160,19 +160,19 @@ function Header(props) {
                     Thể loại
                   </a>
                   <div className="dropdown-menu" aria-labelledby="category">
-                    <Link className="dropdown-item" to="/chien-thuat">
+                    <Link className="dropdown-item" to="/the-loai/chien-thuat">
                       Chiến thuật
                     </Link>
-                    <Link className="dropdown-item" to="/hanh-dong">
+                    <Link className="dropdown-item" to="/the-loai/hanh-dong">
                       Hành động
                     </Link>
-                    <Link className="dropdown-item" to="/kinh-di">
+                    <Link className="dropdown-item" to="/the-loai/kinh-di">
                       Kinh dị
                     </Link>
-                    <Link className="dropdown-item" to="/nhap-vai">
+                    <Link className="dropdown-item" to="/the-loai/nhap-vai">
                       Nhập vai
                     </Link>
-                    <Link className="dropdown-item" to="/phieu-luu">
+                    <Link className="dropdown-item" to="/the-loai/phieu-luu">
                       Phiêu lưu
                     </Link>
                   </div>

@@ -126,10 +126,13 @@ export default class Home extends React.Component {
             })}
           </div>
           <div className="d-flex justify-content-center mt-2">
-            <Link className="text-white custom-link" to={{
+            <Link
+              className="text-white custom-link"
+              to={{
                 pathname: "/latest",
                 state: { type: "latest" },
-              }}>
+              }}
+            >
               Xem thêm sản phẩm
             </Link>
           </div>
@@ -152,7 +155,13 @@ export default class Home extends React.Component {
             })}
           </div>
           <div className="d-flex justify-content-center mt-2">
-            <Link className="text-white custom-link" to="/all">
+            <Link
+              className="text-white custom-link"
+              to={{
+                pathname: "/all",
+                state: { type: "all" },
+              }}
+            >
               Xem thêm sản phẩm
             </Link>
           </div>
