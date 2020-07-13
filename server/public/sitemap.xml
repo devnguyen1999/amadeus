@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://amadeushop.herokuapp.com/</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+<url>
+  <loc>http://amadeushop.herokuapp.com/dang-nhap</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+<url>
+  <loc>http://amadeushop.herokuapp.com/dang-ki</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+<url>
+  <loc>http://amadeushop.herokuapp.com/lien-he</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+<url>
+  <loc>http://amadeushop.herokuapp.com/nguoi-dung</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+<url>
+  <loc>http://amadeushop.herokuapp.com/gio-hang</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+<url>
+  <loc>http://amadeushop.herokuapp.com/thanh-toan</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+<url>
+  <loc>http://amadeushop.herokuapp.com/cam-on</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+<url>
+  <loc>http://amadeushop.herokuapp.com/the-loai</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+<url>
+  <loc>http://amadeushop.herokuapp.com/bill/:_id</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+<url>
+  <loc>http://amadeushop.herokuapp.com/:slug</loc>
+  <lastmod>2020-07-04T13:56:30+00:00</lastmod>
+</url>
+</urlset>
