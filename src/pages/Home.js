@@ -22,7 +22,7 @@ export default class Home extends React.Component {
   }
 
   render() {
-    let promotion = 0;
+    let promotionCount = 0;
     return (
       <div>
         <Header />
@@ -83,8 +83,8 @@ export default class Home extends React.Component {
           <hr className="border-white mt-2" />
           <div className="row">
             {this.state.ListData.map((value, key) => {
-              if (value.priceFake !== 0 && promotion < 6) {
-                promotion = promotion + 1;
+              if (value.priceFake !== 0 && promotionCount < 6) {
+                promotionCount++;
                 return (
                   <ProductInline
                     key={key}
@@ -112,7 +112,7 @@ export default class Home extends React.Component {
           <h4 className="text-white mt-3">Sản phẩm mới nhất</h4>
           <hr className="border-white mt-2" />
           <div className="row">
-            {this.state.ListData.map((value, key) => {
+            {this.state.ListData.reverse().map((value, key) => {
               if (key < 6) {
                 return (
                   <ProductInline
@@ -141,7 +141,7 @@ export default class Home extends React.Component {
           <h4 className="text-white mt-3">Tất cả sản phẩm</h4>
           <hr className="border-white mt-2" />
           <div className="row">
-            {this.state.ListData.map((value, key) => {
+            {this.state.ListData.reverse().map((value, key) => {
               if (key < 6) {
                 return (
                   <ProductInline

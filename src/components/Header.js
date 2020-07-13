@@ -48,7 +48,7 @@ function Header(props) {
     return (
       <Redirect
         to={{
-          pathname: "tim-kiem=" + toSlug(keySearch),
+          pathname: "/tim-kiem=" + toSlug(keySearch),
           state: { keySearch: keySearch },
         }}
       />
