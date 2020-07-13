@@ -4,7 +4,8 @@ import $ from 'jquery';
 import { getUser, getToken } from "../Utils/Common";
 import axios from "axios";
 import Header from "../components/Header";
-import { Redirect } from "react-router-dom";
+import bag from "../Asset/Img/empty-cart.png"
+import { Link } from "react-router-dom";
 export default class Checkout extends React.Component {
   constructor() {
     super();
@@ -78,9 +79,7 @@ export default class Checkout extends React.Component {
 
     const createOrder = async () => {
       var fremail = this.state.email;
-      console.log('mail', fremail)
       const user = getUser();
-      console.log("user", user);
       var email ="";
       if(fremail != null && fremail !=''){
         email = fremail;
@@ -98,7 +97,6 @@ export default class Checkout extends React.Component {
         }
         return axios.post('https://amadeuss.herokuapp.com/order/post',data,config).then((response) => {
           const order = response.data;
-          console.log('order', order);
           this.setState({order});
           payment();
         }).catch((error) => {
@@ -108,16 +106,6 @@ export default class Checkout extends React.Component {
     };
     const payment = () =>{
       const token = getToken();
-      const id = JSON.stringify(this.state.order.orderId);
-      console.log('orderId', id);
-        const config = {
-          headers: { Authorization: `Bearer ${token}`},
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        };
-        const data = {
-          orderID: id
-        };
         fetch('https://amadeuss.herokuapp.com/payment', {
             method: 'POST',
             headers: {
@@ -130,8 +118,14 @@ export default class Checkout extends React.Component {
           }).then((data) => {
             const link = data.payUrl;
             this.setState({link});
-            window.location.href=this.state.link;
-            console.log('link', this.state.link);
+            if(this.state.link == null){
+              window.location.replace('/undefine');
+            }
+            else{
+              window.location.href= this.state.link;
+            }
+          }).catch((error) => {
+            window.location.replace('/undefine');
           });
     };
     const sum = () => {
@@ -141,17 +135,10 @@ export default class Checkout extends React.Component {
       });
       return sum;
     };
-    return (
-      <div>
-        <Header />
-    <div
-      className="page-header section-dark"
-      style={{
-        backgroundImage:
-          "url(https://cdnb.artstation.com/p/assets/images/images/007/382/309/large/nastya-friday-game-background-1.jpg?1505758821)",
-      }}
-    >
-      <div className="container mt-4">
+    const checked = () => {
+      if(this.state.ListCart.items.length != 0){
+        return(
+          <div className="container mt-4">
         <div className="row">
           <div className="col-lg-9">
             <div className="cart-form">
@@ -222,6 +209,33 @@ export default class Checkout extends React.Component {
           </div>
         </div>
       </div>
+        )
+      }
+      else{
+        return(
+          <div className="row justify-content-center">
+              <div className="empty-form col-lg-6 text-center m-4 p-2">
+                  <h3 className="mt-3">Oop! Không có sản phẩm nào trong giỏ hàng của bạn</h3>
+                  <img className="ml-4 img-fluid" src={bag} />
+                <Link className="px-0 mx-0 col-lg-12" to="/">
+                  <a className="h4">Trở lại cửa hàng</a>
+                </Link>
+              </div>
+            </div>
+        )
+      }
+    };
+    return (
+      <div>
+        <Header />
+    <div
+      className="page-header section-dark"
+      style={{
+        backgroundImage:
+          "url(https://cdnb.artstation.com/p/assets/images/images/007/382/309/large/nastya-friday-game-background-1.jpg?1505758821)",
+      }}
+    >
+      {checked()}
     </div>
     <Footer />
     </div>
