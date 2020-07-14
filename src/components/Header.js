@@ -125,7 +125,7 @@ function Header(props) {
             <div className="col-lg-2 p-0 d-flex">
               <Link className="navbar-brand" to="/">
                 <img
-                  src="../amadeus.svg"
+                  src="https://archive-media-1.nyafuu.org/w/image/1460/06/1460067150711.png"
                   className="img-fluid mr-3"
                   alt="Logo"
                 />

@@ -11,7 +11,7 @@ function Footer(props) {
               <div className="col-lg-4 d-flex flex-column">
                 <Link className="footer-logo d-flex flex-row my-2" to="/">
                   <img
-                    src="../amadeus.svg"
+                    src="https://archive-media-1.nyafuu.org/w/image/1460/06/1460067150711.png"
                     className="img-fluid mr-3"
                     alt="Logo"
                   />

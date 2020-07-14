@@ -10,13 +10,13 @@ function Search(props) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     (async () => {
-      const products = await axios.post(
+      const response = await axios.post(
         `https://amadeuss.herokuapp.com/products/search`,
         {
           keySearch: props.location.state.keySearch,
         }
       );
-      setProducts(products.data);
+      setProducts(response.data);
     })();
   }, []);
   const ascending = (event) => {
@@ -157,7 +157,9 @@ function Search(props) {
             </div>
           </div>
           <div className="col-12 col-md-9 pl-5 mt-3">
-              <h6 className="text-white">Kết quả tìm kiếm cho từ khoá: {props.location.state.keySearch}</h6>
+            <h6 className="text-white">
+              Kết quả tìm kiếm cho từ khoá: {props.location.state.keySearch}
+            </h6>
             {products.map((value, key) => {
               return (
                 <ProductBlock
