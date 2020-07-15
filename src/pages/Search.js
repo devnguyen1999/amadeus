@@ -30,7 +30,6 @@ function Search(props) {
       }
       handled[j + 1] = temp;
     }
-    console.log("Gia tang dan");
     setProducts(handled);
     setStt(1);
   };
