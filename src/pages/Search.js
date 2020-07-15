@@ -32,8 +32,6 @@ function Search(props) {
     }
     console.log("Gia tang dan");
     setProducts(handled);
-    const arr = handled;
-    setProducts(arr);
     setStt(1);
   };
   const decrease = () => {
@@ -47,9 +45,7 @@ function Search(props) {
       }
       handled[j + 1] = temp;
     }
-    console.log("Gia giam dan");
-    const arr = handled;
-    setProducts(arr);
+    setProducts(handled);
     setStt(2);
   };
   const latest = () => {};

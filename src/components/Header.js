@@ -239,7 +239,9 @@ function Header(props) {
                     >
                       <input
                         name="keySearch"
-                        ref={register}
+                        ref={register({
+                          required: "Từ khoá không được để trống",
+                        })}
                         className="form-control mr-sm-2"
                         placeholder="Nhập tên sản phẩm..."
                         type="search"
