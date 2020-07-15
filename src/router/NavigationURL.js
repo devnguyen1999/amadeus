@@ -51,11 +51,13 @@ function NavigationURL(props) {
         <Route path="/undefine">
           <Undefine />
         </Route>
+        <Route path="/tim-kiem">
+          <Search />
+        </Route>
         <Route path="/promotion" component={SeeMore}></Route>
         <Route path="/latest" component={SeeMore}></Route>
         <Route path="/all" component={SeeMore}></Route>
         <Route path="/bill/:_id" component={DetailBill}></Route>
-        <Route path="/tim-kiem=:keySearch" component={Search}></Route>
         <Route path="/the-loai/:category/:slug" component={ChiTietSP}></Route>
         <Route path="/the-loai/:category" component={ProductList}></Route>
 

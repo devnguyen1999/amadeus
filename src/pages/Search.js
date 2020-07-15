@@ -3,22 +3,49 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProductBlock from "../components/ProductBlock";
 import axios from "axios";
+import { useForm } from "react-hook-form";
+import Carousel from "../components/Carousel";
 
 function Search(props) {
-  console.log(props.location.state);
+  // console.log(props.location.state);
+  // const [stt, setStt] = useState(0);
+  // const [products, setProducts] = useState([]);
+  // useEffect(() => {
+  //   (async () => {
+  //     const response = await axios.post(
+  //       `https://amadeuss.herokuapp.com/products/search`,
+  //       {
+  //         keySearch: props.location.state.keySearch,
+  //       }
+  //     );
+  //     setProducts(response.data);
+  //     console.log(products);
+  //   })();
+  // }, []);
+
   const [stt, setStt] = useState(0);
   const [products, setProducts] = useState([]);
-  useEffect(() => {
-    (async () => {
-      const response = await axios.post(
-        `https://amadeuss.herokuapp.com/products/search`,
-        {
-          keySearch: props.location.state.keySearch,
-        }
-      );
-      setProducts(response.data);
-    })();
-  }, []);
+  const { handleSubmit, register, errors } = useForm();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const onSubmit = (values) => {
+    setError(null);
+    setLoading(true);
+    axios
+      .post(`https://amadeuss.herokuapp.com/products/search`, {
+        keySearch: values.keySearch,
+      })
+      .then((response) => {
+        setLoading(false);
+        setProducts(response.data);
+        console.log(products);
+      })
+      .catch((error) => {
+        setLoading(false);
+        setError(error);
+      });
+  };
   const ascending = (event) => {
     let handled = products;
     for (let i = 1; i < handled.length; i++) {
@@ -51,54 +78,7 @@ function Search(props) {
   return (
     <div>
       <Header />
-      <div id="carouselId" className="carousel slide" data-ride="carousel">
-        <ol className="carousel-indicators">
-          <li data-target="#carouselId" data-slide-to={0} className="active" />
-          <li data-target="#carouselId" data-slide-to={1} />
-          <li data-target="#carouselId" data-slide-to={2} />
-        </ol>
-        <div className="carousel-inner" role="listbox">
-          <div className="carousel-item active">
-            <img
-              src="https://wongstore.com/uploads/2/2020-04/15615.jpg"
-              className="img-fluid d-block mx-auto"
-              alt="First slide"
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://wongstore.com/uploads/2/2020-02/new_project.jpg"
-              className="img-fluid d-block mx-auto"
-              alt="Second slide"
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://wongstore.com/uploads/2/2020-02/avenger2222.jpg"
-              className="img-fluid d-block mx-auto"
-              alt="Third slide"
-            />
-          </div>
-        </div>
-        <a
-          className="carousel-control-prev"
-          href="#carouselId"
-          role="button"
-          data-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="sr-only">Previous</span>
-        </a>
-        <a
-          className="carousel-control-next"
-          href="#carouselId"
-          role="button"
-          data-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="sr-only">Next</span>
-        </a>
-      </div>
+      <Carousel/>
       <div className="container my-3">
         <div className="row">
           <div className="col-12 col-md-3 pr-3">
@@ -152,9 +132,26 @@ function Search(props) {
             </div>
           </div>
           <div className="col-12 col-md-9 pl-5 mt-3">
-            <h6 className="text-white">
-              Kết quả tìm kiếm cho từ khoá: {props.location.state.keySearch}
-            </h6>
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="input-group form-inline mb-3 w-100"
+            >
+              <input
+                name="keySearch"
+                ref={register({
+                  required: "Từ khoá không được để trống",
+                })}
+                className="form-control mr-sm-2"
+                placeholder="Nhập tên sản phẩm muốn tìm kiếm..."
+                type="search"
+              />
+              <input
+                type="submit"
+                className="btn btn-success"
+                value={loading ? "Loading..." : "Tìm kiếm"}
+                disabled={loading}
+              />
+            </form>
             {products.map((value, key) => {
               return (
                 <ProductBlock
