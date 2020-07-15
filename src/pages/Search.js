@@ -5,23 +5,9 @@ import ProductBlock from "../components/ProductBlock";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import Carousel from "../components/Carousel";
+import bag from "../Asset/Img/empty-cart.png"
 
 function Search(props) {
-  // console.log(props.location.state);
-  // const [stt, setStt] = useState(0);
-  // const [products, setProducts] = useState([]);
-  // useEffect(() => {
-  //   (async () => {
-  //     const response = await axios.post(
-  //       `https://amadeuss.herokuapp.com/products/search`,
-  //       {
-  //         keySearch: props.location.state.keySearch,
-  //       }
-  //     );
-  //     setProducts(response.data);
-  //     console.log(products);
-  //   })();
-  // }, []);
 
   const [stt, setStt] = useState(0);
   const [products, setProducts] = useState([]);
@@ -39,7 +25,6 @@ function Search(props) {
       .then((response) => {
         setLoading(false);
         setProducts(response.data);
-        console.log(products);
       })
       .catch((error) => {
         setLoading(false);
@@ -75,10 +60,39 @@ function Search(props) {
     setStt(2);
   };
   const latest = () => {};
+  const displayCheck = () => {
+    if (products.length > 0) {
+      return (
+        <div>
+          {products.map((value, key) => {
+            return (
+              <ProductBlock
+                key={key}
+                prID={value.id}
+                prImg={value.img}
+                prTitle={value.name}
+                prPrice={value.price}
+                prFake={value.priceFake}
+              />
+            );
+          })}
+        </div>
+      );
+    } else {
+      return (
+        <div className="row justify-content-center">
+          <div className="empty-form col-lg-6 text-center m-4 p-2">
+            <h3 className="mt-3">Kết quả trống</h3>
+            <img className="ml-4 img-fluid" src={bag} />
+          </div>
+        </div>
+      );
+    }
+  };
   return (
     <div>
       <Header />
-      <Carousel/>
+      <Carousel />
       <div className="container my-3">
         <div className="row">
           <div className="col-12 col-md-3 pr-3">
@@ -152,18 +166,7 @@ function Search(props) {
                 disabled={loading}
               />
             </form>
-            {products.map((value, key) => {
-              return (
-                <ProductBlock
-                  key={key}
-                  prID={value.id}
-                  prImg={value.img}
-                  prTitle={value.name}
-                  prPrice={value.price}
-                  prFake={value.priceFake}
-                />
-              );
-            })}
+            {displayCheck()}
           </div>
         </div>
       </div>
