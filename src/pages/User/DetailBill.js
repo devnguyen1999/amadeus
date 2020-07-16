@@ -76,7 +76,6 @@ export default class DetailBill extends React.Component{
                 }
             });
           }).catch((error) => {
-            console.log("error",error);
           })
         }
     }
