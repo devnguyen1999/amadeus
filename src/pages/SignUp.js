@@ -21,7 +21,6 @@ function SignUp(props) {
       .then((response) => {
         setLoading(false);
         setError("Đăng kí thành công. Vui lòng kiểm tra email của bạn và xác thực tài khoản.");
-        console.log(response);
         
       })
       .catch((error) => {
@@ -30,7 +29,6 @@ function SignUp(props) {
           setError(error.response.data.message);
         else setError("Có lỗi xảy ra. Vui lòng thử lại sau");
       });
-    console.log(values);
   };
 
   return (

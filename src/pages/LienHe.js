@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../amadeus.svg";
 import Header from "../components/Header";
 LienHe.propTypes = {};
 
@@ -19,7 +18,7 @@ function LienHe(props) {
             style={{ width: "100%" }}
           >
             <img
-              src={logo}
+              src="https://archive-media-1.nyafuu.org/w/image/1460/06/1460067150711.png"
               className="img-fluid col-xd-10"
               width={200}
               height={150}

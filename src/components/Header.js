@@ -38,29 +38,6 @@ const toSlug = (str) => {
 
 function Header(props) {
   const [loggedIn, setloggedIn] = useState(getToken() ? true : false);
-  const { handleSubmit, register, errors, watch } = useForm();
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [redirect, setRedirect] = useState(false);
-  const [keySearch, setKeySearch] = useState();
-
-  if (redirect) {
-    return (
-      <Redirect
-        to={{
-          pathname: "/tim-kiem=" + toSlug(keySearch),
-          state: { keySearch: keySearch },
-        }}
-      />
-    );
-  }
-
-  const onSubmit = (values) => {
-    setError(null);
-    setLoading(true);
-    setKeySearch(values.keySearch);
-    setRedirect(true);
-  };
   const logOut = (event) => {
     setloggedIn(false);
     removeUserSession();
@@ -125,7 +102,7 @@ function Header(props) {
             <div className="col-lg-2 p-0 d-flex">
               <Link className="navbar-brand" to="/">
                 <img
-                  src="../amadeus.svg"
+                  src="https://archive-media-1.nyafuu.org/w/image/1460/06/1460067150711.png"
                   className="img-fluid mr-3"
                   alt="Logo"
                 />
@@ -218,40 +195,13 @@ function Header(props) {
                 <li className="nav-item ml-3">
                   <Bag></Bag>
                 </li>
-                <li className="nav-item ml-3 dropdown">
-                  <a
+                <li className="nav-item ml-3">
+                  <Link
                     className="nav-link"
-                    type="button"
-                    id="search"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
+                    to="/tim-kiem"
                   >
                     <i className="far fa-search    " />
-                  </a>
-                  <div
-                    className="dropdown-menu dropdown-menu-right search-box"
-                    aria-labelledby="search"
-                  >
-                    <form
-                      onSubmit={handleSubmit(onSubmit)}
-                      className="input-group form-inline my-2 my-lg-0 w-100"
-                    >
-                      <input
-                        name="keySearch"
-                        ref={register}
-                        className="form-control mr-sm-2"
-                        placeholder="Nhập tên sản phẩm..."
-                        type="search"
-                      />
-                      <input
-                        type="submit"
-                        className="btn btn-success"
-                        value={loading ? "Loading..." : "Tìm kiếm"}
-                        disabled={loading}
-                      />
-                    </form>
-                  </div>
+                  </Link>
                 </li>
               </ul>
             </div>

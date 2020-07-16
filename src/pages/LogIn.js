@@ -26,7 +26,6 @@ function LogIn(props) {
         password: values.password,
       })
       .then((response) => {
-        console.log(response);
         setLoading(false);
         setUserSession(response.data.accessToken, response.data.user);
         setRedirect(true);
@@ -37,7 +36,6 @@ function LogIn(props) {
           setError(error.response.data.message);
         else setError("Something went wrong. Please try again later.");
       });
-    console.log(values);
   };
 
   return (
