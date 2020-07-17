@@ -17,11 +17,11 @@ function Footer(props) {
                   />
                   <h5 className="my-auto">Amadeus Shop</h5>
                 </Link>
-                <span className="my-2">Thương mại điện tử &#38; triển khai ứng dụng</span>
+                <span className="my-2">Lập trình ứng dụng mạng</span>
                 <span className="my-2">
-                  Trần Tuấn Dũng
+                  
                 </span>
-                <span className="my-2">http://www.dungtran.top/</span>
+                {/* <span className="my-2">http://www.dungtran.top/</span> */}
               </div>
               <div className="col-lg-4 d-flex flex-column">
                 <div className="footer-logo d-flex flex-row my-2">
