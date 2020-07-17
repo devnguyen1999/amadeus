@@ -12,6 +12,7 @@ export default class ChiTietSP extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      error: null,
       HienThi: true,
       ChuyenHuong: false,
       ChuyenHuong404: false,
@@ -59,36 +60,37 @@ export default class ChiTietSP extends React.Component {
         this.setState({ ListData });
         console.log(this.state.ListData);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        if (error.response.status === 404) {
+          this.setState({error: error.response.data.message});
+          console.log(this.state.error);
+          this.setState({ ChuyenHuong404: true });
+        }
+      });
 
 
-      $("#1").on("click", function () {
-        $("#1").css("background", "#D63031");
-        $("#2").css("background", "rgba(255, 255, 255, 0.1)");
-      });
-  
-      $("#2").on("click", function () {
-        $("#2").css("background", "#D63031");
-        $("#1").css("background", "rgba(255, 255, 255, 0.1)");
-      });
+    $("#1").on("click", function () {
+      $("#1").css("background", "#D63031");
+      $("#2").css("background", "rgba(255, 255, 255, 0.1)");
+    });
+
+    $("#2").on("click", function () {
+      $("#2").css("background", "#D63031");
+      $("#1").css("background", "rgba(255, 255, 255, 0.1)");
+    });
   }
 
-  
 
-  render()
-  {
-    
-    if (this.state.ListData.leght === 0) {
-      this.setState({ ChuyenHuong404: true });
-    }
-    if (this.state.ChuyenHuong404 === true) {
-      return <Redirect to="/undefine" />;
-    }
+
+  render() {
     const formatter = new Intl.NumberFormat("vi-VI", {
       style: "currency",
       currency: "VND",
       minimumFractionDigits: 0,
     });
+    if (this.state.ChuyenHuong404) {
+      return <Redirect to="/undefine" />;
+    }
     if (this.state.ChuyenHuong) {
       return <Redirect to="/gio-hang" />;
     }
@@ -111,9 +113,9 @@ export default class ChiTietSP extends React.Component {
             config
           )
           .then((response) => {
-           if(response.data.message ==="The item has been added to cart")
-            alert("Thêm sản phẩm vào giỏ hàng thành công");
-            else   alert("Thêm sản phẩm vào giỏ hàng thất bại");
+            if (response.data.message === "The item has been added to cart")
+              alert("Thêm sản phẩm vào giỏ hàng thành công");
+            else alert("Thêm sản phẩm vào giỏ hàng thất bại");
             window.location.reload();
           })
           .catch((error) => {
@@ -142,9 +144,9 @@ export default class ChiTietSP extends React.Component {
             config,
           )
           .then((response) => {
-            if(response.data.message === "The item has been added to cart")
-            alert("Thêm sản phẩm vào giỏ hàng thành công");
-            else   alert("Thêm sản phẩm vào giỏ hàng thất bại");
+            if (response.data.message === "The item has been added to cart")
+              alert("Thêm sản phẩm vào giỏ hàng thành công");
+            else alert("Thêm sản phẩm vào giỏ hàng thất bại");
             this.setState({ ChuyenHuong: true });
           })
           .catch((error) => {
@@ -228,7 +230,7 @@ export default class ChiTietSP extends React.Component {
 
                 <div className="column justify-content-center">
                   <button className="col-12 btn btn-danger text-white mb-1"
-                   onClick={getProfileFetch2}
+                    onClick={getProfileFetch2}
                   >
                     Mua ngay
                   </button>
