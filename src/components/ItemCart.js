@@ -113,7 +113,7 @@ function ItemCart(props){
                                                   <div className="input-group-prepend">
                                                       <button onClick={subtract} className="btn btn-outline-primary">&minus;</button>
                                                   </div>
-                                                  <input className="text-center form-control input-fix" type="tel" placeholder={props.count}/>
+                                                  <input className="text-center form-control input-fix" type="tel" placeholder={props.count} disabled/>
                                                   <div className="input-group-append">
                                                       <button onClick={plus} className="btn btn-outline-primary">&#43;</button>
                                                   </div>
