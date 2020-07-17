@@ -14,6 +14,7 @@ export default class ChiTietSP extends React.Component {
     this.state = {
       HienThi: true,
       ChuyenHuong: false,
+      ChuyenHuong404: false,
       ListData: {
         vote: 0,
         category: [],
@@ -56,7 +57,7 @@ export default class ChiTietSP extends React.Component {
       .then((res) => {
         const ListData = res.data;
         this.setState({ ListData });
-        console.log(res.data);
+        console.log(this.state.ListData);
       })
       .catch((error) => console.log(error));
 
@@ -74,9 +75,15 @@ export default class ChiTietSP extends React.Component {
 
   
 
-  render() {
-    console.log(this.props.match.params);
+  render()
+  {
     
+    if (this.state.ListData.leght === 0) {
+      this.setState({ ChuyenHuong404: true });
+    }
+    if (this.state.ChuyenHuong404 === true) {
+      return <Redirect to="/undefine" />;
+    }
     const formatter = new Intl.NumberFormat("vi-VI", {
       style: "currency",
       currency: "VND",

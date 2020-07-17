@@ -21,6 +21,9 @@ function NavigationURL(props) {
         <Route exact path="/">
           <Home />
         </Route>
+        <Route path="/undefine">
+          <Undefine />
+        </Route>
         <Route path="/dang-nhap">
           <LogIn />
         </Route>
@@ -48,9 +51,7 @@ function NavigationURL(props) {
         <Route path="/cam-on">
           <Thankfor />
         </Route>
-        <Route path="/undefine">
-          <Undefine />
-        </Route>
+        
         <Route path="/tim-kiem">
           <Search />
         </Route>
