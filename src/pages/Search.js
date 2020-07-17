@@ -5,33 +5,32 @@ import ProductBlock from "../components/ProductBlock";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import Carousel from "../components/Carousel";
-import bag from "../Asset/Img/empty-cart.png"
+import bag from "../Asset/Img/empty-cart.png";
 
 function Search(props) {
-
   const [stt, setStt] = useState(0);
   const [products, setProducts] = useState([]);
   const { handleSubmit, register, errors } = useForm();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const onSubmit = (values) => {
+  const onSubmit = values => {
     setError(null);
     setLoading(true);
     axios
       .post(`https://amadeuss.herokuapp.com/products/search`, {
         keySearch: values.keySearch,
       })
-      .then((response) => {
+      .then(response => {
         setLoading(false);
         setProducts(response.data);
       })
-      .catch((error) => {
+      .catch(error => {
         setLoading(false);
         setError(error);
       });
   };
-  const ascending = (event) => {
+  const ascending = event => {
     let handled = products;
     for (let i = 1; i < handled.length; i++) {
       let j = i - 1;
@@ -111,7 +110,7 @@ function Search(props) {
                 role="tab"
                 aria-controls="v-pills-home"
                 aria-selected="true"
-                onClick={(event) => {
+                onClick={event => {
                   ascending(event);
                 }}
               >
@@ -124,7 +123,7 @@ function Search(props) {
                 role="tab"
                 aria-controls="v-pills-home"
                 aria-selected="true"
-                onClick={(event) => {
+                onClick={event => {
                   decrease(event);
                 }}
               >

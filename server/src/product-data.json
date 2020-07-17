@@ -1,0 +1,255 @@
+[
+    {
+        "prImg":"https://www.vietboot.com/forum/attachments/pxjffcb-jpg.3741/",
+        "prTitle":"Grand Theft Auto V",
+        "prPrice":485000,
+        "prAmount":30,
+        "prIntro":"Grand Theft Auto V (còn được gọi là Grand Theft Auto 5, GTA 5  hoặc GTA V) là trò chơi video được phát triển bởi Rockstar North thuộc hãng Rockstar Games. Là phiên bản thứ năm trong Dòng trò chơi Grand Theft Auto  và là phần kế tiếp của Grand Theft Auto IV . Bản gốc của trò chơi chính thức được phát hành vào ngày 17 Tháng 9 năm 2013 cho phiên bản Xbox 360 và PlayStation 3. Trò chơi cũng đã được phát hành cho phiên bản Xbox One và PlayStation 4  vào ngày 18 tháng 11 năm 2014, sau đó phát hành cho PC vào ngày 14 tháng 4 năm 2015. Trò chơi nằm trong mạch truyện chính của series Grand Theft Auto, mạch truyện này được tính là từ khi bắt đầu nội dung của trò chơi Grand Theft Auto IV (2008), không liên hệ nội dung đến các phần trước Grand Theft Auto IV. Nằm trong tiểu bang hư cấu San Andreas, mô phỏng Nam California, câu chuyện nói về ba tên tội phạm và nỗ lực của họ trong việc thực hiện các cuộc tấn công trong thế giới ngầm bên cạnh là chống lại chính phủ và các thế lực khác. Trò chơi được thiết kế theo kiểu thế giới mở cho phép người chơi tự do đi khắp nơi, các vùng nông thôn, rừng núi, hoang mạc và thành phố hư cấu Los Santos, mô phỏng thành phố Los Angeles ngoài đời. Trò chơi hỗ trợ chơi theo góc nhìn thứ nhất (FPS - First Person Shooter) và thứ ba (TPS - Third Person Shooter), di chuyển trong thế giới bằng cách điều hướng chân để đi bộ hoặc phương tiện giao thông. Người chơi điều khiển ba nhân vật chính xuyên suốt trò chơi và có thể chuyển đổi điều khiển qua lại giữa các nhân vật ở ngoài hoặc trong nhiệm vụ (một số phân đoạn trong nhiệm vụ buộc người chơi phải điều khiển một nhân vật nhất định hoặc phải chuyển đổi sang nhân vật khác). Câu chuyện chủ yếu xoay quanh những việc của tội phạm như trộm cướp, đánh nhau, liên hệ đến việc bắn súng và lái xe. Hệ thống cảnh sát trong trò chơi sẽ luôn cố gắng kiểm soát người chơi khi thực hiện những hành vi tội ác đến mức độ nào đó bằng cách bắt vào tù hoặc giết, số sao truy nã (tối đa là năm sao) càng cao thì mức độ nguy hiểm của cảnh sát đối với nhân vật càng tăng, tương tự như những phần Grand Theft Auto trước đó. Grand Theft Auto Online , chế độ chơi trực tiếp nhiều người chơi, cho phép lên đến 30 người chơi cùng khám phá thế giới, làm nhiệm vụ, tham gia các trò chơi như đánh nhau, đua xe,...",
+        "prConfig":"OS: Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1, Windows Vista 64 Bit Service Pack 2* (*NVIDIA video card recommended if running Vista OS). Processor: Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz. Memory: 4 GB RAM. Graphics: NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)Storage: 65 GB available space. Sound Card: 100% DirectX 10 compatible."
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/dqIImhJJr7o/maxresdefault.jpg",
+        "prTitle":"Sea of Thieves",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://cdn.unwire.hk/wp-content/uploads/2019/01/dims-2-1280x720.jpeg",
+        "prTitle":"PlayerUnknown’s Battlegrounds",
+        "prPrice":169000
+    },
+    {
+        "prImg":"https://trainghiemso.vn/wp-content/uploads/2018/06/ark-survival-evolved-android-featured.jpg",
+        "prTitle":"ARK: Survival Evolved",
+        "prPrice":388000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/PvQdaahZL14/maxresdefault.jpg",
+        "prTitle":"Batman™: Arkham Knight",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/zEaPWMQl_hw/maxresdefault.jpg",
+        "prTitle":"Conan Exiles",
+        "prPrice":318000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/xDdcINaUJ9I/maxresdefault.jpg",
+        "prTitle":"Call of Duty: Modern Warfare",
+        "prPrice":452000
+    },
+    {
+        "prImg":"https://www.desktopbackground.org/download/1280x720/2013/09/15/639383_left-4-dead-2-wallpapers_1920x1080_h.png",
+        "prTitle":"Left 4 Dead 2",
+        "prPrice":119000
+    },
+    {
+        "prImg":"https://vignette.wikia.nocookie.net/dont-starve/images/f/f0/DST_A_New_Reign_Release_Poster.jpg/revision/latest?cb=20170527141817&path-prefix=vi",
+        "prTitle":"Don't Starve Together",
+        "prPrice":164000
+    },
+    {
+        "prImg":"https://1.bp.blogspot.com/-TmMuEhdG3Bo/XYzbIQeWWPI/AAAAAAAAFow/XDoe7x4BqGYrAIf2CnMAUZTWoeeWov7gACNcBGAsYHQ/s1600/a6c4fd22-11d5-4037-a029-7183a6aabbc3.jpg",
+        "prTitle":"Rust",
+        "prPrice":308000
+    },
+    {
+        "prImg":"https://images.cgmagonline.com/wp-content/uploads/2020/03/horror-multiplayer-classic-dead-by-daylight-announced-for-mobile-devices-4-1280x720.jpg",
+        "prTitle":"Dead by Daylight",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/NGsloCp-hdE/maxresdefault.jpg",
+        "prTitle":"Farm Together",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/-M3t4p4H_fI/maxresdefault.jpg",
+        "prTitle":"The Forest",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://i1.wp.com/gamepcfull.com/wp-content/uploads/2020/01/This-War-of-Mine-Free-Download.jpg?fit=1280%2C720&ssl=1",
+        "prTitle":"This War of Mine",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://cs5.pikabu.ru/post_img/big/2015/08/29/1/1440802188_534069256.jpg",
+        "prTitle":"Borderlands 2",
+        "prPrice":83000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/AHXaxsQBbPU/maxresdefault.jpg",
+        "prTitle":"Sleeping Dogs: Definitive Edition",
+        "prPrice":414000
+    },
+    {
+        "prImg":"https://pic4.zhimg.com/v2-a89a962074cc928f022cc422a3190c43.jpg",
+        "prTitle":"No Man's Sky",
+        "prPrice":478000
+    },
+    {
+        "prImg":"https://i1.wp.com/www.nintendo-insider.com/wp-content/uploads/2018/08/prison-architect-nintendo-switch-edition-artwork.jpg?fit=1280%2C720&ssl=1",
+        "prTitle":"Prison Architect",
+        "prPrice":249000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/9kdZriliwS4/maxresdefault.jpg",
+        "prTitle":"Total War: WARHAMMER",
+        "prPrice":876000
+    },
+    {
+        "prImg":"https://cdn.shopify.com/s/files/1/0067/8492/files/Batman_Arkham_City_GOTY.jpg?7528943641974014904",
+        "prTitle":"Batman: Arkham City",
+        "prPrice":187.000
+    },
+    {
+        "prImg":"https://cdn-ext.fanatical.com/production/product/original/033bb714-9374-4143-b9f8-697336259f76.jpeg?w=1200",
+        "prTitle":"Starbound",
+        "prPrice":164000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/TwIB-OdXMCY/maxresdefault.jpg",
+        "prTitle":"The Witcher® 3: Wild Hunt",
+        "prPrice":438000
+    },
+    {
+        "prImg":"https://i1.wp.com/switchaboo.com/wp-content/uploads/2020/03/Saints-Row-4-Switch-Review.jpg?ssl=1",
+        "prTitle":"Saints Row IV",
+        "prPrice":164000
+    },
+    {
+        "prImg":"https://1.bp.blogspot.com/-x66pBsExKP4/XYy66Vu-fXI/AAAAAAAAE5E/Xe6MS5yuif40Lhh_LNi9C2tKBsjAgMVgQCNcBGAsYHQ/s1600/maxresdefault.jpg",
+        "prTitle":"Tomb Raider",
+        "prPrice":414000
+    },
+    {
+        "prImg":"https://3rd-strike.com/wp-content/uploads/2019/09/Torchlight-II.jpg",
+        "prTitle":"Torchlight II",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/WXD8L3pRTz0/maxresdefault.jpg",
+        "prTitle":"7 Days to Die",
+        "prPrice":219000
+    },
+    {
+        "prImg":"https://i0.wp.com/static1.gamespot.com/uploads/screen_kubrick/1537/15377506/2925116-madmax.jpg",
+        "prTitle":"Mad Max",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://m.media-amazon.com/images/M/MV5BN2ZhMTU2MjUtYzMwNy00MTJlLThiYTQtMGE2ODY3ZDkxNTg2XkEyXkFqcGdeQXVyNzczNzE5MTg@._V1_.jpg",
+        "prTitle":"DARK SOULS™ II: Scholar of the First Sin",
+        "prPrice":637000
+    },
+    {
+        "prImg":"https://i2.wp.com/thekoalition.com/images/2011/04/portal22.jpg?fit=1280%2C720&ssl=1",
+        "prTitle":"Portal 2",
+        "prPrice":119000
+    },
+    {
+        "prImg":"https://1.bp.blogspot.com/-hGw0dDVIY7w/XY3oa9K7L0I/AAAAAAAAH68/stzU_H8Vzr0pG5kUuGLnXGTgLpOE6lgZwCNcBGAsYHQ/s1600/208a7b10f02316fb8dc0ece670be5d9a01310a43.jpg",
+        "prTitle":"Just Cause™ 3",
+        "prPrice":414000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/t9H7_OfXamk/maxresdefault.jpg",
+        "prTitle":"ORION: Prelude",
+        "prPrice":14000
+    },
+    {
+        "prImg":"https://cdn.shopify.com/s/files/1/0067/8492/files/Middle-earth_Shadow_of_Mordor_Game_of_the_Year_Edition.jpg?4579640830360265560",
+        "prTitle":"Middle-earth: Shadow of Mordor",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/CpRxbsOJ8Yk/maxresdefault.jpg",
+        "prTitle":"Youtubers Life",
+        "prPrice":404000
+    },
+    {
+        "prImg":"https://games.mxdwn.com/wp-content/uploads/2017/09/grimdawn-logo.jpg",
+        "prTitle":"Grim Dawn",
+        "prPrice":219000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/_7mvITaX8mQ/maxresdefault.jpg",
+        "prTitle":"Tree of Life",
+        "prPrice":99000
+    },
+    {
+        "prImg":"https://www.playstationlifestyle.net/assets/uploads/2020/03/modern-warfare-3-remastered-1280x720.jpg",
+        "prTitle":"Call of Duty®: Modern Warfare® 2",
+        "prPrice":452000
+    },
+    {
+        "prImg":"https://photo.techrum.vn/images/2019/05/18/4QBjHq.jpg",
+        "prTitle":"The Witcher: Enhanced Edition Director's Cut",
+        "prPrice":119000
+    },
+    {
+        "prImg":"https://doupe.zive.cz/getthumbnail.aspx?w=1600&h=1000&q=60&id_file=121968389",
+        "prTitle":"Mafia II",
+        "prPrice":508000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/wZ75Vcxwm7s/maxresdefault.jpg",
+        "prTitle":"BattleBlock Theater®",
+        "prPrice":164000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/8-3sf-0u8II/maxresdefault.jpg",
+        "prTitle":"Call of Duty: World at War",
+        "prPrice":452000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/RRrOvmf5mj8/maxresdefault.jpg",
+        "prTitle":"Mirror's Edge™",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://hollywoodmetal.com/wp-content/uploads/FAR-CRY-PRIMAL.jpg",
+        "prTitle":"Far Cry® Primal",
+        "prPrice":822000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/y9AHbP8wNuA/maxresdefault.jpg",
+        "prTitle":"Killing Floor",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/bNxjQweN0X4/maxresdefault.jpg",
+        "prTitle":"Don't Starve: Shipwrecked",
+        "prPrice":69000
+    },
+    {
+        "prImg":"https://i.ytimg.com/vi/yZgMpBqXKDE/maxresdefault.jpg",
+        "prTitle":"Need For Speed: Hot Pursuit",
+        "prPrice":187000
+    },
+    {
+        "prImg":"https://news-cdn.softpedia.com/images/news2/Download-Now-New-Max-Payne-3-Patch-on-PS3-and-Xbox-360-Soon-on-PC-2.jpg",
+        "prTitle":"Max Payne 3",
+        "prPrice":333000
+    },
+    {
+        "prImg":"https://www.gamespace.com/wp-content/uploads/2018/12/subnautica-1280x720.jpg",
+        "prTitle":"Subnautica",
+        "prPrice":219000
+    },
+    {
+        "prImg":"https://1.bp.blogspot.com/-SJMJ3SD5GxM/XlrtzxY-W3I/AAAAAAAAGaw/XCPM0xoB55w0meNQn3SSNZKgrgxzFjUNwCLcBGAsYHQ/s1600/maxresdefault.jpg",
+        "prTitle":"Sniper Elite 3",
+        "prPrice":249000
+    },
+    {
+        "prImg":"https://1.bp.blogspot.com/-OAdVdPj9Tv8/XY4camYEJKI/AAAAAAAAIXk/vuXBwM4jTp8RiE7HtRJF-fGRUYrNkNEgACNcBGAsYHQ/s1600/maxresdefault.jpg",
+        "prTitle":"Attack on Titan: Wings of Freedom",
+        "prPrice":478000
+    },
+    {
+        "prImg":"https://i1.wp.com/www.blogdot.tv/wp-content/uploads/2014/01/maxresdefault-1.jpg?fit=1280%2C720&ssl=1",
+        "prTitle":"Injustice: Gods Among Us Ultimate Edition",
+        "prPrice":187000
+    }
+]

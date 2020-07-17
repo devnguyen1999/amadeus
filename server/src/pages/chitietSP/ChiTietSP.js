@@ -14,7 +14,6 @@ export default class ChiTietSP extends React.Component {
     this.state = {
       HienThi: true,
       ChuyenHuong: false,
-      ChuyenHuong404: false,
       ListData: {
         vote: 0,
         category: [],
@@ -57,7 +56,7 @@ export default class ChiTietSP extends React.Component {
       .then((res) => {
         const ListData = res.data;
         this.setState({ ListData });
-        console.log(this.state.ListData);
+        console.log(res.data);
       })
       .catch((error) => console.log(error));
 
@@ -75,15 +74,9 @@ export default class ChiTietSP extends React.Component {
 
   
 
-  render()
-  {
+  render() {
+    console.log(this.props.match.params);
     
-    if (this.state.ListData.leght === 0) {
-      this.setState({ ChuyenHuong404: true });
-    }
-    if (this.state.ChuyenHuong404 === true) {
-      return <Redirect to="/undefine" />;
-    }
     const formatter = new Intl.NumberFormat("vi-VI", {
       style: "currency",
       currency: "VND",
@@ -111,13 +104,16 @@ export default class ChiTietSP extends React.Component {
             config
           )
           .then((response) => {
-           if(response.data.message ==="The item has been added to cart")
+            console.log(response.data);
+            console.log(response.data.message);
+           if(response.data.message =="The item has been added to cart")
             alert("Thêm sản phẩm vào giỏ hàng thành công");
             else   alert("Thêm sản phẩm vào giỏ hàng thất bại");
             window.location.reload();
           })
           .catch((error) => {
             alert("Thêm sản phẩm vào giỏ hàng thất bại");
+            console.log(error.response.data.message);
           });
       } else {
         alert("Xin hãy đăng nhập!!!");
@@ -142,13 +138,14 @@ export default class ChiTietSP extends React.Component {
             config,
           )
           .then((response) => {
-            if(response.data.message === "The item has been added to cart")
+            if(response.data.message =="The item has been added to cart")
             alert("Thêm sản phẩm vào giỏ hàng thành công");
             else   alert("Thêm sản phẩm vào giỏ hàng thất bại");
             this.setState({ ChuyenHuong: true });
           })
           .catch((error) => {
             alert("Thêm sản phẩm vào giỏ hàng thất bại");
+            console.log(error.response.data.message);
           });
       } else {
         alert("Xin hãy đăng nhập!!!");
