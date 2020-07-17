@@ -23,14 +23,12 @@ export default class ThongTinGame extends React.Component{
 
       setName(e){
         e.preventDefault();
-        console.log(e.target.value);
         this.setState({
             title:e.target.value
         })
     }
     setAgree(e){
       e.preventDefault();
-      console.log(e.target.value);
       this.setState({
           mess:e.target.value
       })
@@ -101,16 +99,10 @@ export default class ThongTinGame extends React.Component{
           })
         })
         .then((response) => {
-          console.log(this.state.title);
-          console.log(this.state.value);
-          console.log(this.state.mess);
-          console.log(response);
           alert("Cảm ơn bạn đã gửi đánh giá");
           window.location.reload();
-          
         })
         .catch((error) => {
-            console.log(error.response.data.message);
             alert("lỗi khi gửi đánh giá")
         })
       }

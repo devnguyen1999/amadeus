@@ -45,7 +45,6 @@ export default class Cart extends React.Component {
           this.setState({ ListCart });
         })
         .catch((error) => {
-          console.log("error", error);
         });
     }
   }
@@ -79,11 +78,9 @@ export default class Cart extends React.Component {
           },
         })
           .then((response) => {
-            console.log(response);
             window.location.reload();
           })
           .catch((error) => {
-            console.log(error.response.data.message);
           });
       }
     };

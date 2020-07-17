@@ -130,22 +130,9 @@ function Search(props) {
               >
                 Giá giảm dần
               </a>
-              {/* <a
-                className="nav-link text-white sort-menu"
-                type="button"
-                data-toggle="pill"
-                role="tab"
-                aria-controls="v-pills-home"
-                aria-selected="true"
-                onClick={(event) => {
-                  latest(event);
-                }}
-              >
-                Mới nhất
-              </a> */}
             </div>
           </div>
-          <div className="col-12 col-md-9 pl-5 mt-3">
+          <div className="col-12 col-md-9 px-3 mt-3">
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="input-group form-inline mb-3 w-100"
