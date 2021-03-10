@@ -7,14 +7,39 @@ import { connect } from "react-redux";
 import { fetchGames, sortGames} from '../action/gamesAction';
 import { Component } from "react";
 class SeeMore extends Component {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      games: []
+    }
+  }
+  componentWillMount() {
     if(this.props.games === undefined) {
       this.props.fetchGames();
+    };
+  }
+  componentWillReceiveProps() {
+    this.handleSetState(this.props.games);
+  }
+  componentDidMount() {
+    if(this.props.games === undefined) {
+      this.props.fetchGames();
+    };
+  }
+
+  handleSort = (games ,sortKey) => {
+    this.props.sortGames(games, sortKey);
+    this.handleSetState(this.props.filteredItems);
+  };
+  handleSetState = (games) => {
+    if(games !== undefined) {
+      this.setState({
+        games: games
+      });
     }
-    console.log(this.props.games);
-    const handleSort = (sortKey) => {
-      this.props.sortGames(this.props.games, sortKey);
-    }
+  }
+  render() {
+    const {games} = this.props;
     return (
       <div>
         <Header />
@@ -37,7 +62,7 @@ class SeeMore extends Component {
                   role="tab"
                   aria-controls="v-pills-home"
                   aria-selected="true"
-                  onClick={() => handleSort('lowest')
+                  onClick={() => this.handleSort(games,'lowest')
                   }
                 >
                   Giá tăng dần
@@ -49,7 +74,7 @@ class SeeMore extends Component {
                   role="tab"
                   aria-controls="v-pills-home"
                   aria-selected="true"
-                  onClick={() => handleSort('')
+                  onClick={() => this.handleSort(games,'highest')
                   }
                 >
                   Giá giảm dần
@@ -57,8 +82,8 @@ class SeeMore extends Component {
               </div>
             </div>
             <div className="col-12 col-md-9 px-5">
-              {!this.props.games ? (<div>...Loading</div>): (
-                this.props.games.map((value, key) => {
+              {!this.state.games ? (<div>...Loading</div>): (
+                this.state.games.map((value, key) => {
                   return (
                     <ProductBlock
                       key={key}
@@ -80,4 +105,4 @@ class SeeMore extends Component {
   }
 }
 
-export default connect((state)=>({games: state.games.filteredItems}), {fetchGames, sortGames})(SeeMore);
+export default connect((state)=>({games: state.games.items, filteredItems: state.games.filteredItems}), {fetchGames, sortGames})(SeeMore);

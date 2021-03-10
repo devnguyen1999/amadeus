@@ -21,14 +21,15 @@ export const sortGames =(filteredGame, sort) => (dispacth) => {
     if(sort === "") {
         sortedGames.sort((a,b) => (a.id > b.id ? 1 : -1));
     }
-    else {
-        sortedGames.sort((a,b) => sort==="lowest" ? a.price > b.price ? 1 : -1 : a.price > b.price ? 1 : 1);
+    else if(sort === "highest") {
+        sortedGames.sort((a,b) => (a.price < b.price ? 1 : -1 ));
     }
-    console.log(sortedGames);
+    else {
+        sortedGames.sort((a,b) => (a.price > b.price ? 1 : -1));
+    }
     dispacth({
         type: ORDER_GAME,
         payload: {
-            sort: sort,
             items: sortedGames
         }
     })
