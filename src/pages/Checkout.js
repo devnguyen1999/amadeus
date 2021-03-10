@@ -81,7 +81,7 @@ export default class Checkout extends React.Component {
       var fremail = this.state.email;
       const user = getUser();
       var email ="";
-      if(fremail != null && fremail !=''){
+      if(fremail != null && fremail !==''){
         email = fremail;
       } 
       else{
@@ -105,7 +105,6 @@ export default class Checkout extends React.Component {
       }
     };
     const payment = () =>{
-      const token = getToken();
         fetch('https://amadeuss.herokuapp.com/payment', {
             method: 'POST',
             headers: {
@@ -136,7 +135,7 @@ export default class Checkout extends React.Component {
       return sum;
     };
     const checked = () => {
-      if(this.state.ListCart.items.length != 0){
+      if(this.state.ListCart.items.length !== 0){
         return(
           <div className="container mt-4">
         <div className="row">
@@ -216,9 +215,9 @@ export default class Checkout extends React.Component {
           <div className="row justify-content-center">
               <div className="empty-form col-lg-6 text-center m-4 p-2">
                   <h3 className="mt-3">Oop! Không có sản phẩm nào trong giỏ hàng của bạn</h3>
-                  <img className="ml-4 img-fluid" src={bag} />
+                  <img alt="img" className="ml-4 img-fluid" src={bag} />
                 <Link className="px-0 mx-0 col-lg-12" to="/">
-                  <a className="h4">Trở lại cửa hàng</a>
+                  <h4 className="h4">Trở lại cửa hàng</h4>
                 </Link>
               </div>
             </div>

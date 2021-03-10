@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 function ItemHistory (props){
     var statusOrder = "";
-    if(props.paid == false){
+    if(props.paid === false){
         statusOrder ="Chưa hoàn thành";
     } else{
         statusOrder ="Hoàn thành";

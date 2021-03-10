@@ -2,39 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getToken, getUser, removeUserSession } from "../Utils/Common";
 import Bag from "../pages/User/bag";
-import { useForm } from "react-hook-form";
-import axios from "axios";
-import Search from "../pages/Search";
-import { Redirect } from "react-router-dom";
 
-const toSlug = (str) => {
-  // Chuyển hết sang chữ thường
-  str = str.toLowerCase();
 
-  // xóa dấu
-  str = str.replace(/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/g, "a");
-  str = str.replace(/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/g, "e");
-  str = str.replace(/(ì|í|ị|ỉ|ĩ)/g, "i");
-  str = str.replace(/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/g, "o");
-  str = str.replace(/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/g, "u");
-  str = str.replace(/(ỳ|ý|ỵ|ỷ|ỹ)/g, "y");
-  str = str.replace(/(đ)/g, "d");
 
-  // Xóa ký tự đặc biệt
-  str = str.replace(/([^0-9a-z-\s])/g, "");
-
-  // Xóa khoảng trắng thay bằng ký tự -
-  str = str.replace(/(\s+)/g, "-");
-
-  // xóa phần dự - ở đầu
-  str = str.replace(/^-+/g, "");
-
-  // xóa phần dư - ở cuối
-  str = str.replace(/-+$/g, "");
-
-  // return
-  return str;
-};
 
 function Header(props) {
   const [loggedIn, setloggedIn] = useState(getToken() ? true : false);
@@ -66,7 +36,7 @@ function Header(props) {
                 <Link className="dropdown-item" to="/nguoi-dung">
                   Trang cá nhân
                 </Link>
-                <a
+                <button
                   type="button"
                   className="dropdown-item"
                   onClick={(event) => {
@@ -74,7 +44,7 @@ function Header(props) {
                   }}
                 >
                   Đăng xuất
-                </a>
+                </button>
               </div>
             </li>
           </ul>
@@ -126,7 +96,7 @@ function Header(props) {
             >
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item dropdown mr-3">
-                  <a
+                  <div
                     className="nav-link dropdown-toggle"
                     type="button"
                     id="category"
@@ -135,7 +105,7 @@ function Header(props) {
                     aria-expanded="false"
                   >
                     Thể loại
-                  </a>
+                  </div>
                   <div className="dropdown-menu" aria-labelledby="category">
                     <Link className="dropdown-item" to="/the-loai/chien-thuat">
                       Chiến thuật
@@ -155,7 +125,7 @@ function Header(props) {
                   </div>
                 </li>
                 <li className="nav-item dropdown mr-3">
-                  <a
+                  <div
                     className="nav-link dropdown-toggle"
                     type="button"
                     id="info"
@@ -164,7 +134,7 @@ function Header(props) {
                     aria-expanded="false"
                   >
                     Thông tin
-                  </a>
+                  </div>
                   <div className="dropdown-menu" aria-labelledby="info">
                     <a className="dropdown-item" href="#!">
                       Hướng dẫn

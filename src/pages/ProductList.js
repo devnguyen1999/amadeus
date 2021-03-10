@@ -36,7 +36,7 @@ const toSlug = (str) => {
 };
 
 function ProductList(props) {
-  const [stt, setStt] = useState(0);
+  const [setStt] = useState(0);
   const [products, setProducts] = useState([]);
   useEffect(() => {
     (async () => {
@@ -75,7 +75,6 @@ function ProductList(props) {
     setProducts(handled);
     setStt(2);
   };
-  const latest = () => {};
   return (
     <div>
       <Header />
@@ -91,7 +90,7 @@ function ProductList(props) {
               role="tablist"
               aria-orientation="vertical"
             >
-              <a
+              <div
                 className="nav-link text-white sort-menu"
                 type="button"
                 data-toggle="pill"
@@ -103,8 +102,8 @@ function ProductList(props) {
                 }}
               >
                 Giá tăng dần
-              </a>
-              <a
+              </div>
+              <div
                 className="nav-link text-white sort-menu"
                 type="button"
                 data-toggle="pill"
@@ -116,7 +115,7 @@ function ProductList(props) {
                 }}
               >
                 Giá giảm dần
-              </a>
+              </div>
               {/* <a
                 className="nav-link text-white sort-menu"
                 type="button"

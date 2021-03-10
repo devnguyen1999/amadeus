@@ -18,10 +18,10 @@ function Undefine() {
         <div className="row justify-content-center">
               <div className=" text-center m-4 p-1">
                   <h3 className="mt-3">Oop! Đã xảy ra lỗi</h3>
-                  <img className="img-success img-fluid" src={error} />
+                  <img alt={error} className="img-success img-fluid" src={error} />
                   <div className="row">
                 <Link className="px-0 mx-0 col-lg-12" to="/">
-                  <a className="h4">Trở lại cửa hàng</a>
+                  <h4 >Trở lại cửa hàng</h4>
                 </Link>
                 </div>
               </div>

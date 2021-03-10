@@ -30,9 +30,6 @@ const toSlug = (str) => {
   return str;
 };
 
-const IDda = (ID) => {
-  return ID;
-};
 
 const formatter = new Intl.NumberFormat("vi-VI", {
   style: "currency",

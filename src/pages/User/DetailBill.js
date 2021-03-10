@@ -70,7 +70,7 @@ export default class DetailBill extends React.Component{
             const ListOrders = response.data;
             this.setState({ListOrders});
             this.state.ListOrders.forEach((item) =>{
-                if(item._id == this.props.match.params._id){
+                if(item._id === this.props.match.params._id){
                     this.state.Order = item;
                     this.setState(this.state.Order);
                 }

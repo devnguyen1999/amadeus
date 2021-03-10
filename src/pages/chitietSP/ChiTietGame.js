@@ -145,8 +145,8 @@ export default class ThongTinGame extends React.Component{
                   {/*https://www.npmjs.com/package/material-ui-rating  */}
                  
                   <Ratings
-                    emptySymbol={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/OOjs_UI_icon_star.svg/1200px-OOjs_UI_icon_star.svg.png" with="35" height="35" style={{fontSize:10}} className="icon" />}
-                    fullSymbol={<img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-512.png" style={{fontSize:10}} with="35" height="35" className="icon" />}
+                    emptySymbol={<img alt="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/OOjs_UI_icon_star.svg/1200px-OOjs_UI_icon_star.svg.png" with="35" height="35" style={{fontSize:10}} className="icon" />}
+                    fullSymbol={<img alt="img" src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-512.png" style={{fontSize:10}} with="35" height="35" className="icon" />}
                     
                     initialRating={this.props.DATA.vote}
                     readonly />
@@ -168,8 +168,8 @@ export default class ThongTinGame extends React.Component{
         <div>
         <p className="text-cauhinh">+ Đánh giá của bạn về sản phẩm:</p>  
         <Ratings
-        emptySymbol={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/OOjs_UI_icon_star.svg/1200px-OOjs_UI_icon_star.svg.png" with="25" height="25" style={{fontSize:10}} className="icon" />}
-        fullSymbol={<img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-512.png" style={{fontSize:10}} with="25" height="25" className="icon" />}
+        emptySymbol={<img alt="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/OOjs_UI_icon_star.svg/1200px-OOjs_UI_icon_star.svg.png" with="25" height="25" style={{fontSize:10}} className="icon" />}
+        fullSymbol={<img alt="img" src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-512.png" style={{fontSize:10}} with="25" height="25" className="icon" />}
         onChange={(rate) => this.setState({value:rate})}
         {...this.props} initialRating={this.state.value} />
       
@@ -213,8 +213,8 @@ export default class ThongTinGame extends React.Component{
                 <div className="media-body">
                   <h5 className="text-warning">{value.userId.username}   <small><i className="text-light" style={{fontSize:12}}>   {value.createAt}</i></small></h5>
                 <p className="text-success">{value.title}   <small><Ratings
-                    emptySymbol={<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/OOjs_UI_icon_star.svg/1200px-OOjs_UI_icon_star.svg.png" with="15" height="15" style={{fontSize:10}} className="icon" />}
-                    fullSymbol={<img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-512.png" style={{fontSize:10}} with="15" height="15" className="icon" />}
+                    emptySymbol={<img alt="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/OOjs_UI_icon_star.svg/1200px-OOjs_UI_icon_star.svg.png" with="15" height="15" style={{fontSize:10}} className="icon" />}
+                    fullSymbol={<img alt="img" src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-512.png" style={{fontSize:10}} with="15" height="15" className="icon" />}
                     initialRating={value.vote}
                     readonly /></small>  </p>
                 <p className="text-light">{value.content}</p>      

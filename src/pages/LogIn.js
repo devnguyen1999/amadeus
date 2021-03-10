@@ -29,6 +29,7 @@ function LogIn(props) {
         setLoading(false);
         setUserSession(response.data.accessToken, response.data.user);
         setRedirect(true);
+        console.log(response.data.user)
       })
       .catch((error) => {
         setLoading(false);

@@ -157,7 +157,7 @@ const Updatepass = () => {
   
   const token = getToken();
 
-  if(this.state.setpass1 == this.state.setpass2 ){
+  if(this.state.setpass1 === this.state.setpass2 ){
   if (token) {
     return fetch("https://amadeuss.herokuapp.com/api/user/changepassword", {
       method: "POST",

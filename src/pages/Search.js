@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProductBlock from "../components/ProductBlock";
@@ -8,11 +8,11 @@ import Carousel from "../components/Carousel";
 import bag from "../Asset/Img/empty-cart.png";
 
 function Search(props) {
-  const [stt, setStt] = useState(0);
+  const [ setStt] = useState(0);
   const [products, setProducts] = useState([]);
-  const { handleSubmit, register, errors } = useForm();
+  const { handleSubmit, register } = useForm();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [ setError] = useState(null);
 
   const onSubmit = values => {
     setError(null);
@@ -58,7 +58,6 @@ function Search(props) {
     setProducts(handled);
     setStt(2);
   };
-  const latest = () => {};
   const displayCheck = () => {
     if (products.length > 0) {
       return (
@@ -82,7 +81,7 @@ function Search(props) {
         <div className="row justify-content-center">
           <div className="empty-form col-lg-6 text-center m-4 p-2">
             <h3 className="mt-3">Kết quả trống</h3>
-            <img className="ml-4 img-fluid" src={bag} />
+            <img alt="img" className="ml-4 img-fluid" src={bag} />
           </div>
         </div>
       );
@@ -103,7 +102,7 @@ function Search(props) {
               role="tablist"
               aria-orientation="vertical"
             >
-              <a
+              <div
                 className="nav-link text-white sort-menu"
                 type="button"
                 data-toggle="pill"
@@ -115,8 +114,8 @@ function Search(props) {
                 }}
               >
                 Giá tăng dần
-              </a>
-              <a
+              </div>
+              <div
                 className="nav-link text-white sort-menu"
                 type="button"
                 data-toggle="pill"
@@ -128,7 +127,7 @@ function Search(props) {
                 }}
               >
                 Giá giảm dần
-              </a>
+              </div>
             </div>
           </div>
           <div className="col-12 col-md-9 px-3 mt-3">
