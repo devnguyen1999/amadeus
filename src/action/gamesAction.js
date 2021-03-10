@@ -1,4 +1,4 @@
-import { FECTH_GAME, FILER_GAME_BY_TYPE, ORDER_GAME } from "./type";
+import { FECTH_GAME, FILER_GAME_BY_TYPE, ORDER_GAME, SEARCH_GAME } from "./type";
 export const  fetchGames = () => async(dispacth) => {
     const res = await fetch("http://amadeuss.herokuapp.com/products");
     const data = await res.json();
@@ -32,5 +32,21 @@ export const sortGames =(filteredGame, sort) => (dispacth) => {
         payload: {
             items: sortedGames
         }
+    })
+}
+export const searhGames = (filteredGame, searchKey) => (dispacth) => {
+    const games = filteredGame;
+    let resultList = [];
+    games.forEach(item => {
+        if(item.name.toLocaleLowerCase().includes(searchKey.toLocaleLowerCase())){
+            resultList.push(item);
+        }
+    })
+    if(resultList.length === 0) {
+        resultList = games;
+    }
+    dispacth({
+        type: SEARCH_GAME,
+        payload: resultList
     })
 }

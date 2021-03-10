@@ -23,7 +23,7 @@ class ItemCart extends  React.Component{
   })
   render() {
     return(                     
-      <div className="cart-form row justify-content-center p-2 mt-1 text-white">
+      <div className="cart-form row justify-content-center p-2 mt-2 text-white">
         <div className="col-md-11 col-sm-11 col-xs-11 col-10">
           <div className="row">
             <div className="col-md-3 col-sm-4 col-6 text-center d-flex align-items-center">

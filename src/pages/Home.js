@@ -44,10 +44,10 @@ class Home extends React.Component {
           </div>
           <div className="d-flex justify-content-center mt-2">
             <Link
-              className="text-white custom-link"
+              className="text-white custom-link btn btn-primary"
               to={{
-                pathname: "/promotion",
-                state: { type: "promotion" },
+                pathname: "/all",
+                state: { type: "all" },
               }}
             >
               Xem thêm sản phẩm
@@ -77,10 +77,10 @@ class Home extends React.Component {
           </div>
           <div className="d-flex justify-content-center mt-2">
             <Link
-              className="text-white custom-link"
+              className="text-white custom-link btn btn-primary"
               to={{
-                pathname: "/latest",
-                state: { type: "latest" },
+                pathname: "/all",
+                state: { type: "all" },
               }}
             >
               Xem thêm sản phẩm
@@ -112,7 +112,7 @@ class Home extends React.Component {
           </div>
           <div className="d-flex justify-content-center mt-2">
             <Link
-              className="text-white custom-link"
+              className="text-white custom-link btn btn-primary"
               to={{
                 pathname: "/all",
                 state: { type: "all" },

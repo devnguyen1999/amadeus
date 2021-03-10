@@ -486,7 +486,7 @@ h6 {
 }
 @media (min-width: 430px) {
   .cart-form {
-    margin: 1px !important;
+    margin: 5px !important;
   }
 }
 @media (max-width: 576px) {
@@ -586,7 +586,7 @@ h6 {
   justify-content: center;
 }
 .cart-form {
-  background: rgba(99, 110, 114, 0.7);
+  background: #343a40eb;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 11px;
 }
@@ -666,6 +666,12 @@ h6 {
 }
 
 /* Home */
+.card:hover {
+  transform:scale(1.02);
+    filter:blur(0px);
+    opacity:1;
+    box-shadow:0 8px 20px 0px rgba(255, 255, 255, 0.342);
+}
 .custom-link:hover {
   text-decoration: none !important;
 }

@@ -84,7 +84,10 @@ class ChiTietSP extends React.Component {
     this.props.addToCart(game);
     this.props.countItemInCart();
   }
-
+  handleBuyNow = (game) =>{
+    this.props.addToCart(game);
+    this.props.countItemInCart();
+  }
   render() {
     const formatter = new Intl.NumberFormat("vi-VI", {
       style: "currency",
@@ -173,7 +176,7 @@ class ChiTietSP extends React.Component {
 
                       <div className="column justify-content-center">
                         <button className="col-12 btn btn-danger text-white mb-1"
-                          onClick={() => this.handleClickAddToCart(this.state.ListData)}
+                          onClick={() => this.handleBuyNow(this.state.ListData)}
                         >
                           Mua ngay
                     </button>
